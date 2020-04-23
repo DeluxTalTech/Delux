@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <RootNamespace>Delux.Tests</RootNamespace>
+
+    <AssemblyName>Delux.Tests</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.0.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.0.0" />
+    <PackageReference Include="coverlet.collector" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aids\Aids.csproj" />
+    <ProjectReference Include="..\Data\Data.csproj" />
+    <ProjectReference Include="..\Delux\Delux.csproj" />
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Facade\Facade.csproj" />
+    <ProjectReference Include="..\Infra\Infra.csproj" />
+    <ProjectReference Include="..\Pages\Pages.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Common\" />
+    <Folder Include="Data\Technician\" />
+    <Folder Include="Data\Treatment\" />
+    <Folder Include="Facade\" />
+    <Folder Include="Domain\" />
+    <Folder Include="Infra\" />
+    <Folder Include="Pages\" />
+  </ItemGroup>
+
+</Project>
