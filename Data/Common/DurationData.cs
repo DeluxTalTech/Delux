@@ -2,6 +2,6 @@
 {
     public abstract class DurationData : PriceData
     {
-        public int Duration { get; set; }
+        public double Duration { get; set; }
     }
 }

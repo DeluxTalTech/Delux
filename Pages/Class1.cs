@@ -1,4 +1,4 @@
-﻿namespace Pages
+﻿namespace Delux.Pages
 {
     public class Class1
     {
