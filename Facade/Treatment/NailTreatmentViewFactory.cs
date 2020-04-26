@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Delux.Aids;
-using Delux.Data.Technician;
+﻿using Delux.Aids;
 using Delux.Data.Treatment;
-using Delux.Domain.Technician;
 using Delux.Domain.Treatment;
-using Delux.Facade.Technician;
 
 namespace Delux.Facade.Treatment
 {

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Delux.Facade.Common
+﻿namespace Delux.Facade.Common
 {
     public abstract class DefinitionView : NameView
     {
