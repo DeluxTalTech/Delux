@@ -22,14 +22,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Common.DefinitionData">
-    <Position X="11.75" Y="2" Width="1.5" />
+    <Position X="7.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\DefinitionData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Common.NameData">
-    <Position X="11.75" Y="0.5" Width="1.5" />
+    <Position X="5.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\NameData.cs</FileName>
@@ -50,7 +50,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Common.WorkedYearsData">
-    <Position X="9.5" Y="4.5" Width="1.5" />
+    <Position X="9.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
       <FileName>Common\WorkedYearsData.cs</FileName>

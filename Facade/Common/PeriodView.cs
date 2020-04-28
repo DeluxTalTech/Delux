@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Delux.Facade.Common
 {
-    public abstract class PeriodView : DefinitionView
+    public abstract class PeriodView : IdView
     {
         [DataType(DataType.Date)]
         [DisplayName("Valid from")]
