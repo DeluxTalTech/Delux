@@ -1,0 +1,14 @@
+﻿@page
+@using Delux.Pages.Extensions
+@model Delux.Areas.Salon.Pages.Technicians.Beauticians.DeleteModel
+
+@{
+    Layout = "_Delete";
+}
+
+<body>
+@Html.DisplayControlsFor(m => m.Item.Name)
+@Html.DisplayControlsFor(m => m.Item.Definition)
+@Html.DisplayControlsFor(m => m.Item.AvailableDays)
+@Html.DisplayControlsFor(m => m.Item.WorkedYears)
+</body>

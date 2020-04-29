@@ -5,9 +5,9 @@ using Delux.Pages.Common;
 
 namespace Delux.Pages.Technician
 {
-    public class MasseusePage : CommonPage<IMasseusesRepository, Masseuse, MasseuseView, MasseuseData>
+    public class MasseusesPage : CommonPage<IMasseusesRepository, Masseuse, MasseuseView, MasseuseData>
     {
-        protected internal MasseusePage(IMasseusesRepository r) : base(r)
+        protected internal MasseusesPage(IMasseusesRepository r) : base(r)
         {
             PageTitle = "Masseuses";
         }

@@ -1,0 +1,26 @@
+﻿@page
+@using Delux.Pages.Extensions
+@using Delux.Data.Technician
+@using Delux.Data.Treatment
+@using Delux.Aids
+@model Delux.Areas.Salon.Pages.Technicians.Beauticians.DetailsModel
+
+@{
+    Layout = "_Details";
+    const string facialTreatments = "/Quantity/Units";
+    var id = GetMember.Name<FacialTreatmentData>(x => x.Id);
+}
+
+
+<body>
+    
+    @Html.DisplayControlsFor(m => m.Item.Name)
+    @Html.DisplayControlsFor(m => m.Item.Definition)
+    @Html.DisplayControlsFor(m => m.Item.AvailableDays)
+    @Html.DisplayControlsFor(m => m.Item.WorkedYears)
+</body>
+
+@section Details {
+    @Html.HypertextLinkFor(string.Empty, new Link("Show treatments",
+        $"{facialTreatments}/Index?fixedFilter={id}&fixedValue={Model.Item.Id}"))
+}

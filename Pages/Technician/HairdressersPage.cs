@@ -5,11 +5,11 @@ using Delux.Pages.Common;
 
 namespace Delux.Pages.Technician
 {
-    public class HairdresserPage : CommonPage<IHairdressersRepository, Hairdresser, HairdresserView, HairdresserData>
+    public class HairdressersPage : CommonPage<IHairdressersRepository, Hairdresser, HairdresserView, HairdresserData>
     {
-        protected internal HairdresserPage(IHairdressersRepository r) : base(r)
+        protected internal HairdressersPage(IHairdressersRepository r) : base(r)
         {
-            PageTitle = "Systems Of Units";
+            PageTitle = "Hairdressers";
         }
 
         public override string ItemId => Item.Id;

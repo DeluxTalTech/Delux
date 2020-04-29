@@ -5,9 +5,9 @@ using Delux.Pages.Common;
 
 namespace Delux.Pages.Technician
 {
-    public class BeauticianPage : CommonPage<IBeauticiansRepository, Beautician, BeauticianView, BeauticianData>
+    public class BeauticiansPage : CommonPage<IBeauticiansRepository, Beautician, BeauticianView, BeauticianData>
     {
-        protected internal BeauticianPage(IBeauticiansRepository r) : base(r)
+        protected internal BeauticiansPage(IBeauticiansRepository r) : base(r)
         {
             PageTitle = "Beauticians";
         }
