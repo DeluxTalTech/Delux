@@ -14,7 +14,7 @@ namespace Delux.Pages.Treatment
 
         public override string ItemId => Item?.Id ?? string.Empty;
 
-        protected internal override string GetPageUrl() => "/Treatment/NailTreatments";
+        protected internal override string GetPageUrl() => "/Treatments/NailTreatments";
 
         protected internal override NailTreatment ToObject(NailTreatmentView view) => NailTreatmentViewFactory.Create(view);
 

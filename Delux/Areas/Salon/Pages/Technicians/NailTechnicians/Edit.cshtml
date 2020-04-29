@@ -1,0 +1,15 @@
+﻿@page
+@using Delux.Pages.Extensions
+@model Delux.Areas.Salon.Pages.Technicians.NailTechnicians.EditModel
+
+@{
+    Layout = "_Edit";
+}
+
+<body>
+<input type="hidden" asp-for="Item.Id" />
+@Html.EditControlsFor(m => m.Item.Name)
+@Html.EditControlsFor(m => m.Item.Definition)
+@Html.EditControlsFor(m => m.Item.AvailableDays)
+@Html.EditControlsFor(m => m.Item.WorkedYears)
+</body>

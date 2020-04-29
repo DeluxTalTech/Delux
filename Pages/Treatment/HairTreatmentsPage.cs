@@ -14,7 +14,7 @@ namespace Delux.Pages.Treatment
         
         public override string ItemId => Item?.Id ?? string.Empty;
 
-        protected internal override string GetPageUrl() => "/Treatment/HairTreatments";
+        protected internal override string GetPageUrl() => "/Treatments/HairTreatments";
 
         protected internal override HairTreatment ToObject(HairTreatmentView view) => HairTreatmentViewFactory.Create(view);
 

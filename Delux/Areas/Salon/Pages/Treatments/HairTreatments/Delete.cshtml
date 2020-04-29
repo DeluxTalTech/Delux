@@ -1,11 +1,10 @@
 ﻿@page
 @using Delux.Pages.Extensions
-@model Delux.Areas.Salon.Pages.Treatments.FacialTreatments.DetailsModel
+@model Delux.Areas.Salon.Pages.Treatments.HairTreatments.DeleteModel
 
 @{
-    Layout = "_Details";
+    Layout = "_Delete";
 }
-
 
     <body>
         @Html.DisplayControlsFor(m => m.Item.Id)
@@ -16,6 +15,3 @@
         @Html.DisplayControlsFor(m => m.Item.Price)
         @Html.DisplayControlsFor(m => m.Item.Duration)
     </body>
-
-@section Details {
-}

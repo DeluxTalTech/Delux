@@ -14,7 +14,7 @@ namespace Delux.Pages.Technician
 
         public override string ItemId => Item.Id;
 
-        protected internal override string GetPageUrl() => "/Quantity/Hairdressers";
+        protected internal override string GetPageUrl() => "/Technicians/Hairdressers";
 
         protected internal override Hairdresser ToObject(HairdresserView view)
         {
