@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using Delux.Aids;
-using Delux.Data.Technician;
 using Delux.Data.Treatment;
 using Delux.Domain.Technician;
 using Delux.Domain.Treatment;
-using Delux.Facade.Technician;
 using Delux.Facade.Treatment;
 using Delux.Pages.Common;
 

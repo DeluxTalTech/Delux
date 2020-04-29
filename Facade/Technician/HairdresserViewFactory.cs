@@ -6,14 +6,14 @@ namespace Delux.Facade.Technician
 {
     public static class HairdresserViewFactory
     {
-        public static HairDresser Create(HairdresserView view)
+        public static Hairdresser Create(HairdresserView view)
         {
             var d = new HairdresserData();
             Copy.Members(view, d);
-            return new HairDresser(d);
+            return new Hairdresser(d);
         }
 
-        public static HairdresserView Create(HairDresser obj)
+        public static HairdresserView Create(Hairdresser obj)
         {
             var v = new HairdresserView();
             Copy.Members(obj.Data, v);

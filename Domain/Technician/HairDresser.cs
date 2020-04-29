@@ -3,10 +3,10 @@ using Delux.Domain.Common;
 
 namespace Delux.Domain.Technician
 {
-    public sealed class HairDresser : Entity<HairdresserData>
+    public sealed class Hairdresser : Entity<HairdresserData>
     {
-        public HairDresser() : this(null) { }
+        public Hairdresser() : this(null) { }
 
-        public HairDresser(HairdresserData data) : base(data) { }
+        public Hairdresser(HairdresserData data) : base(data) { }
     }
 }

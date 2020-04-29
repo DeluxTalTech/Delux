@@ -2,7 +2,7 @@
 
 namespace Delux.Domain.Technician
 {
-    public interface IHairdressersRepository : IRepository<HairDresser>
+    public interface IHairdressersRepository : IRepository<Hairdresser>
     {
     }
 }
