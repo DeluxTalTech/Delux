@@ -1,13 +1,13 @@
 ﻿using System.Threading.Tasks;
-using Delux.Domain.Treatment;
-using Delux.Pages.Treatment;
+using Delux.Domain.Technician;
+using Delux.Pages.Technician;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Delux.Areas.Salon.Pages.Treatments.MassageTreatments
+namespace Delux.Areas.Salon.Pages.Technicians.Masseuses
 {
-    public class DetailsModel : MassageTreatmentsPage
+    public class DetailsModel : MasseusesPage
     {
-        public DetailsModel(IMassageTreatmentsRepository r) : base(r) { }
+        public DetailsModel(IMasseusesRepository b) : base(b) { }
 
         public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
         {

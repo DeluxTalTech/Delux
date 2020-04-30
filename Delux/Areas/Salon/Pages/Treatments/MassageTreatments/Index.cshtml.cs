@@ -2,7 +2,7 @@
 using Delux.Domain.Treatment;
 using Delux.Pages.Treatment;
 
-namespace Delux.Areas.Salon.Pages.Treatments.MassageTreatements
+namespace Delux.Areas.Salon.Pages.Treatments.MassageTreatments
 {
     public class IndexModel : MassageTreatmentsPage
     {

@@ -1,13 +1,13 @@
 ﻿using System.Threading.Tasks;
-using Delux.Domain.Treatment;
-using Delux.Pages.Treatment;
+using Delux.Domain.Technician;
+using Delux.Pages.Technician;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Delux.Areas.Salon.Pages.Treatments.MassageTreatments
+namespace Delux.Areas.Salon.Pages.Technicians.Hairdressers
 {
-    public class CreateModel : MassageTreatmentsPage
+    public class CreateModel : HairdressersPage
     {
-        public CreateModel(IMassageTreatmentsRepository r) : base(r) { }
+        public CreateModel(IHairdressersRepository b) : base(b) { }
 
         public IActionResult OnGet(string fixedFilter, string fixedValue)
         {
