@@ -7,7 +7,7 @@ namespace Delux.Areas.Salon.Pages.Treatments.MassageTreatments
 {
     public class EditModel : MassageTreatmentsPage
     {
-        public EditModel(IMassageTreatmentsRepository r) : base(r) { }
+        public EditModel(IMassageTreatmentsRepository m) : base(m) { }
 
         public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
         {

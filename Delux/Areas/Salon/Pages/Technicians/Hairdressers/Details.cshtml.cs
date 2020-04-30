@@ -7,7 +7,7 @@ namespace Delux.Areas.Salon.Pages.Technicians.Hairdressers
 {
     public class DetailsModel : HairdressersPage
     {
-        public DetailsModel(IHairdressersRepository b) : base(b) { }
+        public DetailsModel(IHairdressersRepository h) : base(h) { }
 
         public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
         {

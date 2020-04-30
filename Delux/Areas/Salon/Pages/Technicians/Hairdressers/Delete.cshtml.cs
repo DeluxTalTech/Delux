@@ -9,7 +9,7 @@ namespace Delux.Areas.Salon.Pages.Technicians.Hairdressers
     public class DeleteModel : HairdressersPage
     {
 
-        public DeleteModel(IHairdressersRepository b) : base(b) { }
+        public DeleteModel(IHairdressersRepository h) : base(h) { }
 
         public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
         {

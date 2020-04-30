@@ -6,7 +6,7 @@ namespace Delux.Areas.Salon.Pages.Treatments.NailTreatments
 {
     public class IndexModel : NailTreatmentsPage
     {
-        public IndexModel(INailTreatmentsRepository r) : base(r) { }
+        public IndexModel(INailTreatmentsRepository n) : base(n) { }
 
         public async Task OnGetAsync(string sortOrder,
             string currentFilter, string searchString, int? pageIndex,

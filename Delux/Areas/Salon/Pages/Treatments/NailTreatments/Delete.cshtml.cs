@@ -9,7 +9,7 @@ namespace Delux.Areas.Salon.Pages.Treatments.NailTreatments
     public class DeleteModel : NailTreatmentsPage
     {
 
-        public DeleteModel(INailTreatmentsRepository r) : base(r) { }
+        public DeleteModel(INailTreatmentsRepository n) : base(n) { }
 
         public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
         {

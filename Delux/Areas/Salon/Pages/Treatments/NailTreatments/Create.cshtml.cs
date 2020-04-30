@@ -7,7 +7,7 @@ namespace Delux.Areas.Salon.Pages.Treatments.NailTreatments
 {
     public class CreateModel : NailTreatmentsPage
     {
-        public CreateModel(INailTreatmentsRepository r) : base(r) { }
+        public CreateModel(INailTreatmentsRepository n) : base(n) { }
 
         public IActionResult OnGet(string fixedFilter, string fixedValue)
         {

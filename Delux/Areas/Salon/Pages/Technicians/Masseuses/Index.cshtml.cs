@@ -6,7 +6,7 @@ namespace Delux.Areas.Salon.Pages.Technicians.Masseuses
 {
     public class IndexModel : MasseusesPage
     {
-        public IndexModel(IMasseusesRepository b) : base(b) { }
+        public IndexModel(IMasseusesRepository m) : base(m) { }
 
         public async Task OnGetAsync(string sortOrder, 
             string id, string currentFilter, string searchString, int? pageIndex,

@@ -6,8 +6,8 @@
 
 @{
     Layout = "_Details";
-    const string facialTreatments = "/Treatments/HairTreatments";
-    var id = GetMember.Name<FacialTreatmentData>(x => x.Id);
+    const string hairTreatments = "/Treatments/HairTreatments";
+    var id = GetMember.Name<HairTreatmentData>(x => x.Id);
 }
 
 
@@ -21,5 +21,5 @@
 
 @section Details {
     @Html.HypertextLinkFor(string.Empty, new Link("Show treatments",
-        $"{facialTreatments}/Index?fixedFilter={id}&fixedValue={Model.Item.Id}"))
+        $"{hairTreatments}/Index?fixedFilter={id}&fixedValue={Model.Item.Id}"))
 }

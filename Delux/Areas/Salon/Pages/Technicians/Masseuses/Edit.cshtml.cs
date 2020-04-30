@@ -7,7 +7,7 @@ namespace Delux.Areas.Salon.Pages.Technicians.Masseuses
 {
     public class EditModel : MasseusesPage
     {
-        public EditModel(IMasseusesRepository b) : base(b) { }
+        public EditModel(IMasseusesRepository m) : base(m) { }
 
         public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
         {

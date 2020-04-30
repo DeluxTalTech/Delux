@@ -7,7 +7,7 @@ namespace Delux.Areas.Salon.Pages.Treatments.MassageTreatments
 {
     public class CreateModel : MassageTreatmentsPage
     {
-        public CreateModel(IMassageTreatmentsRepository r) : base(r) { }
+        public CreateModel(IMassageTreatmentsRepository m) : base(m) { }
 
         public IActionResult OnGet(string fixedFilter, string fixedValue)
         {

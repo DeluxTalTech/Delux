@@ -7,7 +7,7 @@ namespace Delux.Areas.Salon.Pages.Treatments.NailTreatments
 {
     public class EditModel : NailTreatmentsPage
     {
-        public EditModel(INailTreatmentsRepository r) : base(r) { }
+        public EditModel(INailTreatmentsRepository n) : base(n) { }
 
         public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
         {

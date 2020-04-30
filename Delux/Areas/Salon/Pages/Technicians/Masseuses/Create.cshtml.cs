@@ -7,7 +7,7 @@ namespace Delux.Areas.Salon.Pages.Technicians.Masseuses
 {
     public class CreateModel : MasseusesPage
     {
-        public CreateModel(IMasseusesRepository b) : base(b) { }
+        public CreateModel(IMasseusesRepository m) : base(m) { }
 
         public IActionResult OnGet(string fixedFilter, string fixedValue)
         {

@@ -6,7 +6,7 @@ namespace Delux.Areas.Salon.Pages.Technicians.Hairdressers
 {
     public class IndexModel : HairdressersPage
     {
-        public IndexModel(IHairdressersRepository b) : base(b) { }
+        public IndexModel(IHairdressersRepository h) : base(h) { }
 
         public async Task OnGetAsync(string sortOrder, 
             string id, string currentFilter, string searchString, int? pageIndex,
