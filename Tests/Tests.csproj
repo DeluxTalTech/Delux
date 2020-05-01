@@ -28,7 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\Treatment\" />
     <Folder Include="Facade\" />
     <Folder Include="Domain\" />
     <Folder Include="Infra\" />
