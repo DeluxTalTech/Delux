@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aids", "Aids\Aids.csproj", "{C4512B38-67C5-4EBE-82C5-6C2A860770EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aids", "Aids\Aids.csproj", "{C4512B38-67C5-4EBE-82C5-6C2A860770EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{F3408E2B-2C03-4F96-8B11-5A6C0EEFD8FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{F3408E2B-2C03-4F96-8B11-5A6C0EEFD8FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{623B66AF-F563-41C1-A090-C280EA45D0C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{623B66AF-F563-41C1-A090-C280EA45D0C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facade", "Facade\Facade.csproj", "{5A5FB588-ECA3-4B6D-A4B2-F30DFFDFB828}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facade", "Facade\Facade.csproj", "{5A5FB588-ECA3-4B6D-A4B2-F30DFFDFB828}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Infra\Infra.csproj", "{EDA45FC1-50BA-4B71-8F78-D44EE49339BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra", "Infra\Infra.csproj", "{EDA45FC1-50BA-4B71-8F78-D44EE49339BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pages", "Pages\Pages.csproj", "{593C1DA2-B4C7-47B8-880E-9EB14FA09AEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pages", "Pages\Pages.csproj", "{593C1DA2-B4C7-47B8-880E-9EB14FA09AEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{66AFF48E-D37A-4259-AB00-A00096BA25D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{66AFF48E-D37A-4259-AB00-A00096BA25D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delux", "Delux\Delux.csproj", "{EB4EAE8B-1463-4267-A07A-6BCA8E851B31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delux", "Delux\Delux.csproj", "{DDE7B3DA-4B3E-4B96-9975-8118B920CE4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +53,10 @@ Global
 		{66AFF48E-D37A-4259-AB00-A00096BA25D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66AFF48E-D37A-4259-AB00-A00096BA25D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66AFF48E-D37A-4259-AB00-A00096BA25D7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EB4EAE8B-1463-4267-A07A-6BCA8E851B31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB4EAE8B-1463-4267-A07A-6BCA8E851B31}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB4EAE8B-1463-4267-A07A-6BCA8E851B31}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB4EAE8B-1463-4267-A07A-6BCA8E851B31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDE7B3DA-4B3E-4B96-9975-8118B920CE4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE7B3DA-4B3E-4B96-9975-8118B920CE4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDE7B3DA-4B3E-4B96-9975-8118B920CE4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDE7B3DA-4B3E-4B96-9975-8118B920CE4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

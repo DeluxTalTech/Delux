@@ -2,6 +2,6 @@
 {
     public abstract class AvailabilityData : IdData
     {
-        public string[] AvailableDays { get; set; }
+        public string AvailableDays { get; set; }
     }
 }

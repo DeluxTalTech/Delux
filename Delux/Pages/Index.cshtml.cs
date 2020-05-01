@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace Delux.Pages
+namespace Delux.Delux.Pages
 {
     public class IndexModel : PageModel
     {

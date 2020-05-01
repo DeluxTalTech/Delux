@@ -1,10 +1,18 @@
+using Delux.Delux.Data;
+using Delux.Domain.Technician;
+using Delux.Domain.Treatment;
+using Delux.Infra;
+using Delux.Infra.Technician;
+using Delux.Infra.Treatment;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Delux
+namespace Delux.Delux
 {
     public class Startup
     {
@@ -18,6 +26,22 @@ namespace Delux
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<SalonDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddScoped<IBeauticiansRepository, BeauticiansRepository>();
+            services.AddScoped<IHairdressersRepository, HairdressersRepository>();
+            services.AddScoped<IMasseusesRepository, MasseusesRepository>();
+            services.AddScoped<INailTechniciansRepository, NailTechniciansRepository>();
+            services.AddScoped<IFacialTreatmentsRepository, FacialTreatmentsRepository>();
+            services.AddScoped<IHairTreatmentsRepository, HairTreatmentsRepository>();
+            services.AddScoped<IMassageTreatmentsRepository, MassageTreatmentsRepository>();
+            services.AddScoped<INailTreatmentsRepository, NailTreatmentsRepository>();
             services.AddRazorPages();
         }
 
@@ -27,6 +51,7 @@ namespace Delux
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseDatabaseErrorPage();
             }
             else
             {
@@ -40,6 +65,7 @@ namespace Delux
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

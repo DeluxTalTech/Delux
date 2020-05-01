@@ -1,0 +1,25 @@
+﻿@page
+@using global::Delux.Aids
+@using global::Delux.Data.Treatment
+@using global::Delux.Pages.Extensions
+@model Delux.Areas.Salon.Pages.NailTechnicians.DetailsModel
+
+@{
+    Layout = "_Details";
+    const string nailTreatments = "/Treatments/NailTreatments";
+    var id = GetMember.Name<NailTreatmentData>(x => x.Id);
+}
+
+
+<body>
+    
+    @Html.DisplayControlsFor(m => m.Item.Name)
+    @Html.DisplayControlsFor(m => m.Item.Definition)
+    @Html.DisplayControlsFor(m => m.Item.AvailableDays)
+    @Html.DisplayControlsFor(m => m.Item.WorkedYears)
+</body>
+
+@section Details {
+    @Html.HypertextLinkFor(string.Empty, new Link("Show treatments",
+        $"{nailTreatments}/Index?fixedFilter={id}&fixedValue={Model.Item.Id}"))
+}
