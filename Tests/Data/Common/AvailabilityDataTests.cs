@@ -16,7 +16,7 @@ namespace Delux.Tests.Data.Common
         }
 
         [TestMethod]
-        public void AvailabilityTest()
+        public void AvailableDaysTest()
         {
             IsNullableProperty(() => Obj.AvailableDays, x => Obj.AvailableDays = x);
         }
