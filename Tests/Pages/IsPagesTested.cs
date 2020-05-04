@@ -1,11 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Delux.Tests.Facade
+namespace Delux.Tests.Pages
 {
     [TestClass]
-    public class IsFacadeTested:AssemblyTests
+    public class IsPagesTested:AssemblyTests
     {
-        private const string Assembly = "Delux.Facade";
+        private const string Assembly = "Delux.Pages";
 
         protected override string Namespace(string name)
         {
@@ -13,9 +13,9 @@ namespace Delux.Tests.Facade
         }
 
         [TestMethod]
-        public void IsCommonTested()
+        public void IsExtensionsTested()
         {
-            IsAllTested(Assembly, Namespace("Common"));
+            IsAllTested(Assembly, Namespace("Extensions"));
         }
 
         [TestMethod]
@@ -32,8 +32,7 @@ namespace Delux.Tests.Facade
         [TestMethod]
         public void IsTested()
         {
-            IsAllTested(base.Namespace("Facade"));
+            IsAllTested(Assembly, base.Namespace("Pages"));
         }
-
     }
 }

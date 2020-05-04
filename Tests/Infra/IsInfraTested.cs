@@ -3,7 +3,7 @@
 namespace Delux.Tests.Infra
 {
     [TestClass]
-    public class IsInfraTested : AssemblyTests
+    public class IsInfraTested:AssemblyTests
     {
         private const string Assembly = "Delux.Infra";
 
@@ -17,7 +17,6 @@ namespace Delux.Tests.Infra
         {
             IsAllTested(Assembly, Namespace("Technician"));
         }
-
         [TestMethod]
         public void IsTreatmentTested()
         {
@@ -29,5 +28,6 @@ namespace Delux.Tests.Infra
         {
             IsAllTested(base.Namespace("Infra"));
         }
+
     }
 }
