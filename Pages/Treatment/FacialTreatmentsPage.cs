@@ -21,3 +21,4 @@ namespace Delux.Pages.Treatment
         protected internal override FacialTreatmentView ToView(FacialTreatment obj) => FacialTreatmentViewFactory.Create(obj);
     }
 }
+

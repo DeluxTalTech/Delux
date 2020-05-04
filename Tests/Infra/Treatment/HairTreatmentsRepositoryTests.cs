@@ -16,7 +16,7 @@ namespace Delux.Tests.Infra.Treatment
         public override void TestInitialize()
         {
             var options = new DbContextOptionsBuilder<SalonDbContext>()
-                //.UseInMemoryDatabase("TestDb")
+                .UseInMemoryDatabase("TestDb")
                 .Options;
             db = new SalonDbContext(options);
             dbSet = ((SalonDbContext)db).HairTreatments;
