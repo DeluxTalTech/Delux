@@ -19,37 +19,37 @@ namespace Delux.Tests
         public string FixedFilter { get; set; }
         public string FixedValue { get; set; }
 
-        internal readonly List<TObj> list;
-        public BaseTestRepositoryForId() => list = new List<TObj>();
+        internal readonly List<TObj> List;
+        public BaseTestRepositoryForId() => List = new List<TObj>();
         public async Task<List<TObj>> Get()
         {
             await Task.CompletedTask;
-            return list;
+            return List;
         }
 
         public async Task<TObj> Get(string id)
         {
             await Task.CompletedTask;
-            return list.Find(x => x.Data.Id == id);
+            return List.Find(x => x.Data.Id == id);
         }
 
         public async Task Delete(string id)
         {
             await Task.CompletedTask;
-            var obj = list.Find(x => x.Data.Id == id);
-            list.Remove(obj);
+            var obj = List.Find(x => x.Data.Id == id);
+            List.Remove(obj);
         }
 
         public async Task Add(TObj obj)
         {
             await Task.CompletedTask;
-            list.Add(obj);
+            List.Add(obj);
         }
 
         public async Task Update(TObj obj)
         {
             await Delete(obj.Data.Id);
-            list.Add(obj);
+            List.Add(obj);
         }
     }
 }
