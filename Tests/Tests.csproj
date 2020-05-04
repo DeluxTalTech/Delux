@@ -31,10 +31,8 @@
     <Folder Include="Domain\Common\" />
     <Folder Include="Facade\Common\" />
     <Folder Include="Infra\Common\" />
-    <Folder Include="Infra\Technician\" />
     <Folder Include="Pages\Extensions\" />
     <Folder Include="Pages\Common\" />
-    <Folder Include="Pages\Technician\" />
   </ItemGroup>
 
 </Project>
