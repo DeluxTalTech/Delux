@@ -29,9 +29,7 @@
 
   <ItemGroup>
     <Folder Include="Domain\Common\" />
-    <Folder Include="Domain\Technician\" />
     <Folder Include="Facade\Common\" />
-    <Folder Include="Facade\Technician\" />
     <Folder Include="Infra\Common\" />
     <Folder Include="Infra\Technician\" />
     <Folder Include="Pages\Extensions\" />
