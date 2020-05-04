@@ -1,11 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Delux.Tests.Data
+namespace Delux.Tests.Domain
 {
     [TestClass]
-    public class IsDataTested : AssemblyTests
+    public class IsDomainTested: AssemblyTests
     {
-        private const string Assembly = "Delux.Data";
+        private const string Assembly = "Delux.Domain";
 
         protected override string Namespace(string name)
         {
@@ -17,7 +17,6 @@ namespace Delux.Tests.Data
         {
             IsAllTested(Assembly, Namespace("Common"));
         }
-
         [TestMethod]
         public void IsTechnicianTested()
         {
@@ -28,11 +27,10 @@ namespace Delux.Tests.Data
         {
             IsAllTested(Assembly, Namespace("Treatment"));
         }
-
         [TestMethod]
         public void IsTested()
         {
-            IsAllTested(base.Namespace("Data"));
+            IsAllTested(base.Namespace("Domain"));
         }
     }
 }

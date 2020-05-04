@@ -28,9 +28,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Facade\" />
-    <Folder Include="Domain\" />
-    <Folder Include="Infra\" />
+    <Folder Include="Domain\Common\" />
+    <Folder Include="Domain\Treatment\" />
+    <Folder Include="Domain\Technician\" />
+    <Folder Include="Facade\Common\" />
+    <Folder Include="Facade\Treatment\" />
+    <Folder Include="Facade\Technician\" />
+    <Folder Include="Infra\Common\" />
+    <Folder Include="Infra\Treatment\" />
+    <Folder Include="Infra\Technician\" />
     <Folder Include="Pages\" />
   </ItemGroup>
 
