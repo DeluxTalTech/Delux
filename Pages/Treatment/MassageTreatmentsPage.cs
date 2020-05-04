@@ -5,7 +5,7 @@ using Delux.Pages.Common;
 
 namespace Delux.Pages.Treatment
 {
-    public class MassageTreatmentsPage : CommonPage<IMassageTreatmentsRepository, MassageTreatment, MassageTreatmentView, MassageTreatmentData>
+    public abstract class MassageTreatmentsPage : CommonPage<IMassageTreatmentsRepository, MassageTreatment, MassageTreatmentView, MassageTreatmentData>
     {
         protected internal MassageTreatmentsPage(IMassageTreatmentsRepository r) : base(r)
         {

@@ -5,7 +5,7 @@ using Delux.Pages.Common;
 
 namespace Delux.Pages.Treatment
 {
-    public class HairTreatmentsPage : CommonPage<IHairTreatmentsRepository, HairTreatment, HairTreatmentView, HairTreatmentData>
+    public abstract class HairTreatmentsPage : CommonPage<IHairTreatmentsRepository, HairTreatment, HairTreatmentView, HairTreatmentData>
     {
         protected internal HairTreatmentsPage(IHairTreatmentsRepository r) : base(r)
         {

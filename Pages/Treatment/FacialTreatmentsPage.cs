@@ -5,7 +5,7 @@ using Delux.Pages.Common;
 
 namespace Delux.Pages.Treatment
 {
-    public class FacialTreatmentsPage:CommonPage<IFacialTreatmentsRepository, FacialTreatment, FacialTreatmentView,FacialTreatmentData>
+    public abstract class FacialTreatmentsPage:CommonPage<IFacialTreatmentsRepository, FacialTreatment, FacialTreatmentView,FacialTreatmentData>
     {
         protected internal FacialTreatmentsPage(IFacialTreatmentsRepository r) : base(r)
         {

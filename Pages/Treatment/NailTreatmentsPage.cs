@@ -5,7 +5,7 @@ using Delux.Pages.Common;
 
 namespace Delux.Pages.Treatment
 {
-    public class NailTreatmentsPage : CommonPage<INailTreatmentsRepository, NailTreatment, NailTreatmentView, NailTreatmentData>
+    public abstract class NailTreatmentsPage : CommonPage<INailTreatmentsRepository, NailTreatment, NailTreatmentView, NailTreatmentData>
     {
         protected internal NailTreatmentsPage(INailTreatmentsRepository r) : base(r)
         {
