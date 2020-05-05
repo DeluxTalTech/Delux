@@ -6,7 +6,7 @@ using Delux.Pages.Common;
 using Delux.Pages.Technician;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Delux.Tests.Pages.Treatment
+namespace Delux.Tests.Pages.Technician
 {
     [TestClass]
     public class NailTechniciansPageTests : AbstractClassTests<NailTechniciansPage,
