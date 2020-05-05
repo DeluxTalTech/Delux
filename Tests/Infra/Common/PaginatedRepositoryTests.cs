@@ -29,7 +29,7 @@ namespace Delux.Tests.Infra.Common
 
         }
 
-        private byte count;
+        private byte _count;
 
         [TestInitialize]
         public override void TestInitialize()
@@ -41,7 +41,7 @@ namespace Delux.Tests.Infra.Common
                 .Options;
             var c = new SalonDbContext(options);
             Obj = new TestClass(c, c.Beauticians);
-            count = GetRandom.UInt8(20, 40);
+            _count = GetRandom.UInt8(20, 40);
             foreach (var p in c.Beauticians)
             {
                 c.Entry(p).State = EntityState.Deleted;
@@ -58,7 +58,7 @@ namespace Delux.Tests.Infra.Common
         [TestMethod]
         public void TotalPagesTest()
         {
-            var expected = (int) Math.Ceiling(count / (double) Obj.PageSize);
+            var expected = (int) Math.Ceiling(_count / (double) Obj.PageSize);
             var totalPagesCount = Obj.TotalPages;
             Assert.AreEqual(expected, totalPagesCount);
         }
@@ -104,7 +104,7 @@ namespace Delux.Tests.Infra.Common
         [TestMethod]
         public void GetTotalPagesTest()
         {
-            var expected = (int)Math.Ceiling(count / (double)Obj.PageSize);
+            var expected = (int)Math.Ceiling(_count / (double)Obj.PageSize);
             var totalPagesCount = Obj.GetTotalPages(Obj.PageSize);
             Assert.AreEqual(expected, totalPagesCount);
         }
@@ -112,8 +112,8 @@ namespace Delux.Tests.Infra.Common
         [TestMethod]
         public void CountTotalPagesTest()
         {
-            var expected = (int) Math.Ceiling(count / (double) Obj.PageSize);
-            var totalPagesCount = Obj.CountTotalPages(count, Obj.PageSize);
+            var expected = (int) Math.Ceiling(_count / (double) Obj.PageSize);
+            var totalPagesCount = Obj.CountTotalPages(_count, Obj.PageSize);
             Assert.AreEqual(expected, totalPagesCount);
         }
 
@@ -126,7 +126,7 @@ namespace Delux.Tests.Infra.Common
 
         private void AddItems()
         {
-            for (var i = 0; i < count; i++)
+            for (var i = 0; i < _count; i++)
                 Obj.Add(new Beautician(GetRandom.Object<BeauticianData>())).GetAwaiter();
         }
 

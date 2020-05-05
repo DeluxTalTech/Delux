@@ -12,7 +12,7 @@ namespace Delux.Tests.Infra.Common
     [TestClass]
     public class BaseRepositoryTests : AbstractClassTests<BaseRepository<Beautician, BeauticianData>, object>
     {
-        private BeauticianData Data;
+        private BeauticianData _data;
 
         private class TestClass : BaseRepository<Beautician, BeauticianData>
         {
@@ -39,7 +39,7 @@ namespace Delux.Tests.Infra.Common
                 .Options;
             var c = new SalonDbContext(options);
             Obj = new TestClass(c, c.Beauticians);
-            Data = GetRandom.Object<BeauticianData>();
+            _data = GetRandom.Object<BeauticianData>();
         }
 
 
@@ -50,7 +50,7 @@ namespace Delux.Tests.Infra.Common
             var countBefore = Obj.Get().GetAwaiter().GetResult().Count;
             for (var i = 0; i < count; i++)
             {
-                Data = GetRandom.Object<BeauticianData>();
+                _data = GetRandom.Object<BeauticianData>();
                 AddTest();
             }
             Assert.AreEqual(count + countBefore, Obj.Get().GetAwaiter().GetResult().Count);
@@ -64,29 +64,29 @@ namespace Delux.Tests.Infra.Common
         public void DeleteTest()
         {
             AddTest();
-            var expected = Obj.Get(Data.Id).GetAwaiter().GetResult();
-            TestArePropertyValuesEqual(Data, expected.Data);
-            Obj.Delete(Data.Id).GetAwaiter();
-            expected = Obj.Get(Data.Id).GetAwaiter().GetResult();
+            var expected = Obj.Get(_data.Id).GetAwaiter().GetResult();
+            TestArePropertyValuesEqual(_data, expected.Data);
+            Obj.Delete(_data.Id).GetAwaiter();
+            expected = Obj.Get(_data.Id).GetAwaiter().GetResult();
             Assert.IsNull(expected.Data);
         }
 
         public void AddTest()
         {
-            var expected = Obj.Get(Data.Id).GetAwaiter().GetResult();
+            var expected = Obj.Get(_data.Id).GetAwaiter().GetResult();
             Assert.IsNull(expected.Data);
-            Obj.Add(new Beautician(Data)).GetAwaiter();
-            expected = Obj.Get(Data.Id).GetAwaiter().GetResult();
-            TestArePropertyValuesEqual(Data, expected.Data);
+            Obj.Add(new Beautician(_data)).GetAwaiter();
+            expected = Obj.Get(_data.Id).GetAwaiter().GetResult();
+            TestArePropertyValuesEqual(_data, expected.Data);
         }
 
         public void UpdateTest()
         {
             AddTest();
             var newData = GetRandom.Object<BeauticianData>();
-            newData.Id = Data.Id;
+            newData.Id = _data.Id;
             Obj.Update(new Beautician(newData)).GetAwaiter();
-            var expected = Obj.Get(Data.Id).GetAwaiter().GetResult();
+            var expected = Obj.Get(_data.Id).GetAwaiter().GetResult();
             TestArePropertyValuesEqual(newData, expected.Data);
         }
     }

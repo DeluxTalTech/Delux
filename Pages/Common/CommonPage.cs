@@ -28,13 +28,13 @@ namespace Delux.Pages.Common {
 
         protected internal string GetIndexUrl() => $"{PageUrl}/Index?fixedFilter={FixedFilter}&fixedValue={FixedValue}";
 
-        protected static IEnumerable<SelectListItem> CreateSelectList<TTDomain, TTData>(IRepository<TTDomain> r)
-            where TTDomain : Entity<TTData>
-            where TTData : IdData, new() {
-            var items = r.Get().GetAwaiter().GetResult();
+        //protected static IEnumerable<SelectListItem> CreateSelectList<TDomain, TData>(IRepository<TDomain> r)
+        //    where TDomain : Entity<TData>
+        //    where TData : IdData, new() {
+        //    var items = r.Get().GetAwaiter().GetResult();
 
-            return items.Select(m => new SelectListItem(m.Data.Name, m.Data.Id)).ToList();
-        }
+        //    return items.Select(m => new SelectListItem(m.Data.Name, m.Data.Id)).ToList();
+        //}
 
 
     }

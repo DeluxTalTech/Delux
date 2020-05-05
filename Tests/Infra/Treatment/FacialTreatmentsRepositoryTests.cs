@@ -18,9 +18,9 @@ namespace Delux.Tests.Infra.Treatment
             var options = new DbContextOptionsBuilder<SalonDbContext>()
                 .UseInMemoryDatabase("TestDb")
                 .Options;
-            db = new SalonDbContext(options);
-            dbSet = ((SalonDbContext)db).FacialTreatments;
-            obj = new FacialTreatmentsRepository((SalonDbContext)db);
+            Db = new SalonDbContext(options);
+            DbSet = ((SalonDbContext)Db).FacialTreatments;
+            Obj = new FacialTreatmentsRepository((SalonDbContext)Db);
             base.TestInitialize();
         }
 

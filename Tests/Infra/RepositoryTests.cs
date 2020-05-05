@@ -12,44 +12,44 @@ namespace Delux.Tests.Infra
         : BaseTests
     where TRepository : IRepository<TObject>
     where TObject : Entity<TData>
-    where TData : PeriodData, new()
+    where TData : NameData, new()
     {
 
-        protected TData data;
-        protected TRepository obj;
-        protected DbContext db;
-        protected int count;
-        protected DbSet<TData> dbSet;
+        protected TData Data;
+        protected TRepository Obj;
+        protected DbContext Db;
+        protected int Count;
+        protected DbSet<TData> DbSet;
 
         [TestInitialize]
         public virtual void TestInitialize()
         {
             Type = typeof(TRepository);
-            data = GetRandom.Object<TData>();
-            count = GetRandom.UInt8(20, 40);
+            Data = GetRandom.Object<TData>();
+            Count = GetRandom.UInt8(20, 40);
             CleanDbSet();
             AddItems();
         }
         protected void TestGetList()
         {
-            obj.PageIndex = GetRandom.Int32(2, obj.TotalPages - 1);
-            var l = obj.Get().GetAwaiter().GetResult();
-            Assert.AreEqual(obj.PageSize, l.Count);
+            Obj.PageIndex = GetRandom.Int32(2, Obj.TotalPages - 1);
+            var l = Obj.Get().GetAwaiter().GetResult();
+            Assert.AreEqual(Obj.PageSize, l.Count);
         }
 
         [TestCleanup] public void TestCleanup() => CleanDbSet();
 
         protected void CleanDbSet()
         {
-            foreach (var p in dbSet)
-                db.Entry(p).State = EntityState.Deleted;
-            db.SaveChanges();
+            foreach (var p in DbSet)
+                Db.Entry(p).State = EntityState.Deleted;
+            Db.SaveChanges();
         }
 
         protected void AddItems()
         {
-            for (var i = 0; i < count; i++)
-                obj.Add(GetObject(GetRandom.Object<TData>())).GetAwaiter();
+            for (var i = 0; i < Count; i++)
+                Obj.Add(GetObject(GetRandom.Object<TData>())).GetAwaiter();
         }
 
         [TestMethod] public void IsSealed() => Assert.IsTrue(Type.IsSealed);
@@ -67,11 +67,11 @@ namespace Delux.Tests.Infra
         public void DeleteTest()
         {
             AddTest();
-            var id = GetId(data);
-            var expected = obj.Get(id).GetAwaiter().GetResult();
-            TestArePropertyValuesEqual(data, expected.Data);
-            obj.Delete(id).GetAwaiter();
-            expected = obj.Get(id).GetAwaiter().GetResult();
+            var id = GetId(Data);
+            var expected = Obj.Get(id).GetAwaiter().GetResult();
+            TestArePropertyValuesEqual(Data, expected.Data);
+            Obj.Delete(id).GetAwaiter();
+            expected = Obj.Get(id).GetAwaiter().GetResult();
             Assert.IsNull(expected.Data);
         }
 
@@ -80,12 +80,12 @@ namespace Delux.Tests.Infra
         [TestMethod]
         public void AddTest()
         {
-            var id = GetId(data);
-            var expected = obj.Get(id).GetAwaiter().GetResult();
+            var id = GetId(Data);
+            var expected = Obj.Get(id).GetAwaiter().GetResult();
             Assert.IsNull(expected.Data);
-            obj.Add(GetObject(data)).GetAwaiter();
-            expected = obj.Get(id).GetAwaiter().GetResult();
-            TestArePropertyValuesEqual(data, expected.Data);
+            Obj.Add(GetObject(Data)).GetAwaiter();
+            expected = Obj.Get(id).GetAwaiter().GetResult();
+            TestArePropertyValuesEqual(Data, expected.Data);
         }
 
         protected abstract TObject GetObject(TData d);
@@ -94,11 +94,11 @@ namespace Delux.Tests.Infra
         public void UpdateTest()
         {
             AddTest();
-            var id = GetId(data);
+            var id = GetId(Data);
             var newData = GetRandom.Object<TData>();
             SetId(newData, id);
-            obj.Update(GetObject(newData)).GetAwaiter();
-            var expected = obj.Get(id).GetAwaiter().GetResult();
+            Obj.Update(GetObject(newData)).GetAwaiter();
+            var expected = Obj.Get(id).GetAwaiter().GetResult();
             TestArePropertyValuesEqual(newData, expected.Data);
         }
         protected abstract void SetId(TData d, string id);
