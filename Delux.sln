@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pages", "Pages\Pages.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{66AFF48E-D37A-4259-AB00-A00096BA25D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delux", "Delux\Delux.csproj", "{DDE7B3DA-4B3E-4B96-9975-8118B920CE4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delux", "Delux\Delux.csproj", "{DDE7B3DA-4B3E-4B96-9975-8118B920CE4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
