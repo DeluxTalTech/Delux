@@ -8,7 +8,7 @@ namespace Delux.Delux.Areas.Salon.Pages.Masseuses
     {
         public IndexModel(IMasseusesRepository m) : base(m) { }
 
-        public async Task OnGetAsync(string sortOrder, 
+        public async Task OnGetAsync(string sortOrder,
             string id, string currentFilter, string searchString, int? pageIndex,
             string fixedFilter, string fixedValue)
         {

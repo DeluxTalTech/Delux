@@ -8,16 +8,16 @@ namespace Delux.Pages.Extensions
         public const string EditLinkTitle = "Edit";
         public const string DetailsLinkTitle = "Details";
         public const string DeleteLinkTitle = "Delete";
-        public const string TechniciansLinkTitle = "Tehnikud";
-        public const string TreatmentsLinkTitle = "Teenused";
-        public const string HairdressersPageTitle = "Juuksurid";
-        public const string BeauticiansPageTitle = "Kosmeetikud";
-        public const string MasseusesPageTitle = "Massöörid";
-        public const string NailTechniciansPageTitle = "Küünetehnikud";
-        public const string FacialTreatmentsPageTitle = "Näohooldus";
-        public const string HairTreatmentsPageTitle = "Juuksehooldus";
-        public const string MassagesPageTitle = "Massaaž";
-        public const string NailTreatmentsPageTitle = "Küünehooldus";
+        public const string TechniciansLinkTitle = "Technicians";
+        public const string TreatmentsLinkTitle = "Treatments";
+        public const string HairdressersPageTitle = "Hairdressers";
+        public const string BeauticiansPageTitle = "Beauticians";
+        public const string MasseusesPageTitle = "Masseuses";
+        public const string NailTechniciansPageTitle = "NailTechnicians";
+        public const string FacialTreatmentsPageTitle = "FacialTreatments";
+        public const string HairTreatmentsPageTitle = "HairTreatments";
+        public const string MassagesPageTitle = "Massages";
+        public const string NailTreatmentsPageTitle = "NailTreatments";
         public const string SelectLinkTitle = "Select";
     }
 

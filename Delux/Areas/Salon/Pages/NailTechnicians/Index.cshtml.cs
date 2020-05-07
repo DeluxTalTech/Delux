@@ -8,7 +8,7 @@ namespace Delux.Delux.Areas.Salon.Pages.NailTechnicians
     {
         public IndexModel(INailTechniciansRepository n) : base(n) { }
 
-        public async Task OnGetAsync(string sortOrder, 
+        public async Task OnGetAsync(string sortOrder,
             string id, string currentFilter, string searchString, int? pageIndex,
             string fixedFilter, string fixedValue)
         {

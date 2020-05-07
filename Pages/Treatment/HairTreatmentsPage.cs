@@ -12,7 +12,7 @@ namespace Delux.Pages.Treatment
             PageTitle = "Hair Treatments";
         }
         
-        public override string ItemId => Item?.Id ?? string.Empty;
+        public override string ItemId => Item.Id;
 
         protected internal override string GetPageUrl() => "/Salon/HairTreatments";
 

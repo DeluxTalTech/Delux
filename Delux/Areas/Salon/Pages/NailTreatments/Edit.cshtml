@@ -6,13 +6,13 @@
     Layout = "_Edit";
 }
 
-    <body>
-        <input type="hidden" asp-for="Item.Id" />
-        @Html.DisabledControlsFor(m => m.Item.Id)
-        @Html.EditControlsFor(m => m.Item.Name)
-        @Html.EditControlsFor(m => m.Item.Definition)
-        @Html.EditControlsFor(m => m.Item.ValidFrom)
-        @Html.EditControlsFor(m => m.Item.ValidTo)
-        @Html.EditControlsFor(m => m.Item.Price)
-        @Html.EditControlsFor(m => m.Item.Duration)
-    </body>
+<body>
+<input type="hidden" asp-for="Item.Id" />
+@Html.DisabledControlsFor(m => m.Item.Id)
+@Html.EditControlsFor(m => m.Item.Name)
+@Html.EditControlsFor(m => m.Item.Definition)
+@Html.EditControlsFor(m => m.Item.ValidFrom)
+@Html.EditControlsFor(m => m.Item.ValidTo)
+@Html.EditControlsFor(m => m.Item.Price)
+@Html.EditControlsFor(m => m.Item.Duration)
+</body>

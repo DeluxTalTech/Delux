@@ -19,6 +19,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
   </ItemGroup>
 
@@ -28,18 +29,6 @@
     <ProjectReference Include="..\Facade\Facade.csproj" />
     <ProjectReference Include="..\Infra\Infra.csproj" />
     <ProjectReference Include="..\Pages\Pages.csproj" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Folder Include="Areas\Salon\Pages\Beauticians\" />
-    <Folder Include="Areas\Salon\Pages\Hairdressers\" />
-    <Folder Include="Areas\Salon\Pages\Masseuses\" />
-    <Folder Include="Areas\Salon\Pages\NailTechnicians\" />
-    <Folder Include="Areas\Salon\Pages\FacialTreatments\" />
-    <Folder Include="Areas\Salon\Pages\MassageTreatments\" />
-    <Folder Include="Areas\Salon\Pages\NailTreatments\" />
-    <Folder Include="Areas\Salon\Pages\HairTreatments\" />
   </ItemGroup>
 
 </Project>
