@@ -30,6 +30,8 @@
     {
         <tr>
             @Html.TableRowFor(
+                page,
+                item.Id,
                 Model.FixedFilter,
                 Model.FixedValue,
                 Html.DisplayFor(modelItem => item.Id),
