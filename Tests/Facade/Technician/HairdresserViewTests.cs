@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Delux.Tests.Facade.Technician
 {
     [TestClass]
-    public class HairdresserViewTests : SealedClassTests<HairdresserView, DurationView>
+    public class HairdresserViewTests : SealedClassTests<HairdresserView, WorkedYearsView>
     {
     }
 }

@@ -15,8 +15,8 @@ namespace Delux.Tests
             "No classes found in assembly {0}";
         private static string NoClassesInNamespace =>
             "No classes found in namespace {0}";
-        private static string TestAssembly => "Abc.Tests";
-        private static string Assembly => "Abc";
+        private static string TestAssembly => "Delux.Tests";
+        private static string Assembly => "Delux";
         private static char GenericsChar => '`';
         private static char InternalClass => '+';
         private static string DisplayClass => "<>";

@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Xml.Serialization;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Delux.Tests.Pages.Extensions
 {

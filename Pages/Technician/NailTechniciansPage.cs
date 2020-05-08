@@ -5,14 +5,14 @@ using Delux.Pages.Common;
 
 namespace Delux.Pages.Technician
 {
-    public class NailTechniciansPage : CommonPage<INailTechniciansRepository, NailTechnician, NailTechnicianView, NailTechnicianData>
+    public abstract class NailTechniciansPage : CommonPage<INailTechniciansRepository, NailTechnician, NailTechnicianView, NailTechnicianData>
     {
         protected internal NailTechniciansPage(INailTechniciansRepository r) : base(r)
         {
             PageTitle = "Nail Technicians";
         }
 
-        public override string ItemId => Item.Id;
+        public override string ItemId => Item.Id ?? string.Empty;
 
         protected internal override string GetPageUrl() => "/Salon/NailTechnicians";
 

@@ -70,12 +70,12 @@ namespace Delux.Tests.Pages.Common {
 
         [TestMethod] public void GetSortStringTest() {
             const string page = "xxx/yyy";
-            Obj.SortOrder = "Code";
+            Obj.SortOrder = "Name";
             Obj.SearchString = "AAA";
             Obj.FixedFilter = "BBB";
             Obj.FixedValue = "CCC";
             var sortString = Obj.GetSortString(x=>x.Name, page);
-            var s = "xxx/yyy?sortOrder=Code_desc&currentFilter=AAA&fixedFilter=BBB&fixedValue=CCC";
+            var s = "xxx/yyy?sortOrder=Name_desc&currentFilter=AAA&fixedFilter=BBB&fixedValue=CCC";
             Assert.AreEqual(s, sortString);
         }
 

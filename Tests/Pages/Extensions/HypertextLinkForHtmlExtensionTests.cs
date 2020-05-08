@@ -10,7 +10,7 @@ namespace Delux.Tests.Pages.Extensions
         public virtual void TestInitialize() => Type = typeof(HypertextLinkForHtmlExtension);
 
         [TestMethod]
-        public void HypertextLinkForForTest()
+        public void HypertextLinkForTest()
         {
             Assert.Inconclusive();
         }

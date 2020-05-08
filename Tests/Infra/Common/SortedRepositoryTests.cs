@@ -69,13 +69,13 @@ namespace Delux.Tests.Infra.Common
                 Assert.AreNotEqual(d, set);
                 var str = set.Expression.ToString();
                 Assert.IsTrue(str
-                    .Contains($"Abc.Data.Quantity.BeauticianData]).OrderByDescending(x => Convert(x.{sortOrder}, Object))"));
+                    .Contains($"Delux.Data.Technician.BeauticianData]).OrderByDescending(x => Convert(x.{sortOrder}, Object))"));
                 Obj.SortOrder = sortOrder;
                 set = Obj.AddSorting(d);
                 Assert.IsNotNull(set);
                 Assert.AreNotEqual(d, set);
                 str = set.Expression.ToString();
-                Assert.IsTrue(str.Contains($"Abc.Data.Quantity.BeauticianData]).OrderBy(x => Convert(x.{sortOrder}, Object))"));
+                Assert.IsTrue(str.Contains($"Delux.Data.Technician.BeauticianData]).OrderBy(x => Convert(x.{sortOrder}, Object))"));
             }
 
             Assert.IsNull(Obj.AddSorting(null));
@@ -189,12 +189,12 @@ namespace Delux.Tests.Infra.Common
                 Assert.IsNotNull(set);
                 Assert.AreNotEqual(d, set);
                 Assert.IsTrue(set.Expression.ToString()
-                    .Contains($"Abc.Data.Quantity.BeauticianData]).OrderByDescending({expected})"));
+                    .Contains($"Delux.Data.Technician.BeauticianData]).OrderByDescending({expected})"));
                 Obj.SortOrder = GetRandom.String();
                 set = Obj.AddOrderBy(d, e);
                 Assert.IsNotNull(set);
                 Assert.AreNotEqual(d, set);
-                Assert.IsTrue(set.Expression.ToString().Contains($"Abc.Data.Quantity.BeauticianData]).OrderBy({expected})"));
+                Assert.IsTrue(set.Expression.ToString().Contains($"Delux.Data.Technician.BeauticianData]).OrderBy({expected})"));
             }
 
             Assert.IsNull(Obj.AddOrderBy(null, null));
@@ -203,8 +203,8 @@ namespace Delux.Tests.Infra.Common
             Test(data, x => x.Id, "x => x.Id");
             Test(data, x => x.Name, "x => x.Name");
             Test(data, x => x.Definition, "x => x.Definition");
-            Test(data, x => x.AvailableDays, "x => Convert(x.ValidFrom, Object)");
-            Test(data, x => x.WorkedYears, "x => Convert(x.ValidTo, Object)");
+            Test(data, x => x.AvailableDays, "x => x.AvailableDays");
+            Test(data, x => x.WorkedYears, "x => x.WorkedYears");
         }
 
         [TestMethod]

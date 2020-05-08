@@ -30,7 +30,6 @@
   <ItemGroup>
     <Folder Include="Domain\Common\" />
     <Folder Include="Facade\Common\" />
-    <Folder Include="Infra\Common\" />
     <Folder Include="Pages\Extensions\" />
     <Folder Include="Pages\Common\" />
   </ItemGroup>

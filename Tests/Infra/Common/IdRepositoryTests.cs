@@ -3,7 +3,7 @@
 namespace Delux.Tests.Infra.Common
 {
     [TestClass]
-    public class UniqueEntityRepositoryTests
+    public class IdRepositoryTests
     {
     }
 }

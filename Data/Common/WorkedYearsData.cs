@@ -2,6 +2,6 @@
 {
     public abstract class WorkedYearsData : AvailabilityData
     {
-        public double WorkedYears { get; set; }
+        public string WorkedYears { get; set; }
     }
 }

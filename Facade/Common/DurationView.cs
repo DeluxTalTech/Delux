@@ -4,6 +4,6 @@ namespace Delux.Facade.Common
 {
     public abstract class DurationView : PriceView
     {
-        [Required] public double Duration { get; set; }
+        [Required] public string Duration { get; set; }
     }
 }

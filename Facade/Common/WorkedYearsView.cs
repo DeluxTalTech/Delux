@@ -4,6 +4,6 @@ namespace Delux.Facade.Common
 {
     public abstract class WorkedYearsView : AvailabilityView
     {
-        [Required] public double WorkedYears { get; set; }
+        [Required] public string WorkedYears { get; set; }
     }
 }

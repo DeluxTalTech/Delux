@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Delux.Tests.Infra.Technician
 {
     [TestClass]
-    public class FacialTreatmentsRepositoryTests : RepositoryTests<NailTechniciansRepository, NailTechnician, NailTechnicianData>
+    public class NailTechniciansRepositoryTests : RepositoryTests<NailTechniciansRepository, NailTechnician, NailTechnicianData>
     {
         [TestInitialize]
         public override void TestInitialize()

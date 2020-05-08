@@ -2,6 +2,6 @@
 {
     public abstract class PriceData : PeriodData
     {
-        public int Price { get; set; }
+        public string Price { get; set; }
     }
 }

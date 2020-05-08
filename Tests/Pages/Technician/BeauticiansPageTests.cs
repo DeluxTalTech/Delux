@@ -47,10 +47,10 @@ namespace Delux.Tests.Pages.Technician
         }
 
         [TestMethod]
-        public void PageTitleTest() => Assert.AreEqual("Facial Treatments", Obj.PageTitle);
+        public void PageTitleTest() => Assert.AreEqual("Beauticians", Obj.PageTitle);
 
         [TestMethod]
-        public void PageUrlTest() => Assert.AreEqual("/Salon/FacialTreatments", Obj.PageUrl);
+        public void PageUrlTest() => Assert.AreEqual("/Salon/Beauticians", Obj.PageUrl);
 
         [TestMethod]
         public void ToObjectTest()

@@ -10,7 +10,7 @@ namespace Delux.Tests.Pages.Extensions
         public virtual void TestInitialize() => Type = typeof(EditControlsForDropDownHtmlExtension);
 
         [TestMethod]
-        public void EditControlsForDropDownForTest()
+        public void EditControlsForDropDownTest()
         {
             Assert.Inconclusive();
         }

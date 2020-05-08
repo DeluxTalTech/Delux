@@ -10,7 +10,7 @@ namespace Delux.Tests.Pages.Extensions
         public virtual void TestInitialize() => Type = typeof(SearchControlsForHtmlExtension);
 
         [TestMethod]
-        public void SearchControlsForForTest()
+        public void SearchControlsForTest()
         {
             Assert.Inconclusive();
         }

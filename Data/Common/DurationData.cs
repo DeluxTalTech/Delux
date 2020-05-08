@@ -2,6 +2,6 @@
 {
     public abstract class DurationData : PriceData
     {
-        public double Duration { get; set; }
+        public string Duration { get; set; }
     }
 }
