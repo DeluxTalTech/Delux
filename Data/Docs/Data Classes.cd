@@ -113,16 +113,16 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Appointment.AppointmentData">
-    <Position X="5.25" Y="4.25" Width="1.75" />
+    <Position X="5.25" Y="2.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAAAAgAAAAAAAAAgAAAAAAAAAAAEAAAQ=</HashCode>
       <FileName>Appointment\AppointmentData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Appointment.ClientData">
-    <Position X="5.25" Y="2.25" Width="1.75" />
+    <Position X="7.25" Y="2.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAgAAAQAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAQAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Appointment\ClientData.cs</FileName>
     </TypeIdentifier>
   </Class>
