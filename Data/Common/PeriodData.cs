@@ -2,7 +2,7 @@
 
 namespace Delux.Data.Common
 {
-    public abstract class PeriodData : IdData
+    public abstract class PeriodData : DefinitionData
     {
         public DateTime? ValidFrom { get; set; }
 

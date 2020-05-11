@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Delux.Infra.Common
 {
     public abstract class SortedRepository<TDomain, TData> : BaseRepository<TDomain, TData>, ISorting
-        where TData : NameData, new()
+        where TData : IdData, new()
         where TDomain : Entity<TData>, new()
     {
 

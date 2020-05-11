@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Delux.Infra.Common
 {
     public abstract class PaginatedRepository<TDomain, TData> : FilteredRepository<TDomain, TData>, IPaging
-        where TData : NameData, new()
+        where TData : IdData, new()
         where TDomain : Entity<TData>, new()
     {
 

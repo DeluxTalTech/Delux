@@ -2,7 +2,7 @@
 
 namespace Delux.Facade.Common
 {
-    public abstract class AvailabilityView : IdView
+    public abstract class AvailabilityView : DefinitionView
     {
         [Required] public string AvailableDays { get; set; }
     }

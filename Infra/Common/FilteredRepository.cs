@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Delux.Infra.Common
 {
     public abstract class FilteredRepository<TDomain, TData> : SortedRepository<TDomain, TData>, IFiltering
-        where TData : NameData, new()
+        where TData : IdData, new()
         where TDomain : Entity<TData>, new()
     {
 
