@@ -54,7 +54,7 @@ namespace Delux.Delux.Migrations
                     Name = table.Column<string>(nullable: true),
                     Definition = table.Column<string>(nullable: true),
                     AvailableDays = table.Column<string>(nullable: true),
-                    WorkedYears = table.Column<double>(nullable: false)
+                    WorkedYears = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -70,8 +70,8 @@ namespace Delux.Delux.Migrations
                     Definition = table.Column<string>(nullable: true),
                     ValidFrom = table.Column<DateTime>(nullable: true),
                     ValidTo = table.Column<DateTime>(nullable: true),
-                    Price = table.Column<int>(nullable: false),
-                    Duration = table.Column<double>(nullable: false)
+                    Price = table.Column<string>(nullable: true),
+                    Duration = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -86,7 +86,7 @@ namespace Delux.Delux.Migrations
                     Name = table.Column<string>(nullable: true),
                     Definition = table.Column<string>(nullable: true),
                     AvailableDays = table.Column<string>(nullable: true),
-                    WorkedYears = table.Column<double>(nullable: false)
+                    WorkedYears = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -102,8 +102,8 @@ namespace Delux.Delux.Migrations
                     Definition = table.Column<string>(nullable: true),
                     ValidFrom = table.Column<DateTime>(nullable: true),
                     ValidTo = table.Column<DateTime>(nullable: true),
-                    Price = table.Column<int>(nullable: false),
-                    Duration = table.Column<double>(nullable: false)
+                    Price = table.Column<string>(nullable: true),
+                    Duration = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -119,8 +119,8 @@ namespace Delux.Delux.Migrations
                     Definition = table.Column<string>(nullable: true),
                     ValidFrom = table.Column<DateTime>(nullable: true),
                     ValidTo = table.Column<DateTime>(nullable: true),
-                    Price = table.Column<int>(nullable: false),
-                    Duration = table.Column<double>(nullable: false)
+                    Price = table.Column<string>(nullable: true),
+                    Duration = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -135,7 +135,7 @@ namespace Delux.Delux.Migrations
                     Name = table.Column<string>(nullable: true),
                     Definition = table.Column<string>(nullable: true),
                     AvailableDays = table.Column<string>(nullable: true),
-                    WorkedYears = table.Column<double>(nullable: false)
+                    WorkedYears = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -150,7 +150,7 @@ namespace Delux.Delux.Migrations
                     Name = table.Column<string>(nullable: true),
                     Definition = table.Column<string>(nullable: true),
                     AvailableDays = table.Column<string>(nullable: true),
-                    WorkedYears = table.Column<double>(nullable: false)
+                    WorkedYears = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -166,8 +166,8 @@ namespace Delux.Delux.Migrations
                     Definition = table.Column<string>(nullable: true),
                     ValidFrom = table.Column<DateTime>(nullable: true),
                     ValidTo = table.Column<DateTime>(nullable: true),
-                    Price = table.Column<int>(nullable: false),
-                    Duration = table.Column<double>(nullable: false)
+                    Price = table.Column<string>(nullable: true),
+                    Duration = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

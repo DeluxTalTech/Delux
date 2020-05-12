@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Delux.Tests.Facade.Common
 {
     [TestClass]
-    public class IdViewTests : AbstractClassTests<IdView, DefinitionView>
+    public class IdViewTests : AbstractClassTests<IdView, object>
     {
         private class TestClass : IdView { }
 

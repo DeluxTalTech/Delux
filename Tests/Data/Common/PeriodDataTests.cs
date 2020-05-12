@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Delux.Tests.Data.Common
 {
     [TestClass]
-    public class PeriodDataTests : AbstractClassTests<PeriodData, IdData>
+    public class PeriodDataTests : AbstractClassTests<PeriodData, DefinitionData>
     {
         private class TestClass : PeriodData { }
 

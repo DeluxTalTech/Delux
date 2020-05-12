@@ -1,9 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Delux.Facade.Common
 {
     public abstract class AvailabilityView : DefinitionView
     {
-        [Required] public string AvailableDays { get; set; }
+        [Required] 
+        [DisplayName("Workdays")]
+        public string AvailableDays { get; set; }
     }
 }
