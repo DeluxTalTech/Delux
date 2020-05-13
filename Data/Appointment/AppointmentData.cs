@@ -10,8 +10,11 @@ namespace Delux.Data.Appointment
         public DateTime? AppointmentDate { get; set; }
         public DateTime? AppointmentTime { get; set; }
         public string TreatmentId { get; set; }
-        public DurationData Treatment { get; set; }
+        //public DurationData Treatment { get; set; } ??
+
+        //public FacialTreatmentData FacialTreatment {get; set;}
+
         public string TechnicianId { get; set; }
-        public WorkedYearsData Technician { get; set; }
+        //public WorkedYearsData Technician { get; set; }
     }
 }

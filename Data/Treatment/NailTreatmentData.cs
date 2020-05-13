@@ -2,7 +2,7 @@
 
 namespace Delux.Data.Treatment
 {
-    public sealed class NailTreatmentData : DurationData
+    public sealed class NailTreatmentData : TreatmentData
     {
     }
 }

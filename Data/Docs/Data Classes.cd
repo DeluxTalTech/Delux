@@ -1,129 +1,143 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Delux.Data.Common.DurationData">
-    <Position X="13.75" Y="4.5" Width="1.5" />
+    <Position X="13" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\DurationData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Common.PriceData">
-    <Position X="13.75" Y="2.5" Width="1.5" />
+    <Position X="13" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\PriceData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Common.PeriodData">
-    <Position X="13.75" Y="0.5" Width="1.5" />
+    <Position X="13" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAACAAAAAAAAA=</HashCode>
       <FileName>Common\PeriodData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Common.DefinitionData">
-    <Position X="9.5" Y="0.5" Width="1.5" />
+    <Position X="8.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\DefinitionData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Common.NameData">
-    <Position X="7.75" Y="0.5" Width="1.25" />
+    <Position X="6" Y="0.5" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\NameData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Common.IdData">
-    <Position X="5.75" Y="0.5" Width="1.25" />
+    <Position X="3.75" Y="0.5" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\IdData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Common.AvailabilityData">
-    <Position X="9.5" Y="2.5" Width="1.5" />
+    <Position X="8.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\AvailabilityData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Common.WorkedYearsData">
-    <Position X="9.5" Y="4.5" Width="1.5" />
+    <Position X="8.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAACAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
       <FileName>Common\WorkedYearsData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Technician.HairdresserData" Collapsed="true">
-    <Position X="9" Y="6.75" Width="1.5" />
+    <Position X="7.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Technician\HairdresserData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Delux.Data.Technician.NailTechnicianData" Collapsed="true">
-    <Position X="10.75" Y="6.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Technician\NailTechnicianData.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Delux.Data.Technician.BeauticianData" Collapsed="true">
-    <Position X="5.5" Y="6.75" Width="1.5" />
+    <Position X="9.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Technician\BeauticianData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Treatment.HairTreatmentData" Collapsed="true">
-    <Position X="13" Y="6.75" Width="1.5" />
+    <Position X="12" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Treatment\HairTreatmentData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Treatment.NailTreatmentData" Collapsed="true">
-    <Position X="14.75" Y="6.75" Width="1.5" />
+    <Position X="13.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Treatment\NailTreatmentData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Treatment.FacialTreatmentData" Collapsed="true">
-    <Position X="16.5" Y="6.75" Width="1.5" />
+    <Position X="15.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Treatment\FacialTreatmentData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Treatment.MassageTreatmentData" Collapsed="true">
-    <Position X="18.25" Y="6.75" Width="1.5" />
+    <Position X="17.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Treatment\MassageTreatmentData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Technician.MasseuseData" Collapsed="true">
-    <Position X="7.25" Y="6.75" Width="1.5" />
+    <Position X="4.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Technician\MasseuseData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Appointment.ClientData">
-    <Position X="5.5" Y="2" Width="1.75" />
+    <Position X="3.5" Y="2" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAgAAAQAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>Appointment\ClientData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Appointment.AppointmentData">
-    <Position X="5.5" Y="4" Width="1.75" />
+    <Position X="3.5" Y="4" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAAAAAABAAAAAAAgAAAAAAAAAAAECAAQ=</HashCode>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAEAAAQ=</HashCode>
       <FileName>Appointment\AppointmentData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Delux.Data.Technician.TechnicianData" Collapsed="true">
+    <Position X="8.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Technician\TechnicianData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Delux.Data.Treatment.TreatmentData" Collapsed="true">
+    <Position X="13" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Treatment\TreatmentData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Delux.Data.Technician.NailTechnicianData" Collapsed="true">
+    <Position X="6" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Technician\NailTechnicianData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -2,7 +2,7 @@
 
 namespace Delux.Data.Technician
 {
-    public sealed class BeauticianData : WorkedYearsData
+    public sealed class BeauticianData : TechnicianData
     {
     }
 }
