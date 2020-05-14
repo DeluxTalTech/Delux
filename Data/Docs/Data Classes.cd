@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Delux.Data.Common.DurationData">
-    <Position X="13" Y="4" Width="1.5" />
+    <Position X="13" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\DurationData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Common.PriceData">
-    <Position X="13" Y="2.25" Width="1.5" />
+    <Position X="13" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\PriceData.cs</FileName>
@@ -43,14 +43,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Common.AvailabilityData">
-    <Position X="8.25" Y="2.25" Width="1.5" />
+    <Position X="8.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\AvailabilityData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Delux.Data.Common.WorkedYearsData">
-    <Position X="8.25" Y="4" Width="1.5" />
+    <Position X="8.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
       <FileName>Common\WorkedYearsData.cs</FileName>
@@ -119,17 +119,17 @@
       <FileName>Appointment\AppointmentData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Delux.Data.Technician.TechnicianData" Collapsed="true">
-    <Position X="8.25" Y="5.75" Width="1.5" />
+  <Class Name="Delux.Data.Technician.TechnicianData">
+    <Position X="8.25" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAgA=</HashCode>
       <FileName>Technician\TechnicianData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Delux.Data.Treatment.TreatmentData" Collapsed="true">
-    <Position X="13" Y="5.75" Width="1.5" />
+  <Class Name="Delux.Data.Treatment.TreatmentData">
+    <Position X="13" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAQAAA=</HashCode>
       <FileName>Treatment\TreatmentData.cs</FileName>
     </TypeIdentifier>
   </Class>

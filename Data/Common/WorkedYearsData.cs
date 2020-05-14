@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Delux.Data.Appointment;
 
 namespace Delux.Data.Common
 {

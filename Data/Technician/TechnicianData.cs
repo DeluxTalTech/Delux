@@ -7,7 +7,9 @@ namespace Delux.Data.Technician
 {
     public abstract class TechnicianData : WorkedYearsData
     {
-        public string TechnicianTypeId { get; set; }
-        //public ICollection<AppointmentData> Appointments { get; set; }
+        public string BeauticianId { get; set; }
+        public string HairdresserId { get; set; }
+        public string MasseuseId { get; set; }
+        public string NailTechnicianId { get; set; }
     }
 }

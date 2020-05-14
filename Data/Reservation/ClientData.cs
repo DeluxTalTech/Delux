@@ -1,6 +1,6 @@
 ﻿using Delux.Data.Common;
 
-namespace Delux.Data.Appointment
+namespace Delux.Data.Reservation
 {
     public abstract class ClientData : IdData
     {

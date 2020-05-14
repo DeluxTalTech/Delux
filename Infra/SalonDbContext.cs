@@ -1,4 +1,5 @@
-﻿using Delux.Data.Technician;
+﻿using Delux.Data.Reservation;
+using Delux.Data.Technician;
 using Delux.Data.Treatment;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +15,7 @@ namespace Delux.Infra
         public DbSet<HairTreatmentData> HairTreatments { get; set; }
         public DbSet<MassageTreatmentData> MassageTreatments { get; set; }
         public DbSet<NailTreatmentData> NailTreatments { get; set; }
+        public DbSet<AppointmentData> Appointments { get; set; }
 
 
         public SalonDbContext(DbContextOptions<SalonDbContext> options)
@@ -38,6 +40,8 @@ namespace Delux.Infra
             builder.Entity<HairTreatmentData>().ToTable(nameof(HairTreatments));
             builder.Entity<MassageTreatmentData>().ToTable(nameof(MassageTreatments));
             builder.Entity<NailTreatmentData>().ToTable(nameof(NailTreatments));
+            //builder.Entity<AppointmentData>().ToTable(nameof(Appointments))
+                //.HasKey(x => new { x.TreatmentId, x.TechnicianId });
 
         }
     }

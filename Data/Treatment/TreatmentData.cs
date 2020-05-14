@@ -7,6 +7,9 @@ namespace Delux.Data.Treatment
 {
     public abstract class TreatmentData : DurationData
     {
-        public string TreatmentTypeId { get; set; }
+        public string FacialTreatmentId { get; set; }
+        public string HairTreatmentId { get; set; }
+        public string MassageTreatmentId { get; set; }
+        public string NailTreatmentId { get; set; }
     }
 }
