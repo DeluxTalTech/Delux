@@ -34,14 +34,10 @@ namespace Delux.Delux
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddScoped<IBeauticiansRepository, BeauticiansRepository>();
-            services.AddScoped<IHairdressersRepository, HairdressersRepository>();
-            services.AddScoped<IMasseusesRepository, MasseusesRepository>();
-            services.AddScoped<INailTechniciansRepository, NailTechniciansRepository>();
-            services.AddScoped<IFacialTreatmentsRepository, FacialTreatmentsRepository>();
-            services.AddScoped<IHairTreatmentsRepository, HairTreatmentsRepository>();
-            services.AddScoped<IMassageTreatmentsRepository, MassageTreatmentsRepository>();
-            services.AddScoped<INailTreatmentsRepository, NailTreatmentsRepository>();
+            services.AddScoped<ITreatmentTypesRepository, TreatmentTypesRepository>();
+            services.AddScoped<ITechnicianTypesRepository, TechnicianTypesRepository>();
+            services.AddScoped<ITreatmentsRepository, TreatmentsRepository>();
+            services.AddScoped<ITechniciansRepository, TechniciansRepository>();
             services.AddRazorPages();
         }
 

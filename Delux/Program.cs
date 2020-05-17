@@ -13,7 +13,8 @@ namespace Delux.Delux
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
-                var dbQuantity = services.GetRequiredService<SalonDbContext>();
+                var dbSalon = services.GetRequiredService<SalonDbContext>();
+                SalonDbInitializer.Initialize(dbSalon);
             }
 
             host.Run();

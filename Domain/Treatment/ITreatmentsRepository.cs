@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Delux.Domain.Common;
 
 namespace Delux.Domain.Treatment
 {
-    class ITreatmentsRepository
+    public interface ITreatmentsRepository : IRepository<Treatment>
     {
     }
 }

@@ -7,15 +7,11 @@ namespace Delux.Infra
 {
     public class SalonDbContext : DbContext
     {
-        public DbSet<BeauticianData> Beauticians { get; set; }
-        public DbSet<HairdresserData> Hairdressers { get; set; }
-        public DbSet<MasseuseData> Masseuses { get; set; }
-        public DbSet<NailTechnicianData> NailTechnicians { get; set; }
-        public DbSet<FacialTreatmentData> FacialTreatments { get; set; }
-        public DbSet<HairTreatmentData> HairTreatments { get; set; }
-        public DbSet<MassageTreatmentData> MassageTreatments { get; set; }
-        public DbSet<NailTreatmentData> NailTreatments { get; set; }
-        public DbSet<AppointmentData> Appointments { get; set; }
+        public DbSet<TreatmentTypeData> TreatmentTypes { get; set; }
+        public DbSet<TechnicianTypeData> TechnicianTypes { get; set; }
+        public DbSet<TreatmentData> Treatments { get; set; }
+        public DbSet<TechnicianData> Technicians { get; set; }
+        //public DbSet<AppointmentData> Appointments { get; set; }
 
 
         public SalonDbContext(DbContextOptions<SalonDbContext> options)
@@ -32,16 +28,14 @@ namespace Delux.Infra
         public static void InitializeTables(ModelBuilder builder)
         {
             if (builder is null) return;
-            builder.Entity<BeauticianData>().ToTable(nameof(Beauticians));
-            builder.Entity<HairdresserData>().ToTable(nameof(Hairdressers));
-            builder.Entity<MasseuseData>().ToTable(nameof(Masseuses));
-            builder.Entity<NailTechnicianData>().ToTable(nameof(NailTechnicians));
-            builder.Entity<FacialTreatmentData>().ToTable(nameof(FacialTreatments));
-            builder.Entity<HairTreatmentData>().ToTable(nameof(HairTreatments));
-            builder.Entity<MassageTreatmentData>().ToTable(nameof(MassageTreatments));
-            builder.Entity<NailTreatmentData>().ToTable(nameof(NailTreatments));
+            builder.Entity<TreatmentTypeData>().ToTable(nameof(TreatmentTypes));
+            builder.Entity<TechnicianTypeData>().ToTable(nameof(TechnicianTypes));
+            builder.Entity<TreatmentData>().ToTable(nameof(Treatments))
+                .HasKey(x => new {x.Id, x.TreatmentTypeId});
+            builder.Entity<TechnicianData>().ToTable(nameof(Technicians))
+                .HasKey(x => new { x.Id, x.TechnicianTypeId});
             //builder.Entity<AppointmentData>().ToTable(nameof(Appointments))
-                //.HasKey(x => new { x.ClientId, x.TreatmentId, x.TechnicianId });
+            //.HasKey(x => new { x.ClientId, x.TreatmentId, x.TechnicianId });
 
         }
     }

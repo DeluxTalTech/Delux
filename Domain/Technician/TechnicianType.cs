@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Delux.Data.Technician;
+using Delux.Domain.Common;
 
 namespace Delux.Domain.Technician
 {
-    class TechnicianType
+    public sealed class TechnicianType : Entity<TechnicianTypeData>
     {
+        public TechnicianType() : this(null) { }
+
+        public TechnicianType(TechnicianTypeData data) : base(data) { }
     }
 }

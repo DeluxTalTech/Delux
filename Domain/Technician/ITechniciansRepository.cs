@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Delux.Domain.Common;
 
 namespace Delux.Domain.Technician
 {
-    class ITechniciansRepository
+    public interface ITechniciansRepository : IRepository<Technician>
     {
     }
 }

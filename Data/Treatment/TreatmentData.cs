@@ -5,7 +5,7 @@ using Delux.Data.Common;
 
 namespace Delux.Data.Treatment
 {
-    public abstract class TreatmentData : DurationData
+    public sealed class TreatmentData : DurationData
     {
         public string TreatmentTypeId { get; set; }
     }
