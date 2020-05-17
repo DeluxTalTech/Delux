@@ -1,7 +1,10 @@
 ﻿using Delux.Aids;
 using Delux.Data.Technician;
+using Delux.Data.Treatment;
 using Delux.Domain.Technician;
+using Delux.Domain.Treatment;
 using Delux.Facade.Technician;
+using Delux.Facade.Treatment;
 using Delux.Pages.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -9,8 +12,8 @@ namespace Delux.Tests.Pages.Common {
 
     [TestClass]
     public class CommonPageTests
-        : AbstractPageTests<CommonPage<IBeauticiansRepository, Beautician, BeauticianView, BeauticianData>
-            , PaginatedPage<IBeauticiansRepository, Beautician, BeauticianView, BeauticianData>> {
+        : AbstractPageTests<CommonPage<ITreatmentsRepository, global::Delux.Domain.Treatment.Treatment, TreatmentView, TreatmentData>
+            , PaginatedPage<ITreatmentsRepository, global::Delux.Domain.Treatment.Treatment, TreatmentView, TreatmentData>> {
        
         [TestInitialize]
         public override void TestInitialize()
@@ -20,7 +23,7 @@ namespace Delux.Tests.Pages.Common {
         }
 
         [TestMethod] public void ItemIdTest() {
-            Obj.Item = GetRandom.Object<BeauticianView>();
+            Obj.Item = GetRandom.Object<TreatmentView>();
             Assert.AreEqual(Obj.Item.Id, Obj.ItemId);
         }
 

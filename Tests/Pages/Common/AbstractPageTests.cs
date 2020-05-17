@@ -1,32 +1,35 @@
 ﻿using Delux.Data.Technician;
+using Delux.Data.Treatment;
 using Delux.Domain.Technician;
+using Delux.Domain.Treatment;
 using Delux.Facade.Technician;
+using Delux.Facade.Treatment;
 using Delux.Pages.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Delux.Tests.Pages.Common {
 
     public abstract class AbstractPageTests<TClass, TBaseClass> : AbstractClassTests<TClass, TBaseClass>
-        where TClass : BasePage<IBeauticiansRepository, Beautician, BeauticianView, BeauticianData> {
+        where TClass : BasePage<ITreatmentsRepository, global::Delux.Domain.Treatment.Treatment, TreatmentView, TreatmentData> {
 
         internal TestRepository Db; 
-        internal class TestClass : CommonPage<IBeauticiansRepository, Beautician, BeauticianView, BeauticianData> {
+        internal class TestClass : CommonPage<ITreatmentsRepository, global::Delux.Domain.Treatment.Treatment, TreatmentView, TreatmentData> {
 
-            protected internal TestClass(IBeauticiansRepository r) : base(r) {
-                PageTitle = "Beauticians";
+            protected internal TestClass(ITreatmentsRepository r) : base(r) {
+                PageTitle = "Treatments";
             }
 
             public override string ItemId => Item?.Id ?? string.Empty;
 
-            protected internal override string GetPageUrl() => "/Salon/Beauticians";
+            protected internal override string GetPageUrl() => "/Salon/Treatments";
 
-            protected internal override Beautician ToObject(BeauticianView view) => BeauticianViewFactory.Create(view);
+            protected internal override global::Delux.Domain.Treatment.Treatment ToObject(TreatmentView view) => TreatmentViewFactory.Create(view);
 
-            protected internal override BeauticianView ToView(Beautician obj) => BeauticianViewFactory.Create(obj);
+            protected internal override TreatmentView ToView(global::Delux.Domain.Treatment.Treatment obj) => TreatmentViewFactory.Create(obj);
 
         }
 
-        internal class TestRepository : BaseTestRepositoryForId<Beautician, BeauticianData>, IBeauticiansRepository { }
+        internal class TestRepository : BaseTestRepositoryForId<global::Delux.Domain.Treatment.Treatment, TreatmentData>, ITreatmentsRepository { }
 
         [TestInitialize]
         public override void TestInitialize()

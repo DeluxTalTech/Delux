@@ -1,15 +1,18 @@
 ﻿using Delux.Aids;
 using Delux.Data.Technician;
+using Delux.Data.Treatment;
 using Delux.Domain.Technician;
+using Delux.Domain.Treatment;
 using Delux.Facade.Technician;
+using Delux.Facade.Treatment;
 using Delux.Pages.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Delux.Tests.Pages.Common {
 
     [TestClass] public class PaginatedPageTests : AbstractPageTests<
-        PaginatedPage<IBeauticiansRepository, Beautician, BeauticianView, BeauticianData>,
-        CrudPage<IBeauticiansRepository, Beautician, BeauticianView, BeauticianData>> {
+        PaginatedPage<ITreatmentsRepository, global::Delux.Domain.Treatment.Treatment, TreatmentView, TreatmentData>,
+        CrudPage<ITreatmentsRepository, global::Delux.Domain.Treatment.Treatment, TreatmentView, TreatmentData>> {
 
         [TestInitialize] public override void TestInitialize() {
             base.TestInitialize();
@@ -64,8 +67,8 @@ namespace Delux.Tests.Pages.Common {
             Assert.AreEqual(0, l.Count);
 
             for (var i = 0; i < GetRandom.UInt8(); i++) {
-                var d = GetRandom.Object<BeauticianData>();
-                Db.Add(new Beautician(d)).GetAwaiter();
+                var d = GetRandom.Object<TreatmentData>();
+                Db.Add(new global::Delux.Domain.Treatment.Treatment(d)).GetAwaiter();
                 l = Obj.GetList().GetAwaiter().GetResult();
                 Assert.AreEqual(i + 1, l.Count);
             }

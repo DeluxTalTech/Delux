@@ -2,7 +2,9 @@
 using System.Threading.Tasks;
 using Delux.Aids;
 using Delux.Data.Technician;
+using Delux.Data.Treatment;
 using Delux.Domain.Technician;
+using Delux.Domain.Treatment;
 using Delux.Infra;
 using Delux.Infra.Common;
 using Microsoft.EntityFrameworkCore;
@@ -12,20 +14,20 @@ namespace Delux.Tests.Infra.Common
 {
     [TestClass]
     public class PaginatedRepositoryTests :
-        AbstractClassTests<PaginatedRepository<Beautician, BeauticianData>, FilteredRepository<Beautician, BeauticianData>>
+        AbstractClassTests<PaginatedRepository<TreatmentType, TreatmentTypeData>, FilteredRepository<TreatmentType, TreatmentTypeData>>
     {
 
-        private class TestClass : PaginatedRepository<Beautician, BeauticianData>
+        private class TestClass : PaginatedRepository<TreatmentType, TreatmentTypeData>
         {
 
-            public TestClass(DbContext c, DbSet<BeauticianData> s) : base(c, s) { }
+            public TestClass(DbContext c, DbSet<TreatmentTypeData> s) : base(c, s) { }
 
-            protected internal override Beautician ToDomainObject(BeauticianData d) => new Beautician(d);
+            protected internal override TreatmentType ToDomainObject(TreatmentTypeData d) => new TreatmentType(d);
 
-            protected override async Task<BeauticianData> GetData(string id)
+            protected override async Task<TreatmentTypeData> GetData(string id)
              => await DbSet.FirstOrDefaultAsync(m => m.Id == id);
             
-            protected override string GetId(Beautician entity) => entity?.Data?.Id;
+            protected override string GetId(TreatmentType entity) => entity?.Data?.Id;
 
         }
 
@@ -40,9 +42,9 @@ namespace Delux.Tests.Infra.Common
                 .UseInMemoryDatabase("TestDb")
                 .Options;
             var c = new SalonDbContext(options);
-            Obj = new TestClass(c, c.Beauticians);
+            Obj = new TestClass(c, c.TreatmentTypes);
             _count = GetRandom.UInt8(20, 40);
-            foreach (var p in c.Beauticians)
+            foreach (var p in c.TreatmentTypes)
             {
                 c.Entry(p).State = EntityState.Deleted;
             }
@@ -127,7 +129,7 @@ namespace Delux.Tests.Infra.Common
         private void AddItems()
         {
             for (var i = 0; i < _count; i++)
-                Obj.Add(new Beautician(GetRandom.Object<BeauticianData>())).GetAwaiter();
+                Obj.Add(new TreatmentType(GetRandom.Object<TreatmentTypeData>())).GetAwaiter();
         }
 
         [TestMethod]

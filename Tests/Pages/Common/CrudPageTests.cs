@@ -1,15 +1,18 @@
 ﻿using Delux.Aids;
 using Delux.Data.Technician;
+using Delux.Data.Treatment;
 using Delux.Domain.Technician;
+using Delux.Domain.Treatment;
 using Delux.Facade.Technician;
+using Delux.Facade.Treatment;
 using Delux.Pages.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Delux.Tests.Pages.Common {
 
     [TestClass]
-    public class CrudPageTests : AbstractPageTests<CrudPage<IBeauticiansRepository, Beautician, BeauticianView, BeauticianData>,
-        BasePage<IBeauticiansRepository, Beautician, BeauticianView, BeauticianData>> {
+    public class CrudPageTests : AbstractPageTests<CrudPage<ITreatmentsRepository, global::Delux.Domain.Treatment.Treatment, TreatmentView, TreatmentData>,
+        BasePage<ITreatmentsRepository, global::Delux.Domain.Treatment.Treatment, TreatmentView, TreatmentData>> {
 
         private string _fixedFilter;
         private string _fixedValue;
@@ -29,7 +32,7 @@ namespace Delux.Tests.Pages.Common {
 
         [TestMethod] public void AddObjectTest() {
             var idx = Db.List.Count;
-            Obj.Item = GetRandom.Object<BeauticianView>();
+            Obj.Item = GetRandom.Object<TreatmentView>();
             Obj.AddObject(_fixedFilter, _fixedValue).GetAwaiter();
             Assert.AreEqual(_fixedFilter, Obj.FixedFilter);
             Assert.AreEqual(_fixedValue, Obj.FixedValue);
@@ -40,7 +43,7 @@ namespace Delux.Tests.Pages.Common {
             GetObjectTest();
             var idx = GetRandom.Int32(0, Db.List.Count);
             var itemId = Db.List[idx].Data.Id;
-            Obj.Item = GetRandom.Object<BeauticianView>();
+            Obj.Item = GetRandom.Object<TreatmentView>();
             Obj.Item.Id = itemId;
             Obj.UpdateObject(_fixedFilter, _fixedValue).GetAwaiter();
             TestArePropertyValuesEqual(Db.List[^1].Data, Obj.Item);
@@ -65,13 +68,13 @@ namespace Delux.Tests.Pages.Common {
         }
 
         [TestMethod] public void ToViewTest() {
-            var d = GetRandom.Object<BeauticianData>();
-            var v = Obj.ToView(new Beautician(d));
+            var d = GetRandom.Object<TreatmentData>();
+            var v = Obj.ToView(new global::Delux.Domain.Treatment.Treatment(d));
             TestArePropertyValuesEqual(d, v);
         }
 
         [TestMethod] public void ToObjectTest() {
-            var v = GetRandom.Object<BeauticianView>();
+            var v = GetRandom.Object<TreatmentView>();
             var o = Obj.ToObject(v);
             TestArePropertyValuesEqual(v, o.Data);
         }

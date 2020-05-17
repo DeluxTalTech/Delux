@@ -5,7 +5,9 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Delux.Aids;
 using Delux.Data.Technician;
+using Delux.Data.Treatment;
 using Delux.Domain.Technician;
+using Delux.Domain.Treatment;
 using Delux.Infra;
 using Delux.Infra.Common;
 using Microsoft.EntityFrameworkCore;
@@ -15,24 +17,24 @@ namespace Delux.Tests.Infra.Common
 {
 
     [TestClass]
-    public class SortedRepositoryTests : AbstractClassTests<SortedRepository<Beautician, BeauticianData>,
-        BaseRepository<Beautician, BeauticianData>>
+    public class SortedRepositoryTests : AbstractClassTests<SortedRepository<TreatmentType, TreatmentTypeData>,
+        BaseRepository<TreatmentType, TreatmentTypeData>>
     {
 
-        private class TestClass : SortedRepository<Beautician, BeauticianData>
+        private class TestClass : SortedRepository<TreatmentType, TreatmentTypeData>
         {
 
-            public TestClass(DbContext c, DbSet<BeauticianData> s) : base(c, s) { }
+            public TestClass(DbContext c, DbSet<TreatmentTypeData> s) : base(c, s) { }
 
-            protected internal override Beautician ToDomainObject(BeauticianData d) => new Beautician(d);
+            protected internal override TreatmentType ToDomainObject(TreatmentTypeData d) => new TreatmentType(d);
 
-            protected override async Task<BeauticianData> GetData(string id)
+            protected override async Task<TreatmentTypeData> GetData(string id)
             {
                 await Task.CompletedTask;
-                return new BeauticianData();
+                return new TreatmentTypeData();
             }
 
-            protected override string GetId(Beautician entity) => entity?.Data?.Id;
+            protected override string GetId(TreatmentType entity) => entity?.Data?.Id;
         }
 
         [TestInitialize]
@@ -41,7 +43,7 @@ namespace Delux.Tests.Infra.Common
             base.TestInitialize();
             var options = new DbContextOptionsBuilder<SalonDbContext>().UseInMemoryDatabase("TestDb").Options;
             var c = new SalonDbContext(options);
-            Obj = new TestClass(c, c.Beauticians);
+            Obj = new TestClass(c, c.TreatmentTypes);
         }
 
         [TestMethod]
@@ -61,7 +63,7 @@ namespace Delux.Tests.Infra.Common
         [TestMethod]
         public void SetSortingTest()
         {
-            void Test(IQueryable<BeauticianData> d, string sortOrder)
+            void Test(IQueryable<TreatmentTypeData> d, string sortOrder)
             {
                 Obj.SortOrder = sortOrder + Obj.DescendingString;
                 var set = Obj.AddSorting(d);
@@ -69,37 +71,31 @@ namespace Delux.Tests.Infra.Common
                 Assert.AreNotEqual(d, set);
                 var str = set.Expression.ToString();
                 Assert.IsTrue(str
-                    .Contains($"Delux.Data.Technician.BeauticianData]).OrderByDescending(x => Convert(x.{sortOrder}, Object))"));
+                    .Contains($"Delux.Data.Technician.TreatmentTypeData]).OrderByDescending(x => Convert(x.{sortOrder}, Object))"));
                 Obj.SortOrder = sortOrder;
                 set = Obj.AddSorting(d);
                 Assert.IsNotNull(set);
                 Assert.AreNotEqual(d, set);
                 str = set.Expression.ToString();
-                Assert.IsTrue(str.Contains($"Delux.Data.Technician.BeauticianData]).OrderBy(x => Convert(x.{sortOrder}, Object))"));
+                Assert.IsTrue(str.Contains($"Delux.Data.Technician.TreatmentTypeData]).OrderBy(x => Convert(x.{sortOrder}, Object))"));
             }
 
             Assert.IsNull(Obj.AddSorting(null));
-            IQueryable<BeauticianData> data = Obj.DbSet;
+            IQueryable<TreatmentTypeData> data = Obj.DbSet;
             Obj.SortOrder = null;
             Assert.AreEqual(data, Obj.AddSorting(data));
-            Test(data, GetMember.Name<BeauticianData>(x => x.Id));
-            Test(data, GetMember.Name<BeauticianData>(x => x.Name));
-            Test(data, GetMember.Name<BeauticianData>(x => x.AvailableDays));
-            Test(data, GetMember.Name<BeauticianData>(x => x.WorkedYears));
+            Test(data, GetMember.Name<TreatmentTypeData>(x => x.Id));
+            Test(data, GetMember.Name<TreatmentTypeData>(x => x.Name));
         }
 
         [TestMethod]
         public void CreateExpressionTest()
         {
             string s;
-            TestCreateExpression(GetMember.Name<BeauticianData>(x => x.Id));
-            TestCreateExpression(GetMember.Name<BeauticianData>(x => x.Name));
-            TestCreateExpression(GetMember.Name<BeauticianData>(x => x.AvailableDays));
-            TestCreateExpression(GetMember.Name<BeauticianData>(x => x.WorkedYears));
-            TestCreateExpression(s = GetMember.Name<BeauticianData>(x => x.Id), s + Obj.DescendingString);
-            TestCreateExpression(s = GetMember.Name<BeauticianData>(x => x.Name), s + Obj.DescendingString);
-            TestCreateExpression(s = GetMember.Name<BeauticianData>(x => x.WorkedYears), s + Obj.DescendingString);
-            TestCreateExpression(s = GetMember.Name<BeauticianData>(x => x.WorkedYears), s + Obj.DescendingString);
+            TestCreateExpression(GetMember.Name<TreatmentTypeData>(x => x.Id));
+            TestCreateExpression(GetMember.Name<TreatmentTypeData>(x => x.Name));
+            TestCreateExpression(s = GetMember.Name<TreatmentTypeData>(x => x.Id), s + Obj.DescendingString);
+            TestCreateExpression(s = GetMember.Name<TreatmentTypeData>(x => x.Name), s + Obj.DescendingString);
             TestNullExpression(GetRandom.String());
             TestNullExpression(string.Empty);
             TestNullExpression(null);
@@ -118,18 +114,18 @@ namespace Delux.Tests.Infra.Common
             Obj.SortOrder = name;
             var lambda = Obj.CreateExpression();
             Assert.IsNotNull(lambda);
-            Assert.IsInstanceOfType(lambda, typeof(Expression<Func<BeauticianData, Object>>));
+            Assert.IsInstanceOfType(lambda, typeof(Expression<Func<TreatmentTypeData, Object>>));
             Assert.IsTrue(lambda.ToString().Contains(expected));
         }
 
         [TestMethod]
         public void LambdaExpressionTest()
         {
-            var name = GetMember.Name<BeauticianData>(x => x.Name);
-            var property = typeof(BeauticianData).GetProperty(name);
+            var name = GetMember.Name<TreatmentTypeData>(x => x.Name);
+            var property = typeof(TreatmentTypeData).GetProperty(name);
             var lambda = Obj.LambdaExpression(property);
             Assert.IsNotNull(lambda);
-            Assert.IsInstanceOfType(lambda, typeof(Expression<Func<BeauticianData, Object>>));
+            Assert.IsInstanceOfType(lambda, typeof(Expression<Func<TreatmentTypeData, Object>>));
             Assert.IsTrue(lambda.ToString().Contains(name));
         }
 
@@ -147,14 +143,10 @@ namespace Delux.Tests.Infra.Common
             Test(null, GetRandom.String());
             Test(null, null);
             Test(null, string.Empty);
-            Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.Name)), s);
-            Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.AvailableDays)), s);
-            Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.WorkedYears)), s);
-            Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.Id)), s);
-            Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.Name)), s + Obj.DescendingString);
-            Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.WorkedYears)), s + Obj.DescendingString);
-            Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.AvailableDays)), s + Obj.DescendingString);
-            Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.Id)), s + Obj.DescendingString);
+            Test(typeof(TreatmentTypeData).GetProperty(s = GetMember.Name<TreatmentTypeData>(x => x.Name)), s);
+            Test(typeof(TreatmentTypeData).GetProperty(s = GetMember.Name<TreatmentTypeData>(x => x.Id)), s);
+            Test(typeof(TreatmentTypeData).GetProperty(s = GetMember.Name<TreatmentTypeData>(x => x.Name)), s + Obj.DescendingString);
+            Test(typeof(TreatmentTypeData).GetProperty(s = GetMember.Name<TreatmentTypeData>(x => x.Id)), s + Obj.DescendingString);
         }
 
         [TestMethod]
@@ -177,28 +169,26 @@ namespace Delux.Tests.Infra.Common
         [TestMethod]
         public void SetOrderByTest()
         {
-            void Test(IQueryable<BeauticianData> d, Expression<Func<BeauticianData, Object>> e, string expected)
+            void Test(IQueryable<TreatmentTypeData> d, Expression<Func<TreatmentTypeData, Object>> e, string expected)
             {
                 Obj.SortOrder = GetRandom.String() + Obj.DescendingString;
                 var set = Obj.AddOrderBy(d, e);
                 Assert.IsNotNull(set);
                 Assert.AreNotEqual(d, set);
                 Assert.IsTrue(set.Expression.ToString()
-                    .Contains($"Delux.Data.Technician.BeauticianData]).OrderByDescending({expected})"));
+                    .Contains($"Delux.Data.Technician.TreatmentTypeData]).OrderByDescending({expected})"));
                 Obj.SortOrder = GetRandom.String();
                 set = Obj.AddOrderBy(d, e);
                 Assert.IsNotNull(set);
                 Assert.AreNotEqual(d, set);
-                Assert.IsTrue(set.Expression.ToString().Contains($"Delux.Data.Technician.BeauticianData]).OrderBy({expected})"));
+                Assert.IsTrue(set.Expression.ToString().Contains($"Delux.Data.Technician.TreatmentTypeData]).OrderBy({expected})"));
             }
 
             Assert.IsNull(Obj.AddOrderBy(null, null));
-            IQueryable<BeauticianData> data = Obj.DbSet;
+            IQueryable<TreatmentTypeData> data = Obj.DbSet;
             Assert.AreEqual(data, Obj.AddOrderBy(data, null));
             Test(data, x => x.Id, "x => x.Id");
             Test(data, x => x.Name, "x => x.Name");
-            Test(data, x => x.AvailableDays, "x => x.AvailableDays");
-            Test(data, x => x.WorkedYears, "x => x.WorkedYears");
         }
 
         [TestMethod]

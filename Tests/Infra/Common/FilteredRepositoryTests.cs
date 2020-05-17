@@ -1,7 +1,9 @@
 ﻿using System.Threading.Tasks;
 using Delux.Aids;
 using Delux.Data.Technician;
+using Delux.Data.Treatment;
 using Delux.Domain.Technician;
+using Delux.Domain.Treatment;
 using Delux.Infra;
 using Delux.Infra.Common;
 using Microsoft.EntityFrameworkCore;
@@ -10,20 +12,20 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Delux.Tests.Infra.Common {
 
     [TestClass]
-    public class FilteredRepositoryTests : AbstractClassTests<FilteredRepository<Beautician, BeauticianData>,
-        SortedRepository<Beautician, BeauticianData>> {
+    public class FilteredRepositoryTests : AbstractClassTests<FilteredRepository<TreatmentType, TreatmentTypeData>,
+        SortedRepository<TreatmentType, TreatmentTypeData>> {
 
-        private class TestClass : FilteredRepository<Beautician, BeauticianData> {
+        private class TestClass : FilteredRepository<TreatmentType, TreatmentTypeData> {
 
-            public TestClass(DbContext c, DbSet<BeauticianData> s) : base(c, s) { }
+            public TestClass(DbContext c, DbSet<TreatmentTypeData> s) : base(c, s) { }
 
-            protected internal override Beautician ToDomainObject(BeauticianData d) => new Beautician(d);
+            protected internal override TreatmentType ToDomainObject(TreatmentTypeData d) => new TreatmentType(d);
 
-            protected override async Task<BeauticianData> GetData(string id) {
+            protected override async Task<TreatmentTypeData> GetData(string id) {
                 return await DbSet.FirstOrDefaultAsync(m => m.Id == id);
             }
 
-            protected override string GetId(Beautician entity) => entity?.Data?.Id;
+            protected override string GetId(TreatmentType entity) => entity?.Data?.Id;
 
         }
 
@@ -34,7 +36,7 @@ namespace Delux.Tests.Infra.Common {
                 .UseInMemoryDatabase("TestDb")
                 .Options;
             var c = new SalonDbContext(options);
-            Obj = new TestClass(c, c.Beauticians);
+            Obj = new TestClass(c, c.TreatmentTypes);
         }
 
         [TestMethod] public void SearchStringTest()
@@ -53,7 +55,7 @@ namespace Delux.Tests.Infra.Common {
 
         [TestMethod] public void AddFixedFilteringTest() {
             var sql = Obj.CreateSqlQuery();
-            var fixedFilter = GetMember.Name<BeauticianData>(x=>x.Name);
+            var fixedFilter = GetMember.Name<TreatmentTypeData>(x=>x.Name);
             Obj.FixedFilter = fixedFilter;
             var fixedValue = GetRandom.String();
             Obj.FixedValue = fixedValue;
@@ -62,7 +64,7 @@ namespace Delux.Tests.Infra.Common {
         }
 
         [TestMethod] public void CreateFixedWhereExpressionTest() {
-            var properties = typeof(BeauticianData).GetProperties();
+            var properties = typeof(TreatmentTypeData).GetProperties();
             var idx = GetRandom.Int32(0, properties.Length);
             var p = properties[idx]; 
             Obj.FixedFilter = p.Name;
@@ -101,7 +103,7 @@ namespace Delux.Tests.Infra.Common {
             Assert.IsNotNull(e);
             var s = e.ToString();
 
-            foreach (var p in typeof(BeauticianData).GetProperties()) {
+            foreach (var p in typeof(TreatmentTypeData).GetProperties()) {
                 var expected = p.Name;
                 if (p.PropertyType != typeof(string))
                    expected += ".ToString()";

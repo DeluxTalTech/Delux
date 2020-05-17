@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Delux.Facade.Technician;
+using Delux.Facade.Treatment;
 using Delux.Pages.Extensions;
 using Microsoft.AspNetCore.Html;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -15,7 +16,7 @@ namespace Delux.Tests.Pages.Extensions
         [TestMethod]
         public void DisabledControlsForTest()
         {
-            var obj = new HtmlHelperMock<BeauticianView>().DisabledControlsFor(x => x.Id);
+            var obj = new HtmlHelperMock<TreatmentView>().DisabledControlsFor(x => x.Id);
             Assert.IsInstanceOfType(obj, typeof(HtmlContentBuilder));
         }
 
@@ -23,7 +24,7 @@ namespace Delux.Tests.Pages.Extensions
         public void HtmlStringsTest()
         {
             var expected = new List<string> { "<div", "<fieldset disabled>", "LabelFor", "EditorFor", "ValidationMessageFor", "</fieldset>", "</div" };
-            var actual = DisabledControlsForHtmlExtension.HtmlStrings(new HtmlHelperMock<BeauticianView>(), x => x.Name);
+            var actual = DisabledControlsForHtmlExtension.HtmlStrings(new HtmlHelperMock<TreatmentView>(), x => x.Name);
             TestHtml.Strings(actual, expected);
         }
     }

@@ -1,16 +1,18 @@
 ﻿using Delux.Aids;
 using Delux.Data.Technician;
+using Delux.Data.Treatment;
 using Delux.Domain.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Delux.Tests.Domain.Common
 {
     [TestClass]
-    public class EntityTests : AbstractClassTests<Entity<BeauticianData>, object>
+    public class EntityTests : AbstractClassTests<Entity<TreatmentData>, object>
     {
-        private class TestClass : Entity<BeauticianData>
+        // ei tea kas siia peab panema treatmentdata v mõne muu klassi
+        private class TestClass : Entity<TreatmentData>
         {
-            public TestClass(BeauticianData d = null) : base(d) { }
+            public TestClass(TreatmentData d = null) : base(d) { }
         }
 
         [TestInitialize]
@@ -23,7 +25,7 @@ namespace Delux.Tests.Domain.Common
         [TestMethod]
         public void DataTest()
         {
-            var d = GetRandom.Object<BeauticianData>();
+            var d = GetRandom.Object<TreatmentData>();
             Assert.AreNotSame(d, Obj.Data);
             Obj = new TestClass(d);
             Assert.AreSame(d, Obj.Data);
@@ -32,7 +34,7 @@ namespace Delux.Tests.Domain.Common
         [TestMethod]
         public void DataIsNullTest()
         {
-            var d = GetRandom.Object<BeauticianData>();
+            var d = GetRandom.Object<TreatmentData>();
             Assert.IsNull(Obj.Data);
             Obj.Data = d;
             Assert.AreSame(d, Obj.Data);

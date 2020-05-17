@@ -1,18 +1,20 @@
-﻿using Delux.Aids;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Delux.Aids;
 using Delux.Data.Treatment;
-using Delux.Domain.Treatment;
 using Delux.Facade.Treatment;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Delux.Tests.Facade.Treatment
 {
     [TestClass]
-    public class FacialTreatmentViewFactoryTests:BaseTests
+    public class TreatmentViewFactoryTests : BaseTests
     {
         [TestInitialize]
         public virtual void TestInitialize()
         {
-            Type = typeof(FacialTreatmentViewFactory);
+            Type = typeof(TreatmentViewFactory);
         }
 
         [TestMethod]
@@ -21,8 +23,8 @@ namespace Delux.Tests.Facade.Treatment
         [TestMethod]
         public void CreateObjectTest()
         {
-            var view = GetRandom.Object<FacialTreatmentView>();
-            var data = FacialTreatmentViewFactory.Create(view).Data;
+            var view = GetRandom.Object<TreatmentView>();
+            var data = TreatmentViewFactory.Create(view).Data;
 
             TestArePropertyValuesEqual(view, data);
         }
@@ -30,8 +32,8 @@ namespace Delux.Tests.Facade.Treatment
         [TestMethod]
         public void CreateViewTest()
         {
-            var data = GetRandom.Object<FacialTreatmentData>();
-            var view = FacialTreatmentViewFactory.Create(new FacialTreatment(data));
+            var data = GetRandom.Object<TreatmentData>();
+            var view = TreatmentViewFactory.Create(new global::Delux.Domain.Treatment.Treatment(data));
 
             TestArePropertyValuesEqual(view, data);
         }

@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Delux.Data.Technician;
 using Delux.Data.Treatment;
 using Delux.Domain.Common;
-using Delux.Domain.Technician;
+using Delux.Domain.Treatment;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Delux.Tests.Domain.Technician
+namespace Delux.Tests.Domain.Treatment
 {
     [TestClass]
-   public class HairdresserTests : SealedClassTests<Hairdresser, Entity<HairdresserData>>
+    public class TreatmentTypeTests : SealedClassTests<TreatmentType, Entity<TreatmentTypeData>>
     {
     }
 }

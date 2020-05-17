@@ -1,7 +1,10 @@
 ﻿using Delux.Aids;
 using Delux.Data.Technician;
+using Delux.Data.Treatment;
 using Delux.Domain.Technician;
+using Delux.Domain.Treatment;
 using Delux.Facade.Technician;
+using Delux.Facade.Treatment;
 using Delux.Pages.Common;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -9,7 +12,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Delux.Tests.Pages.Common {
 
     [TestClass]
-    public class BasePageTests : AbstractPageTests<BasePage<IBeauticiansRepository, Beautician, BeauticianView, BeauticianData>,
+    public class BasePageTests : AbstractPageTests<BasePage<ITreatmentsRepository, global::Delux.Domain.Treatment.Treatment, TreatmentView, TreatmentData>,
         PageModel> {
 
 
@@ -83,7 +86,7 @@ namespace Delux.Tests.Pages.Common {
             void test(string filter, string searchString, int? pageIndex, bool isFirst) {
                 var expectedSearchString = isFirst ? searchString: filter;
                 var expectedIndex = isFirst ? 1 : pageIndex;
-                var actual = BasePage<IBeauticiansRepository, Beautician, BeauticianView, BeauticianData>.GetSearchString(filter, searchString, ref pageIndex);
+                var actual = BasePage<ITreatmentsRepository, global::Delux.Domain.Treatment.Treatment, TreatmentView, TreatmentData>.GetSearchString(filter, searchString, ref pageIndex);
                 Assert.AreEqual(expectedSearchString, actual);
                 Assert.AreEqual(expectedIndex, pageIndex);
             }
