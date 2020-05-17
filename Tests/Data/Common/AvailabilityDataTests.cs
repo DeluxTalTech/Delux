@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Delux.Tests.Data.Common
 {
     [TestClass]
-    public class AvailabilityDataTests : AbstractClassTests<AvailabilityData, DefinitionData>
+    public class AvailabilityDataTests : AbstractClassTests<AvailabilityData, NameData>
     {
         private class TestClass : AvailabilityData { }
 

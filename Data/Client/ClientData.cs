@@ -1,10 +1,9 @@
 ﻿using Delux.Data.Common;
 
-namespace Delux.Data.Reservation
+namespace Delux.Data.Client
 {
-    public abstract class ClientData : IdData
+    public sealed class ClientData : NameData
     {
-        public string ClientName { get; set; }
         public string PhoneNumber { get; set; }
         public string MailAddress { get; set; }
     }

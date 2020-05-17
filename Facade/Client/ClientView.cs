@@ -2,13 +2,10 @@
 using System.ComponentModel.DataAnnotations;
 using Delux.Facade.Common;
 
-namespace Delux.Facade.Reservation
+namespace Delux.Facade.Client
 {
-    public abstract class ClientView : IdView
+    public abstract class ClientView : NameView
     {
-        [Required] 
-        [DisplayName("Client name")]
-        public string ClientName { get; set; }
         [Required]
         [DisplayName("Phone number")]
         public string PhoneNumber { get; set; }

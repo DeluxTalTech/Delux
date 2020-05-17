@@ -34,6 +34,9 @@
 
   <ItemGroup>
     <Folder Include="Areas\Salon\Pages\Appointments\" />
+    <Folder Include="Areas\Salon\Pages\Clients\" />
+    <Folder Include="Areas\Salon\Pages\Technicians\" />
+    <Folder Include="Areas\Salon\Pages\Treatments\" />
   </ItemGroup>
 
 </Project>

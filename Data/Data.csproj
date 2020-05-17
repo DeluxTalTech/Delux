@@ -6,8 +6,4 @@
     <AssemblyName>Delux.Data</AssemblyName>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Client\" />
-  </ItemGroup>
-
 </Project>

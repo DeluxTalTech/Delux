@@ -53,7 +53,7 @@ namespace Delux.Tests.Infra.Common {
 
         [TestMethod] public void AddFixedFilteringTest() {
             var sql = Obj.CreateSqlQuery();
-            var fixedFilter = GetMember.Name<BeauticianData>(x=>x.Definition);
+            var fixedFilter = GetMember.Name<BeauticianData>(x=>x.Name);
             Obj.FixedFilter = fixedFilter;
             var fixedValue = GetRandom.String();
             Obj.FixedValue = fixedValue;

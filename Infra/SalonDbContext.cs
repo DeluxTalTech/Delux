@@ -41,7 +41,7 @@ namespace Delux.Infra
             builder.Entity<MassageTreatmentData>().ToTable(nameof(MassageTreatments));
             builder.Entity<NailTreatmentData>().ToTable(nameof(NailTreatments));
             //builder.Entity<AppointmentData>().ToTable(nameof(Appointments))
-                //.HasKey(x => new { x.TreatmentId, x.TechnicianId });
+                //.HasKey(x => new { x.ClientId, x.TreatmentId, x.TechnicianId });
 
         }
     }

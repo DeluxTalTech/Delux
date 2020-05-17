@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Delux.Facade.Common
 {
-    public abstract class AvailabilityView : DefinitionView
+    public abstract class AvailabilityView : NameView
     {
         [Required] 
         [DisplayName("Workdays")]

@@ -17,7 +17,6 @@
             @Html.TableHeaderFor(
                 new Link(Html.DisplayNameFor(m => m.Item.Id), Model.GetSortString(m => m.Id, page)),
                 new Link(Html.DisplayNameFor(m => m.Item.Name), Model.GetSortString(m => m.Name, page)),
-                new Link(Html.DisplayNameFor(m => m.Item.Definition), Model.GetSortString(m => m.Definition, page)),
                 new Link(Html.DisplayNameFor(m => m.Item.AvailableDays), Model.GetSortString(m => m.AvailableDays, page)),
                 new Link(Html.DisplayNameFor(m => m.Item.WorkedYears), Model.GetSortString(m => m.WorkedYears, page))
                 )
@@ -43,7 +42,6 @@
                         Model.FixedValue,
                         Html.DisplayFor(modelItem => item.Id),
                         Html.DisplayFor(modelItem => item.Name),
-                        Html.DisplayFor(modelItem => item.Definition),
                         Html.DisplayFor(modelItem => item.AvailableDays),
                         Html.DisplayFor(modelItem => item.WorkedYears))
                 </tr>

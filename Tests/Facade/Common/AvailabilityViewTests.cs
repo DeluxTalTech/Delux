@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Delux.Tests.Facade.Common
 {
     [TestClass]
-    public class AvailabilityViewTests : AbstractClassTests<AvailabilityView, DefinitionView>
+    public class AvailabilityViewTests : AbstractClassTests<AvailabilityView, NameView>
     {
         private class TestClass : AvailabilityView { }
 

@@ -84,7 +84,6 @@ namespace Delux.Tests.Infra.Common
             Assert.AreEqual(data, Obj.AddSorting(data));
             Test(data, GetMember.Name<BeauticianData>(x => x.Id));
             Test(data, GetMember.Name<BeauticianData>(x => x.Name));
-            Test(data, GetMember.Name<BeauticianData>(x => x.Definition));
             Test(data, GetMember.Name<BeauticianData>(x => x.AvailableDays));
             Test(data, GetMember.Name<BeauticianData>(x => x.WorkedYears));
         }
@@ -97,11 +96,9 @@ namespace Delux.Tests.Infra.Common
             TestCreateExpression(GetMember.Name<BeauticianData>(x => x.Name));
             TestCreateExpression(GetMember.Name<BeauticianData>(x => x.AvailableDays));
             TestCreateExpression(GetMember.Name<BeauticianData>(x => x.WorkedYears));
-            TestCreateExpression(GetMember.Name<BeauticianData>(x => x.Definition));
             TestCreateExpression(s = GetMember.Name<BeauticianData>(x => x.Id), s + Obj.DescendingString);
             TestCreateExpression(s = GetMember.Name<BeauticianData>(x => x.Name), s + Obj.DescendingString);
             TestCreateExpression(s = GetMember.Name<BeauticianData>(x => x.WorkedYears), s + Obj.DescendingString);
-            TestCreateExpression(s = GetMember.Name<BeauticianData>(x => x.Definition), s + Obj.DescendingString);
             TestCreateExpression(s = GetMember.Name<BeauticianData>(x => x.WorkedYears), s + Obj.DescendingString);
             TestNullExpression(GetRandom.String());
             TestNullExpression(string.Empty);
@@ -152,12 +149,10 @@ namespace Delux.Tests.Infra.Common
             Test(null, string.Empty);
             Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.Name)), s);
             Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.AvailableDays)), s);
-            Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.Definition)), s);
             Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.WorkedYears)), s);
             Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.Id)), s);
             Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.Name)), s + Obj.DescendingString);
             Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.WorkedYears)), s + Obj.DescendingString);
-            Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.Definition)), s + Obj.DescendingString);
             Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.AvailableDays)), s + Obj.DescendingString);
             Test(typeof(BeauticianData).GetProperty(s = GetMember.Name<BeauticianData>(x => x.Id)), s + Obj.DescendingString);
         }
@@ -202,7 +197,6 @@ namespace Delux.Tests.Infra.Common
             Assert.AreEqual(data, Obj.AddOrderBy(data, null));
             Test(data, x => x.Id, "x => x.Id");
             Test(data, x => x.Name, "x => x.Name");
-            Test(data, x => x.Definition, "x => x.Definition");
             Test(data, x => x.AvailableDays, "x => x.AvailableDays");
             Test(data, x => x.WorkedYears, "x => x.WorkedYears");
         }

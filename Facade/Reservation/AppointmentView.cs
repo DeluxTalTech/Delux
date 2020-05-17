@@ -8,6 +8,9 @@ namespace Delux.Facade.Reservation
     public sealed class AppointmentView : IdView
     {
         [Required]
+        [DisplayName("Choose a customer")]
+        public string ClientId { get; set; }
+        [Required]
         [DisplayName("Choose a treatment")]
         public string TreatmentId { get; set; }
         [Required]
@@ -24,7 +27,7 @@ namespace Delux.Facade.Reservation
 
         public string GetId()
         {
-            return $"{TreatmentId}.{TechnicianId}";
+            return $"{ClientId}.{TreatmentId}.{TechnicianId}";
         }
     }
 }

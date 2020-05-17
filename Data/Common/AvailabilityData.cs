@@ -1,6 +1,6 @@
 ﻿namespace Delux.Data.Common
 {
-    public abstract class AvailabilityData : DefinitionData
+    public abstract class AvailabilityData : NameData
     {
         public string AvailableDays { get; set; }
     }
