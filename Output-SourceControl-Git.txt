@@ -1,0 +1,110 @@
+﻿Opening repositories:
+C:\Users\Carmen\Source\Repos\DeluxTalTech\Delux
+POST git-upload-pack (982 bytes)
+Remote: Enumerating objects: 58, done.        
+Remote: Counting objects:   1% (1/58)        
+Remote: Counting objects:   3% (2/58)        
+Remote: Counting objects:   5% (3/58)        
+Remote: Counting objects:   6% (4/58)        
+Remote: Counting objects:   8% (5/58)        
+Remote: Counting objects:  10% (6/58)        
+Remote: Counting objects:  12% (7/58)        
+Remote: Counting objects:  13% (8/58)        
+Remote: Counting objects:  15% (9/58)        
+Remote: Counting objects:  17% (10/58)        
+Remote: Counting objects:  18% (11/58)        
+Remote: Counting objects:  20% (12/58)        
+Remote: Counting objects:  22% (13/58)        
+Remote: Counting objects:  24% (14/58)        
+Remote: Counting objects:  25% (15/58)        
+Remote: Counting objects:  27% (16/58)        
+Remote: Counting objects:  29% (17/58)        
+Remote: Counting objects:  31% (18/58)        
+Remote: Counting objects:  32% (19/58)        
+Remote: Counting objects:  34% (20/58)        
+Remote: Counting objects:  36% (21/58)        
+Remote: Counting objects:  37% (22/58)        
+Remote: Counting objects:  39% (23/58)        
+Remote: Counting objects:  41% (24/58)        
+Remote: Counting objects:  43% (25/58)        
+Remote: Counting objects:  44% (26/58)        
+Remote: Counting objects:  46% (27/58)        
+Remote: Counting objects:  48% (28/58)        
+Remote: Counting objects:  50% (29/58)        
+Remote: Counting objects:  51% (30/58)        
+Remote: Counting objects:  53% (31/58)        
+Remote: Counting objects:  55% (32/58)        
+Remote: Counting objects:  56% (33/58)        
+Remote: Counting objects:  58% (34/58)        
+Remote: Counting objects:  60% (35/58)        
+Remote: Counting objects:  62% (36/58)        
+Remote: Counting objects:  63% (37/58)        
+Remote: Counting objects:  65% (38/58)        
+Remote: Counting objects:  67% (39/58)        
+Remote: Counting objects:  68% (40/58)        
+Remote: Counting objects:  70% (41/58)        
+Remote: Counting objects:  72% (42/58)        
+Remote: Counting objects:  74% (43/58)        
+Remote: Counting objects:  75% (44/58)        
+Remote: Counting objects:  77% (45/58)        
+Remote: Counting objects:  79% (46/58)        
+Remote: Counting objects:  81% (47/58)        
+Remote: Counting objects:  82% (48/58)        
+Remote: Counting objects:  84% (49/58)        
+Remote: Counting objects:  86% (50/58)        
+Remote: Counting objects:  87% (51/58)        
+Remote: Counting objects:  89% (52/58)        
+Remote: Counting objects:  91% (53/58)        
+Remote: Counting objects:  93% (54/58)        
+Remote: Counting objects:  94% (55/58)        
+Remote: Counting objects:  96% (56/58)        
+Remote: Counting objects:  98% (57/58)        
+Remote: Counting objects: 100% (58/58)        
+Remote: Counting objects: 100% (58/58), done.        
+Remote: Compressing objects:   5% (1/19)        
+Remote: Compressing objects:  10% (2/19)        
+Remote: Compressing objects:  15% (3/19)        
+Remote: Compressing objects:  21% (4/19)        
+Remote: Compressing objects:  26% (5/19)        
+Remote: Compressing objects:  31% (6/19)        
+Remote: Compressing objects:  36% (7/19)        
+Remote: Compressing objects:  42% (8/19)        
+Remote: Compressing objects:  47% (9/19)        
+Remote: Compressing objects:  52% (10/19)        
+Remote: Compressing objects:  57% (11/19)        
+Remote: Compressing objects:  63% (12/19)        
+Remote: Compressing objects:  68% (13/19)        
+Remote: Compressing objects:  73% (14/19)        
+Remote: Compressing objects:  78% (15/19)        
+Remote: Compressing objects:  84% (16/19)        
+Remote: Compressing objects:  89% (17/19)        
+Remote: Compressing objects:  94% (18/19)        
+Remote: Compressing objects: 100% (19/19)        
+Remote: Compressing objects: 100% (19/19), done.        
+Remote: Total 36 (delta 15), reused 36 (delta 15), pack-reused 0        
+From https://github.com/DeluxTalTech/Delux
+   c5e76f8..84f6309  master     -> origin/master
+Updating c5e76f8..84f6309
+Commit e7239537 created locally in repository C:\Users\Carmen\Source\Repos\DeluxTalTech\Delux
+Pushing master
+Pushing to https://github.com/DeluxTalTech/Delux
+To https://github.com/DeluxTalTech/Delux
+Error: failed to push some refs to 'https://github.com/DeluxTalTech/Delux'
+Error: hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Error encountered while pushing to the remote repository: rejected Updates were rejected because the remote contains work that you do not have locally. This is usually caused by another repository pushing to the same ref. You may want to first integrate the remote changes before pushing again.
+Pushing master
+Pushing to https://github.com/DeluxTalTech/Delux
+To https://github.com/DeluxTalTech/Delux
+Error: failed to push some refs to 'https://github.com/DeluxTalTech/Delux'
+Error: hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Error encountered while pushing to the remote repository: rejected Updates were rejected because the remote contains work that you do not have locally. This is usually caused by another repository pushing to the same ref. You may want to first integrate the remote changes before pushing again.
