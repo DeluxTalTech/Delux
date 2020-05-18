@@ -1,29 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
-using Delux.Data.Technician;
-using Delux.Infra;
+﻿using System.Threading.Tasks;
+using Delux.Domain.Technician;
+using Delux.Pages.Technician;
 
-namespace Delux.Delux
+namespace Delux.Delux.Areas.Salon.Pages.Technicians
 {
-    public class IndexModel : PageModel
+    public class IndexModel : TechniciansPage
     {
-        private readonly Delux.Infra.SalonDbContext _context;
+        public IndexModel(ITechniciansRepository t, ITechnicianTypesRepository tt) : base(t, tt) { }
 
-        public IndexModel(Delux.Infra.SalonDbContext context)
+        public async Task OnGetAsync(string sortOrder,
+            string currentFilter, string searchString, int? pageIndex,
+            string fixedFilter, string fixedValue)
         {
-            _context = context;
-        }
-
-        public IList<TechnicianData> TechnicianData { get;set; }
-
-        public async Task OnGetAsync()
-        {
-            TechnicianData = await _context.Technicians.ToListAsync();
+            await GetList(sortOrder, currentFilter, searchString, pageIndex,
+                fixedFilter, fixedValue);
         }
     }
 }

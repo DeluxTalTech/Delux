@@ -1,77 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Delux.Domain.Technician;
+using Delux.Pages.Technician;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Delux.Data.Technician;
-using Delux.Infra;
 
-namespace Delux.Delux
+namespace Delux.Delux.Areas.Salon.Pages.Technicians
 {
-    public class EditModel : PageModel
+    public class EditModel : TechniciansPage
     {
-        private readonly Delux.Infra.SalonDbContext _context;
+        public EditModel(ITechniciansRepository t, ITechnicianTypesRepository tt) : base(t, tt) { }
 
-        public EditModel(Delux.Infra.SalonDbContext context)
+        public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
         {
-            _context = context;
-        }
+            if (id == null) return NotFound();
 
-        [BindProperty]
-        public TechnicianData TechnicianData { get; set; }
+            await GetObject(id, fixedFilter, fixedValue);
+            if (Item == null) return NotFound();
 
-        public async Task<IActionResult> OnGetAsync(string id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            TechnicianData = await _context.Technicians.FirstOrDefaultAsync(m => m.Id == id);
-
-            if (TechnicianData == null)
-            {
-                return NotFound();
-            }
             return Page();
         }
 
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(string fixedFilter, string fixedValue)
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
-            _context.Attach(TechnicianData).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!TechnicianDataExists(TechnicianData.Id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return RedirectToPage("./Index");
-        }
-
-        private bool TechnicianDataExists(string id)
-        {
-            return _context.Technicians.Any(e => e.Id == id);
+            await UpdateObject(fixedFilter, fixedValue);
+            return Redirect(IndexUrl);
         }
     }
 }

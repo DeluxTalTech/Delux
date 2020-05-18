@@ -1,39 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Delux.Domain.Technician;
+using Delux.Pages.Technician;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
-using Delux.Data.Technician;
-using Delux.Infra;
 
-namespace Delux.Delux
+namespace Delux.Delux.Areas.Salon.Pages.Technicians
 {
-    public class DetailsModel : PageModel
+    public class DetailsModel : TechniciansPage
     {
-        private readonly Delux.Infra.SalonDbContext _context;
+        public DetailsModel(ITechniciansRepository t, ITechnicianTypesRepository tt) : base(t, tt) { }
 
-        public DetailsModel(Delux.Infra.SalonDbContext context)
+        public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
         {
-            _context = context;
-        }
-
-        public TechnicianData TechnicianData { get; set; }
-
-        public async Task<IActionResult> OnGetAsync(string id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            TechnicianData = await _context.Technicians.FirstOrDefaultAsync(m => m.Id == id);
-
-            if (TechnicianData == null)
-            {
-                return NotFound();
-            }
+            await GetObject(id, fixedFilter, fixedValue);
             return Page();
         }
     }

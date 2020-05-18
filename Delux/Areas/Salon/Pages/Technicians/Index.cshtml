@@ -1,48 +1,45 @@
 ﻿@page
-@model Delux.Delux.IndexModel
+@using global::Delux.Pages.Extensions
+@model Delux.Areas.Salon.Pages.Technicians.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    Layout = "_Index";
+    var page = Model.PageUrl;
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.TechnicianData[0].WorkedYears)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TechnicianData[0].AvailableDays)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TechnicianData[0].Name)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.TechnicianData) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.WorkedYears)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AvailableDays)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
+@section Create {
+    @Html.HypertextLinkFor(string.Empty, new Link(Constants.CreateNewLinkTitle, $"{page}/Create"))
 }
-    </tbody>
-</table>
+
+<body>
+    <table class="table">
+        <thead>
+            @Html.TableHeaderFor(
+                new Link(Html.DisplayNameFor(m => m.Item.Id), Model.GetSortString(m => m.Id, page)),
+                new Link(Html.DisplayNameFor(m => m.Item.TechnicianTypeId), Model.GetSortString(m => m.TechnicianTypeId, page)),
+                new Link(Html.DisplayNameFor(m => m.Item.Name), Model.GetSortString(m => m.Name, page)),
+                new Link(Html.DisplayNameFor(m => m.Item.WorkedYears), Model.GetSortString(m => m.WorkedYears, page)),
+                new Link(Html.DisplayNameFor(m => m.Item.AvailableDays), Model.GetSortString(m => m.AvailableDays, page))
+                )
+
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    @Html.TableRowFor(
+                        page,
+                        item.Id,
+                        Model.FixedFilter,
+                        Model.FixedValue,
+                        Html.DisplayFor(modelItem => item.Id),
+                        Html.DisplayFor(modelItem => item.TechnicianTypeId),
+                        Html.DisplayFor(modelItem => item.Name),
+                        Html.DisplayFor(modelItem => item.WorkedYears),
+                        Html.DisplayFor(modelItem => item.AvailableDays)
+                        )
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>

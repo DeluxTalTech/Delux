@@ -1,59 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Delux.Domain.Technician;
+using Delux.Pages.Technician;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
-using Delux.Data.Technician;
-using Delux.Infra;
 
-namespace Delux.Delux
+namespace Delux.Delux.Areas.Salon.Pages.Technicians
 {
-    public class DeleteModel : PageModel
+
+    public class DeleteModel : TechniciansPage
     {
-        private readonly Delux.Infra.SalonDbContext _context;
 
-        public DeleteModel(Delux.Infra.SalonDbContext context)
+        public DeleteModel(ITechniciansRepository t, ITechnicianTypesRepository tt) : base(t, tt) { }
+
+        public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
         {
-            _context = context;
-        }
-
-        [BindProperty]
-        public TechnicianData TechnicianData { get; set; }
-
-        public async Task<IActionResult> OnGetAsync(string id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            TechnicianData = await _context.Technicians.FirstOrDefaultAsync(m => m.Id == id);
-
-            if (TechnicianData == null)
-            {
-                return NotFound();
-            }
+            await GetObject(id, fixedFilter, fixedValue);
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(string id)
+        public async Task<IActionResult> OnPostAsync(string id, string fixedFilter, string fixedValue)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            await DeleteObject(id, fixedFilter, fixedValue);
 
-            TechnicianData = await _context.Technicians.FindAsync(id);
-
-            if (TechnicianData != null)
-            {
-                _context.Technicians.Remove(TechnicianData);
-                await _context.SaveChangesAsync();
-            }
-
-            return RedirectToPage("./Index");
+            return Redirect(IndexUrl);
         }
+
     }
+
 }
