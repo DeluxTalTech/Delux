@@ -43,7 +43,12 @@ namespace Delux.Infra
 
         internal static List<ClientData> Clients => new List<ClientData>
         {
-
+            new ClientData{Id="1", MailAddress = "marimaasikas@gmail.com", Name = "Mari Maasikas", PhoneNumber = "53735654"},
+            new ClientData{Id = "2", MailAddress = "karu.kati@gmail.com", Name = "Kati Karu",PhoneNumber = "5147778"},
+            new ClientData{Id="3",MailAddress = "kajaluik@gmail.com", Name = "Kaja Luik", PhoneNumber = "56715954"},
+            new ClientData{Id="4",MailAddress = "arturluik@gmail.com", Name = "Artur Luik", PhoneNumber = "56354357"},
+            new ClientData{Id="5",MailAddress = "virve.magi@gmail.com", Name = "Virve Mägi", PhoneNumber = "5999745"},
+            new ClientData{Id="6",MailAddress = "ml.kala@gmail.com", Name = "Marta Liisa Kala", PhoneNumber = "54989595"},
         };
 
         internal static List<AppointmentData> Appointments => new List<AppointmentData>
@@ -74,6 +79,12 @@ namespace Delux.Infra
             InitializeTechnicianTypes(db);
             InitializeTreatments(db);
             InitializeTechnicians(db);
+        }
+        private static void InitializeClients(SalonDbContext db)
+        {
+            if (db.Clients.Count() != 0) return;
+            db.Clients.AddRange(Clients);
+            db.SaveChanges();
         }
 
         private static void InitializeTreatmentTypes(SalonDbContext db)

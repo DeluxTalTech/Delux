@@ -4,10 +4,10 @@ using Delux.Facade.Common;
 
 namespace Delux.Facade.Client
 {
-    public abstract class ClientView : NameView
+    public sealed class ClientView : NameView
     {
         [Required]
-        [DisplayName("Phone number")]
+        [DisplayName("Telefoninumber")]
         public string PhoneNumber { get; set; }
         [Required]
         [DisplayName("E-mail")]

@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Delux.Domain.Common;
+
 
 namespace Delux.Domain.Client
 {
-    class IClientsRepository
+    public interface IClientsRepository:IRepository<Client>
     {
     }
 }
