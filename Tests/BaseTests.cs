@@ -52,5 +52,21 @@ namespace Delux.Tests
                 Assert.AreEqual(expected, actual, $"For property '{name}'.");
             }
         }
+
+        protected static void TestArePropertiesNotEqual(object obj1, object obj2)
+        {
+            foreach (var property in obj1.GetType().GetProperties())
+            {
+                var name = property.Name;
+                var p = obj2.GetType().GetProperty(name);
+                Assert.IsNotNull(p, $"No property with name '{name}' found.");
+                var expected = property.GetValue(obj1);
+                var actual = p.GetValue(obj2);
+
+                if (expected != actual) return;
+            }
+
+            Assert.Fail("All properties are same");
+        }
     }
 }
