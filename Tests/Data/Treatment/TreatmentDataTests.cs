@@ -10,5 +10,10 @@ namespace Delux.Tests.Data.Treatment
     [TestClass]
     public class TreatmentDataTests : SealedClassTests<TreatmentData, DurationData>
     {
+        [TestMethod]
+        public void TreatmentTypeIdTest()
+        {
+            IsNullableProperty(() => Obj.TreatmentTypeId, x => Obj.TreatmentTypeId = x);
+        }
     }
 }

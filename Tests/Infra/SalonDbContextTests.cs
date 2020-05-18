@@ -74,7 +74,7 @@ namespace Delux.Tests.Infra
             TestEntity<TechnicianTypeData>(builder);
             TestEntity<TreatmentData>(builder, x => x.Id, x => x.TreatmentTypeId);
             TestEntity<TechnicianData>(builder, x => x.Id, x => x.TechnicianTypeId);
-            //TestEntity<ClientData>(builder);
+            TestEntity<ClientData>(builder);
             //TestEntity<AppointmentData>(builder, x => x.ClientId, x => x.TreatmentId, x => x.TechnicianId);
 
         }
@@ -91,8 +91,8 @@ namespace Delux.Tests.Infra
         [TestMethod]
         public void TechniciansTest() => IsNullableProperty(Obj, nameof(Obj.Technicians), typeof(DbSet<TechnicianData>));
 
-        //[TestMethod]
-        //public void ClientsTest() => IsNullableProperty(Obj, nameof(Obj.Clients), typeof(DbSet<ClientData>));
+        [TestMethod]
+        public void ClientsTest() => IsNullableProperty(Obj, nameof(Obj.Clients), typeof(DbSet<ClientData>));
 
         //[TestMethod]
         //public void AppointmentsTest() => IsNullableProperty(Obj, nameof(Obj.Appointments), typeof(DbSet<AppointmentData>));

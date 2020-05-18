@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Delux.Pages.Technician
 {
-    public class TechniciansPage : CommonPage<ITechniciansRepository, Domain.Technician.Technician, TechnicianView, TechnicianData>
+    public abstract class TechniciansPage : CommonPage<ITechniciansRepository, Domain.Technician.Technician, TechnicianView, TechnicianData>
     {
         public IEnumerable<SelectListItem> TechnicianTypes { get; }
         protected internal TechniciansPage(ITechniciansRepository r, ITechnicianTypesRepository m) : base(r)

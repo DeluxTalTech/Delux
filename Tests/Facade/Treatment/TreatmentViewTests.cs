@@ -10,5 +10,7 @@ namespace Delux.Tests.Facade.Treatment
     [TestClass]
     public class TreatmentViewTests : SealedClassTests<TreatmentView, DurationView>
     {
+        [TestMethod]
+        public void TreatmentTypeIdTest() => IsNullableProperty(() => Obj.TreatmentTypeId, x => Obj.TreatmentTypeId = x);
     }
 }

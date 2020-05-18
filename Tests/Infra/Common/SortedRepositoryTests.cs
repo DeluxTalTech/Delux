@@ -71,13 +71,13 @@ namespace Delux.Tests.Infra.Common
                 Assert.AreNotEqual(d, set);
                 var str = set.Expression.ToString();
                 Assert.IsTrue(str
-                    .Contains($"Delux.Data.Technician.TreatmentTypeData]).OrderByDescending(x => Convert(x.{sortOrder}, Object))"));
+                    .Contains($"Delux.Data.TreatmentTypeData]).OrderByDescending(x => Convert(x.{sortOrder}, Object))"));
                 Obj.SortOrder = sortOrder;
                 set = Obj.AddSorting(d);
                 Assert.IsNotNull(set);
                 Assert.AreNotEqual(d, set);
                 str = set.Expression.ToString();
-                Assert.IsTrue(str.Contains($"Delux.Data.Technician.TreatmentTypeData]).OrderBy(x => Convert(x.{sortOrder}, Object))"));
+                Assert.IsTrue(str.Contains($"Delux.Data.TreatmentTypeData]).OrderBy(x => Convert(x.{sortOrder}, Object))"));
             }
 
             Assert.IsNull(Obj.AddSorting(null));
@@ -176,12 +176,12 @@ namespace Delux.Tests.Infra.Common
                 Assert.IsNotNull(set);
                 Assert.AreNotEqual(d, set);
                 Assert.IsTrue(set.Expression.ToString()
-                    .Contains($"Delux.Data.Technician.TreatmentTypeData]).OrderByDescending({expected})"));
+                    .Contains($"Delux.Data.TreatmentTypeData]).OrderByDescending({expected})"));
                 Obj.SortOrder = GetRandom.String();
                 set = Obj.AddOrderBy(d, e);
                 Assert.IsNotNull(set);
                 Assert.AreNotEqual(d, set);
-                Assert.IsTrue(set.Expression.ToString().Contains($"Delux.Data.Technician.TreatmentTypeData]).OrderBy({expected})"));
+                Assert.IsTrue(set.Expression.ToString().Contains($"Delux.Data.TreatmentTypeData]).OrderBy({expected})"));
             }
 
             Assert.IsNull(Obj.AddOrderBy(null, null));

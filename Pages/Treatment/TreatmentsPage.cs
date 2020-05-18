@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Delux.Pages.Treatment
 {
-    public class TreatmentsPage : CommonPage<ITreatmentsRepository, Domain.Treatment.Treatment, TreatmentView, TreatmentData>
+    public abstract class TreatmentsPage : CommonPage<ITreatmentsRepository, Domain.Treatment.Treatment, TreatmentView, TreatmentData>
     {
         public IEnumerable<SelectListItem> TreatmentTypes { get; }
         protected internal TreatmentsPage(ITreatmentsRepository r, ITreatmentTypesRepository m) : base(r)
