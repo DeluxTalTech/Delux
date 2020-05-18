@@ -7,11 +7,11 @@ namespace Delux.Facade.Common
     public abstract class PeriodView : DefinitionView
     {
         [DataType(DataType.Date)]
-        [DisplayName("Valid from")]
+        [DisplayName("Kehtib alates")]
         public DateTime? ValidFrom { get; set; }
 
         [DataType(DataType.Date)]
-        [DisplayName("Valid to")]
+        [DisplayName("Kehtib kuni")]
         public DateTime? ValidTo { get; set; }
     }
 }

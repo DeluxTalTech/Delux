@@ -37,7 +37,7 @@ namespace Delux.Delux
             services.AddScoped<ITreatmentTypesRepository, TreatmentTypesRepository>();
             services.AddScoped<ITechnicianTypesRepository, TechnicianTypesRepository>();
             services.AddScoped<ITreatmentsRepository, TreatmentsRepository>();
-            services.AddScoped<ITechniciansRepository, TechniciansRepository>();
+            //services.AddScoped<ITechniciansRepository, TechniciansRepository>();
             services.AddRazorPages();
         }
 

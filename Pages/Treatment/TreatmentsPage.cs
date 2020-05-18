@@ -17,7 +17,7 @@ namespace Delux.Pages.Treatment
         public IEnumerable<SelectListItem> TreatmentTypes { get; }
         protected internal TreatmentsPage(ITreatmentsRepository r, ITreatmentTypesRepository m) : base(r)
         {
-            PageTitle = "Treatments";
+            PageTitle = "Hooldused";
             TreatmentTypes = CreateSelectList<TreatmentType, TreatmentTypeData>(m);
         }
 

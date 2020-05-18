@@ -6,7 +6,7 @@ namespace Delux.Facade.Common
     public abstract class AvailabilityView : NameView
     {
         [Required] 
-        [DisplayName("Workdays")]
+        [DisplayName("Tööpäevad")]
         public string AvailableDays { get; set; }
     }
 }

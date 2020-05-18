@@ -6,7 +6,7 @@ namespace Delux.Facade.Common
     public abstract class WorkedYearsView : AvailabilityView
     {
         [Required] 
-        [DisplayName("Years of experience")]
+        [DisplayName("Töökogemus")]
         public string WorkedYears { get; set; }
     }
 }

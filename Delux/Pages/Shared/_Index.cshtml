@@ -22,7 +22,7 @@
             &nbsp;
             <a asp-page="./Index"
                asp-route-fixedFilter="@Model.FixedFilter"
-               asp-route-fixedValue="@Model.FixedValue">Back to full List</a>
+               asp-route-fixedValue="@Model.FixedValue">Tagasi nimekirja</a>
         </p>
     </div>
 </form>
@@ -45,7 +45,7 @@
        asp-route-fixedFilter="@Model.FixedFilter"
        asp-route-fixedValue="@Model.FixedValue"
        class="btn btn-link @prevDisabled">
-        First
+        Esimene
     </a>
     &nbsp;
     <a asp-page="./Index"
@@ -55,7 +55,7 @@
        asp-route-fixedFilter="@Model.FixedFilter"
        asp-route-fixedValue="@Model.FixedValue"
        class="btn btn-link @prevDisabled">
-        Previous
+        Eelmine
     </a>
     &nbsp;
     Page @Model.PageIndex of @Model.TotalPages
@@ -67,7 +67,7 @@
        asp-route-fixedFilter="@Model.FixedFilter"
        asp-route-fixedValue="@Model.FixedValue"
        class="btn btn-link @nextDisabled">
-        Next
+        Järgmine
     </a>
     &nbsp;
     <a asp-page="./Index"
@@ -77,7 +77,7 @@
        asp-route-fixedFilter="@Model.FixedFilter"
        asp-route-fixedValue="@Model.FixedValue"
        class="btn btn-link @nextDisabled">
-        Last
+        Viimane
     </a>
 
 </div>

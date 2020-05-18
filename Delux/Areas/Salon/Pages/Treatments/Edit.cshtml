@@ -1,0 +1,20 @@
+﻿@page
+@using global::Delux.Pages.Extensions
+@model Delux.Areas.Salon.Pages.Treatments.EditModel
+
+@{
+    Layout = "_Edit";
+}
+
+<body>
+    <input type="hidden" asp-for="Item.Id" />
+    <input type="hidden" asp-for="Item.TreatmentTypeId" />
+    @Html.DisabledControlsFor(m => m.Item.Id)
+    @Html.DisabledControlsFor(m => m.Item.TreatmentTypeId)
+    @Html.EditControlsFor(m => m.Item.Name)
+    @Html.EditControlsFor(m => m.Item.Definition)
+    @Html.EditControlsFor(m => m.Item.ValidFrom)
+    @Html.EditControlsFor(m => m.Item.ValidTo)
+    @Html.EditControlsFor(m => m.Item.Price)
+    @Html.EditControlsFor(m => m.Item.Duration)
+</body>

@@ -47,25 +47,38 @@ namespace Delux.Delux.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Beauticians",
+                name: "Technicians",
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
+                    TechnicianTypeId = table.Column<string>(nullable: false),
                     Name = table.Column<string>(nullable: true),
-                    Definition = table.Column<string>(nullable: true),
                     AvailableDays = table.Column<string>(nullable: true),
                     WorkedYears = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Beauticians", x => x.Id);
+                    table.PrimaryKey("PK_Technicians", x => new { x.Id, x.TechnicianTypeId });
                 });
 
             migrationBuilder.CreateTable(
-                name: "FacialTreatments",
+                name: "TechnicianTypes",
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TechnicianTypes", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Treatments",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false),
+                    TreatmentTypeId = table.Column<string>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     Definition = table.Column<string>(nullable: true),
                     ValidFrom = table.Column<DateTime>(nullable: true),
@@ -75,103 +88,19 @@ namespace Delux.Delux.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_FacialTreatments", x => x.Id);
+                    table.PrimaryKey("PK_Treatments", x => new { x.Id, x.TreatmentTypeId });
                 });
 
             migrationBuilder.CreateTable(
-                name: "Hairdressers",
+                name: "TreatmentTypes",
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    Name = table.Column<string>(nullable: true),
-                    Definition = table.Column<string>(nullable: true),
-                    AvailableDays = table.Column<string>(nullable: true),
-                    WorkedYears = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Hairdressers", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "HairTreatments",
-                columns: table => new
-                {
-                    Id = table.Column<string>(nullable: false),
-                    Name = table.Column<string>(nullable: true),
-                    Definition = table.Column<string>(nullable: true),
-                    ValidFrom = table.Column<DateTime>(nullable: true),
-                    ValidTo = table.Column<DateTime>(nullable: true),
-                    Price = table.Column<string>(nullable: true),
-                    Duration = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_HairTreatments", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "MassageTreatments",
-                columns: table => new
-                {
-                    Id = table.Column<string>(nullable: false),
-                    Name = table.Column<string>(nullable: true),
-                    Definition = table.Column<string>(nullable: true),
-                    ValidFrom = table.Column<DateTime>(nullable: true),
-                    ValidTo = table.Column<DateTime>(nullable: true),
-                    Price = table.Column<string>(nullable: true),
-                    Duration = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_MassageTreatments", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Masseuses",
-                columns: table => new
-                {
-                    Id = table.Column<string>(nullable: false),
-                    Name = table.Column<string>(nullable: true),
-                    Definition = table.Column<string>(nullable: true),
-                    AvailableDays = table.Column<string>(nullable: true),
-                    WorkedYears = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Masseuses", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "NailTechnicians",
-                columns: table => new
-                {
-                    Id = table.Column<string>(nullable: false),
-                    Name = table.Column<string>(nullable: true),
-                    Definition = table.Column<string>(nullable: true),
-                    AvailableDays = table.Column<string>(nullable: true),
-                    WorkedYears = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_NailTechnicians", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "NailTreatments",
-                columns: table => new
-                {
-                    Id = table.Column<string>(nullable: false),
-                    Name = table.Column<string>(nullable: true),
-                    Definition = table.Column<string>(nullable: true),
-                    ValidFrom = table.Column<DateTime>(nullable: true),
-                    ValidTo = table.Column<DateTime>(nullable: true),
-                    Price = table.Column<string>(nullable: true),
-                    Duration = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_NailTreatments", x => x.Id);
+                    table.PrimaryKey("PK_TreatmentTypes", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -338,28 +267,16 @@ namespace Delux.Delux.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Beauticians");
+                name: "Technicians");
 
             migrationBuilder.DropTable(
-                name: "FacialTreatments");
+                name: "TechnicianTypes");
 
             migrationBuilder.DropTable(
-                name: "Hairdressers");
+                name: "Treatments");
 
             migrationBuilder.DropTable(
-                name: "HairTreatments");
-
-            migrationBuilder.DropTable(
-                name: "MassageTreatments");
-
-            migrationBuilder.DropTable(
-                name: "Masseuses");
-
-            migrationBuilder.DropTable(
-                name: "NailTechnicians");
-
-            migrationBuilder.DropTable(
-                name: "NailTreatments");
+                name: "TreatmentTypes");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

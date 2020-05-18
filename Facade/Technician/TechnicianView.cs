@@ -10,7 +10,7 @@ namespace Delux.Facade.Technician
     public sealed class TechnicianView : WorkedYearsView
     {
         [Required]
-        [DisplayName("Category")]
+        [DisplayName("Kategooria")]
         public string TechnicianTypeId { get; set; }
     }
 }

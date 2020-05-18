@@ -4,7 +4,7 @@ namespace Delux.Facade.Common
 {
     public abstract class DefinitionView : NameView
     {
-        [DisplayName("Description")]
+        [DisplayName("Kirjeldus")]
         public string Definition { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace Delux.Pages.Technician
         public IEnumerable<SelectListItem> TechnicianTypes { get; }
         protected internal TechniciansPage(ITechniciansRepository r, ITechnicianTypesRepository m) : base(r)
         {
-            PageTitle = "Technicians";
+            PageTitle = "Tehnikud";
             TechnicianTypes = CreateSelectList<TechnicianType, TechnicianTypeData>(m);
         }
 

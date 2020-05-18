@@ -10,7 +10,7 @@ namespace Delux.Facade.Treatment
     public sealed class TreatmentView : DurationView
     {
         [Required]
-        [DisplayName("Category")]
+        [DisplayName("Kategooria")]
         public string TreatmentTypeId { get; set; }
     }
 }

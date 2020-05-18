@@ -19,15 +19,15 @@ namespace Delux.Delux.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Delux.Data.Technician.BeauticianData", b =>
+            modelBuilder.Entity("Delux.Data.Technician.TechnicianData", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("AvailableDays")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("TechnicianTypeId")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Definition")
+                    b.Property<string>("AvailableDays")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -36,80 +36,30 @@ namespace Delux.Delux.Migrations
                     b.Property<string>("WorkedYears")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("Id", "TechnicianTypeId");
 
-                    b.ToTable("Beauticians");
+                    b.ToTable("Technicians");
                 });
 
-            modelBuilder.Entity("Delux.Data.Technician.HairdresserData", b =>
+            modelBuilder.Entity("Delux.Data.Technician.TechnicianTypeData", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("AvailableDays")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Definition")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("WorkedYears")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Hairdressers");
+                    b.ToTable("TechnicianTypes");
                 });
 
-            modelBuilder.Entity("Delux.Data.Technician.MasseuseData", b =>
+            modelBuilder.Entity("Delux.Data.Treatment.TreatmentData", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("AvailableDays")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Definition")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("WorkedYears")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Masseuses");
-                });
-
-            modelBuilder.Entity("Delux.Data.Technician.NailTechnicianData", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("AvailableDays")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Definition")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("WorkedYears")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("NailTechnicians");
-                });
-
-            modelBuilder.Entity("Delux.Data.Treatment.FacialTreatmentData", b =>
-                {
-                    b.Property<string>("Id")
+                    b.Property<string>("TreatmentTypeId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Definition")
@@ -130,93 +80,22 @@ namespace Delux.Delux.Migrations
                     b.Property<DateTime?>("ValidTo")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("Id");
+                    b.HasKey("Id", "TreatmentTypeId");
 
-                    b.ToTable("FacialTreatments");
+                    b.ToTable("Treatments");
                 });
 
-            modelBuilder.Entity("Delux.Data.Treatment.HairTreatmentData", b =>
+            modelBuilder.Entity("Delux.Data.Treatment.TreatmentTypeData", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Definition")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Duration")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Price")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("ValidFrom")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("ValidTo")
-                        .HasColumnType("datetime2");
-
                     b.HasKey("Id");
 
-                    b.ToTable("HairTreatments");
-                });
-
-            modelBuilder.Entity("Delux.Data.Treatment.MassageTreatmentData", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Definition")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Duration")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("ValidFrom")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("ValidTo")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("MassageTreatments");
-                });
-
-            modelBuilder.Entity("Delux.Data.Treatment.NailTreatmentData", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Definition")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Duration")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("ValidFrom")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("ValidTo")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("NailTreatments");
+                    b.ToTable("TreatmentTypes");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

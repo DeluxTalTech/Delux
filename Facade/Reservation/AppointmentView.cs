@@ -8,21 +8,21 @@ namespace Delux.Facade.Reservation
     public sealed class AppointmentView : IdView
     {
         [Required]
-        [DisplayName("Choose a customer")]
+        [DisplayName("Vali klient")]
         public string ClientId { get; set; }
         [Required]
-        [DisplayName("Choose a treatment")]
+        [DisplayName("Vali hooldus")]
         public string TreatmentId { get; set; }
         [Required]
-        [DisplayName("Choose a technician")]
+        [DisplayName("Vali tegija")]
         public string TechnicianId { get; set; }
         [Required]
         [DataType(DataType.Date)]
-        [DisplayName("Appointment Date")]
+        [DisplayName("Broneeringu kuupäev")]
         public DateTime? AppointmentDate { get; set; }
         [Required]
         [DataType(DataType.Time)]
-        [DisplayName("Appointment Time")]
+        [DisplayName("Broneeringu kellaaeg")]
         public DateTime? AppointmentTime { get; set; }
 
         public string GetId()
