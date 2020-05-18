@@ -1,7 +1,9 @@
 using Delux.Delux.Data;
+using Delux.Domain.Client;
 using Delux.Domain.Technician;
 using Delux.Domain.Treatment;
 using Delux.Infra;
+using Delux.Infra.Client;
 using Delux.Infra.Technician;
 using Delux.Infra.Treatment;
 using Microsoft.AspNetCore.Builder;
@@ -37,6 +39,7 @@ namespace Delux.Delux
             services.AddScoped<ITreatmentTypesRepository, TreatmentTypesRepository>();
             services.AddScoped<ITechnicianTypesRepository, TechnicianTypesRepository>();
             services.AddScoped<ITreatmentsRepository, TreatmentsRepository>();
+            services.AddScoped<IClientsRepository, ClientsRepository>();
             //services.AddScoped<ITechniciansRepository, TechniciansRepository>();
             services.AddRazorPages();
         }

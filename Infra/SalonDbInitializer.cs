@@ -79,6 +79,7 @@ namespace Delux.Infra
             InitializeTechnicianTypes(db);
             InitializeTreatments(db);
             InitializeTechnicians(db);
+            InitializeClients(db);
         }
         private static void InitializeClients(SalonDbContext db)
         {

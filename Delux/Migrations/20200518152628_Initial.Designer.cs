@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Delux.Delux.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200518121655_Initial")]
+    [Migration("20200518152628_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

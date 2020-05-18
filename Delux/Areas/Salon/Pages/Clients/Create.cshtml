@@ -1,0 +1,13 @@
+﻿@page
+@using global::Delux.Pages.Extensions
+@model Delux.Areas.Salon.Pages.Clients.CreateModel
+
+@{
+    Layout = "_Create";
+}
+<body>
+    @Html.EditControlsFor(m => m.Item.Id)
+    @Html.EditControlsFor(m => m.Item.Name)
+    @Html.EditControlsFor(m => m.Item.MailAddress)
+    @Html.EditControlsFor(m => m.Item.PhoneNumber)
+</body>

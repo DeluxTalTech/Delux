@@ -1,15 +1,15 @@
 ﻿@using global::Delux.Pages.Extensions
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head >
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Delux</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body>
-    <header>
+<body  style='background: #e6ffff' >   
+    <header >
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">Delux</a>
@@ -24,15 +24,15 @@
                             new Link("Hooldused", "/Salon/Treatments"))
                         @Html.DropDownNavigationMenuFor("Tehnikud",
                         new Link("Tehnikud", "/Salon/Technicians"))
+                        @Html.DropDownNavigationMenuFor("Kliendid",
+                       new Link("Kliendid", "/Salon/Clients"))
                         @*<li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Salon" asp-page="/Treatments">Treatments</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Salon" asp-page="/Technicians">Technicians</a>
-                        </li>*@
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Salon/Clients">Kliendid</a>
-                        </li>
+            <a class="nav-link text-dark" asp-area="Salon" asp-page="/Treatments">Treatments</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Salon" asp-page="/Technicians">Technicians</a>
+        </li>*@
+
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Salon/Appointments">Broneeri aeg</a>
                         </li>

@@ -1,0 +1,43 @@
+﻿@page
+@using global::Delux.Pages.Extensions
+@model Delux.Areas.Salon.Pages.Clients.IndexModel
+
+@{
+    Layout = "_Index";
+    var page = Model.PageUrl;
+}
+
+@section Create {
+    @Html.HypertextLinkFor(string.Empty, new Link(Constants.CreateNewLinkTitle, $"{page}/Create"))
+}
+
+<body>
+    <table class="table">
+        <thead>
+            @Html.TableHeaderFor(
+                new Link(Html.DisplayNameFor(m => m.Item.Id), Model.GetSortString(m => m.Id, page)),
+                new Link(Html.DisplayNameFor(m => m.Item.Name), Model.GetSortString(m => m.Name, page)),
+                new Link(Html.DisplayNameFor(m => m.Item.MailAddress), Model.GetSortString(m => m.MailAddress, page)),
+                new Link(Html.DisplayNameFor(m => m.Item.PhoneNumber), Model.GetSortString(m => m.PhoneNumber, page))
+                )
+
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    @Html.TableRowFor(
+                        page,
+                        item.Id,
+                        Model.FixedFilter,
+                        Model.FixedValue,
+                        Html.DisplayFor(modelItem => item.Id),
+                        Html.DisplayFor(modelItem => item.Name),
+                        Html.DisplayFor(modelItem => item.MailAddress),
+                        Html.DisplayFor(modelItem => item.PhoneNumber)
+                        )
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>

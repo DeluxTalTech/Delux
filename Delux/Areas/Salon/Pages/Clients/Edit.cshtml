@@ -1,0 +1,15 @@
+﻿@page
+@using global::Delux.Pages.Extensions
+@model Delux.Areas.Salon.Pages.Clients.EditModel
+
+@{
+    Layout = "_Edit";
+}
+
+<body>
+    <input type="hidden" asp-for="Item.Id" />
+    @Html.DisabledControlsFor(m => m.Item.Id)
+    @Html.EditControlsFor(m => m.Item.Name)
+    @Html.EditControlsFor(m => m.Item.MailAddress)
+    @Html.EditControlsFor(m => m.Item.PhoneNumber)
+</body>

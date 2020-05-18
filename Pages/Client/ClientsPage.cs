@@ -14,7 +14,7 @@ namespace Delux.Pages.Client
 
         public override string ItemId => Item?.Id ?? string.Empty;
 
-        protected internal override string GetPageUrl() => "/Salon/Kliendid";
+        protected internal override string GetPageUrl() => "/Salon/Clients";
 
         protected internal override Domain.Client.Client ToObject(ClientView view) => ClientViewFactory.Create(view);
 
