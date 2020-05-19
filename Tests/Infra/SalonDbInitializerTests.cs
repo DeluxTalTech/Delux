@@ -38,16 +38,16 @@ namespace Delux.Tests.Infra
         }
 
         [TestMethod]
-        public void TreatmentTypesTest() => Assert.AreEqual(4, GetCount(_db.TreatmentTypes));
+        public void TreatmentTypesTest() => Assert.AreEqual(6, GetCount(_db.TreatmentTypes));
 
         [TestMethod]
-        public void TechnicianTypesTest() => Assert.AreEqual(4, GetCount(_db.TechnicianTypes));
+        public void TechnicianTypesTest() => Assert.AreEqual(6, GetCount(_db.TechnicianTypes));
 
         [TestMethod]
-        public void TreatmentsTest() => Assert.AreEqual(16, GetCount(_db.Treatments));
+        public void TreatmentsTest() => Assert.AreEqual(24, GetCount(_db.Treatments));
 
         [TestMethod]
-        public void TechniciansTest() => Assert.AreEqual(0, GetCount(_db.Technicians));
+        public void TechniciansTest() => Assert.AreEqual(24, GetCount(_db.Technicians));
 
         [TestMethod]
         public void ClientsTest() => Assert.AreEqual(6, GetCount(_db.Clients));

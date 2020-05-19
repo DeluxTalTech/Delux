@@ -8,49 +8,49 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body  style='background: #e6ffff' >   
-    <header >
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Delux</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <partial name="_LoginPartial" />
-                    <ul class="navbar-nav flex-grow-1">
-                        @Html.DropDownNavigationMenuFor("Hooldused",
-                            new Link("Hooldused", "/Salon/Treatments"))
-                        @Html.DropDownNavigationMenuFor("Tehnikud",
+<body>   
+<header >
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-page="/Index">Delux</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <partial name="_LoginPartial" />
+                <ul class="navbar-nav flex-grow-1">
+                    @Html.DropDownNavigationMenuFor("Hooldused",
+                        new Link("Hooldused", "/Salon/Treatments"))
+                    @Html.DropDownNavigationMenuFor("Tehnikud",
                         new Link("Tehnikud", "/Salon/Technicians"))
-                        @Html.DropDownNavigationMenuFor("Kliendid",
-                       new Link("Kliendid", "/Salon/Clients"))
-                        @*<li class="nav-item">
+                    @Html.DropDownNavigationMenuFor("Kliendid",
+                        new Link("Kliendid", "/Salon/Clients"))
+                    @*<li class="nav-item">
             <a class="nav-link text-dark" asp-area="Salon" asp-page="/Treatments">Treatments</a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="Salon" asp-page="/Technicians">Technicians</a>
         </li>*@
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Salon/Appointments">Broneeri aeg</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Contact">Kontakt</a>
-                        </li>
-                    </ul>
-                </div>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-page="/Salon/Appointments">Broneeri aeg</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-page="/Contact">Kontakt</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
 
-    <footer class="border-top footer text-muted">
+<footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2020 - Delux - <a asp-area="" asp-page="/Contact">Kontakt</a>
         </div>
