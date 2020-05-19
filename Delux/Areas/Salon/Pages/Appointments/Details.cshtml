@@ -1,0 +1,20 @@
+﻿@page
+@using global::Delux.Pages.Extensions
+@model Delux.Areas.Salon.Pages.Appointments.DetailsModel
+
+@{
+    Layout = "_Details";
+}
+
+
+<body>
+@Html.DisplayControlsFor(m => m.Item.Id)
+@Html.DisplayControlsFor(m => m.Item.ClientId)
+@Html.DisplayControlsFor(m => m.Item.TreatmentId)
+@Html.DisplayControlsFor(m => m.Item.TechnicianId)
+@Html.DisplayControlsFor(m => m.Item.AppointmentDate)
+@Html.DisplayControlsFor(m => m.Item.AppointmentTime)
+</body>
+
+@section Details {
+}

@@ -31,9 +31,4 @@
     <ProjectReference Include="..\Pages\Pages.csproj" />
   </ItemGroup>
 
-
-  <ItemGroup>
-    <Folder Include="Areas\Salon\Pages\Appointments\" />
-  </ItemGroup>
-
 </Project>

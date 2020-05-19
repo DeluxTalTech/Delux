@@ -1,9 +1,11 @@
 using Delux.Delux.Data;
 using Delux.Domain.Client;
+using Delux.Domain.Reservation;
 using Delux.Domain.Technician;
 using Delux.Domain.Treatment;
 using Delux.Infra;
 using Delux.Infra.Client;
+using Delux.Infra.Reservation;
 using Delux.Infra.Technician;
 using Delux.Infra.Treatment;
 using Microsoft.AspNetCore.Builder;
@@ -42,6 +44,7 @@ namespace Delux.Delux
             services.AddScoped<ITechniciansRepository, TechniciansRepository>();
             services.AddScoped<IClientsRepository, ClientsRepository>();
             services.AddScoped<ITechniciansRepository, TechniciansRepository>();
+            services.AddScoped<IAppointmentsRepository, AppointmentsRepository>();
             services.AddRazorPages();
         }
 

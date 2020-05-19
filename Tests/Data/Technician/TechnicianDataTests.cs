@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Delux.Tests.Data.Technician
 {
     [TestClass]
-    public class TechnicianDataTests : SealedClassTests<TechnicianData, DurationData>
+    public class TechnicianDataTests : SealedClassTests<TechnicianData, WorkedYearsData>
     {
         [TestMethod]
         public void TechnicianTypeIdTest()

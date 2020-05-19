@@ -38,6 +38,31 @@ namespace Delux.Delux.Migrations
                     b.ToTable("Clients");
                 });
 
+            modelBuilder.Entity("Delux.Data.Reservation.AppointmentData", b =>
+                {
+                    b.Property<string>("ClientId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("TreatmentId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("TechnicianId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("AppointmentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("AppointmentTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ClientId", "TreatmentId", "TechnicianId");
+
+                    b.ToTable("Appointments");
+                });
+
             modelBuilder.Entity("Delux.Data.Technician.TechnicianData", b =>
                 {
                     b.Property<string>("Id")
