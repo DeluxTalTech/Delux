@@ -80,6 +80,12 @@ namespace Delux.Infra
             new ClientData{Id="4",MailAddress = "arturluik@gmail.com", Name = "Artur Luik", PhoneNumber = "56354357"},
             new ClientData{Id="5",MailAddress = "virve.magi@gmail.com", Name = "Virve Mägi", PhoneNumber = "5999745"},
             new ClientData{Id="6",MailAddress = "ml.kala@gmail.com", Name = "Marta Liisa Kala", PhoneNumber = "54989595"},
+            new ClientData{Id="7",MailAddress = "kallas@gmail.com", Name = "Siiri Kala", PhoneNumber = "54955595"},
+            new ClientData{Id="8",MailAddress = "Urmasmagler@gmail.com", Name = "Urmas Maaler", PhoneNumber = "551479295"},
+            new ClientData{Id="9",MailAddress = "ml.kala@gmail.com", Name = "Marta Liisa Kala", PhoneNumber = "54989595"},
+            new ClientData{Id="10",MailAddress = "mullaa@gmail.com", Name = "Anita Mulla", PhoneNumber = "51433355"},
+            new ClientData{Id="11",MailAddress = "yllekaljus@gmail.com", Name = "Ülle Kaljus", PhoneNumber = "54987795"},
+            new ClientData{Id="12",MailAddress = "ukumarkus@gmail.com", Name = "Uku-Markus Aisa", PhoneNumber = "54779595"},
         };
 
         internal static List<AppointmentData> Appointments => new List<AppointmentData>

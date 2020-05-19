@@ -28,19 +28,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\Client\" />
     <Folder Include="Data\Reservation\" />
     <Folder Include="Domain\Common\" />
-    <Folder Include="Domain\Client\" />
     <Folder Include="Domain\Reservation\" />
     <Folder Include="Facade\Common\" />
-    <Folder Include="Facade\Client\" />
     <Folder Include="Facade\Reservation\" />
-    <Folder Include="Infra\Client\" />
     <Folder Include="Infra\Reservation\" />
     <Folder Include="Pages\Extensions\" />
     <Folder Include="Pages\Common\" />
-    <Folder Include="Pages\Client\" />
     <Folder Include="Pages\Reservation\" />
   </ItemGroup>
 

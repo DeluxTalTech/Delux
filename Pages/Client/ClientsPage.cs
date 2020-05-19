@@ -5,7 +5,7 @@ using Delux.Pages.Common;
 
 namespace Delux.Pages.Client
 {
-    public class ClientsPage : CommonPage<IClientsRepository, Domain.Client.Client, ClientView, ClientData>
+    public abstract class ClientsPage : CommonPage<IClientsRepository, Domain.Client.Client, ClientView, ClientData>
     {
         protected internal ClientsPage(IClientsRepository r) : base(r)
         {
