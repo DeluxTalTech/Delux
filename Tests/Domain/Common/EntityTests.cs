@@ -1,5 +1,4 @@
 ﻿using Delux.Aids;
-using Delux.Data.Technician;
 using Delux.Data.Treatment;
 using Delux.Domain.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

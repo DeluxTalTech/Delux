@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Delux.Aids;
+﻿using Delux.Aids;
 using Delux.Data.Technician;
-using Delux.Domain.Technician;
 
 namespace Delux.Facade.Technician
 {

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Delux.Facade.Technician;
 using Delux.Facade.Treatment;
 using Delux.Pages.Extensions;
 using Microsoft.AspNetCore.Html;

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Delux.Data.Common
+﻿namespace Delux.Data.Common
 {
     public abstract class DurationData : PriceData
     {

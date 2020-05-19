@@ -1,8 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Delux.Aids;
-using Delux.Data.Technician;
 using Delux.Data.Treatment;
-using Delux.Domain.Technician;
 using Delux.Domain.Treatment;
 using Delux.Infra;
 using Delux.Infra.Common;

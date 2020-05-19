@@ -1,7 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Delux.Domain.Technician;
 using Delux.Domain.Treatment;
-using Delux.Pages.Technician;
 using Delux.Pages.Treatment;
 using Microsoft.AspNetCore.Mvc;
 

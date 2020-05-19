@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Delux.Domain.Common;
+﻿using Delux.Domain.Common;
 
 namespace Delux.Domain.Treatment
 {

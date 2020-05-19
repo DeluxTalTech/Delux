@@ -1,10 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Delux.Data.Common;
+using Delux.Data.Technician;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Delux.Tests.Data.Technician
 {
-    class TechnicianDataTests
+    [TestClass]
+    public class TechnicianDataTests : SealedClassTests<TechnicianData, DurationData>
     {
+        [TestMethod]
+        public void TechnicianTypeIdTest()
+        {
+            IsNullableProperty(() => Obj.TechnicianTypeId, x => Obj.TechnicianTypeId = x);
+        }
     }
 }

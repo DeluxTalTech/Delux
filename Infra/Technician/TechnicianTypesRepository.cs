@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Delux.Data.Technician;
+﻿using Delux.Data.Technician;
 using Delux.Domain.Technician;
 using Delux.Infra.Common;
 

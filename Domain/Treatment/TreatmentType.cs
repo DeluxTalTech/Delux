@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Delux.Data.Technician;
-using Delux.Data.Treatment;
+﻿using Delux.Data.Treatment;
 using Delux.Domain.Common;
 
 namespace Delux.Domain.Treatment

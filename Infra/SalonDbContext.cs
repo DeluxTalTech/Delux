@@ -1,5 +1,4 @@
 ﻿using Delux.Data.Client;
-using Delux.Data.Reservation;
 using Delux.Data.Technician;
 using Delux.Data.Treatment;
 using Microsoft.EntityFrameworkCore;

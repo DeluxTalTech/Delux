@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Delux.Data.Treatment;
+﻿using Delux.Data.Treatment;
 using Delux.Domain.Common;
 using Delux.Domain.Treatment;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

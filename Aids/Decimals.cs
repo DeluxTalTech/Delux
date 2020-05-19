@@ -1,7 +1,4 @@
-﻿using System;
-using System.Globalization;
-
-namespace Delux.Aids 
+﻿namespace Delux.Aids 
 {
     public static class Decimals
     {

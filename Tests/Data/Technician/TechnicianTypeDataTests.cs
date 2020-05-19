@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Delux.Data.Common;
+using Delux.Data.Technician;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Delux.Tests.Data.Technician
 {
-    class TechnicianTypeDataTests
+    [TestClass]
+    public class TechnicianTypeDataTests : SealedClassTests<TechnicianTypeData, NameData>
     {
     }
 }

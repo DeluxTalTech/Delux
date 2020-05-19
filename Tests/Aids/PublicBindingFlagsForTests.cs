@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
 using Delux.Aids;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

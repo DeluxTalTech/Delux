@@ -1,8 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Delux.Domain.Technician;
-using Delux.Domain.Technician;
 using Delux.Pages.Technician;
-using Delux.Pages.Treatment;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Delux.Delux.Areas.Salon.Pages.Technicians

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Delux.Data.Technician;
+﻿using System.Collections.Generic;
 using Delux.Data.Treatment;
-using Delux.Domain.Technician;
 using Delux.Domain.Treatment;
-using Delux.Facade.Technician;
 using Delux.Facade.Treatment;
 using Delux.Pages.Common;
 using Microsoft.AspNetCore.Mvc.Rendering;

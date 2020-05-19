@@ -5,7 +5,6 @@ using Delux.Data.Client;
 using Delux.Data.Reservation;
 using Delux.Data.Technician;
 using Delux.Data.Treatment;
-using Delux.Domain.Reservation;
 
 namespace Delux.Infra
 {

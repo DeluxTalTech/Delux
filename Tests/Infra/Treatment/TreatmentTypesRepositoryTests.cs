@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Delux.Data.Treatment;
 using Delux.Domain.Treatment;
 using Delux.Infra;

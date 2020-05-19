@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Text;
 using Delux.Aids;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DateTime = System.DateTime;
