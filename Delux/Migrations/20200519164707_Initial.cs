@@ -8,6 +8,22 @@ namespace Delux.Delux.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Appointments",
+                columns: table => new
+                {
+                    ClientId = table.Column<string>(nullable: false),
+                    TreatmentId = table.Column<string>(nullable: false),
+                    TechnicianId = table.Column<string>(nullable: false),
+                    Id = table.Column<string>(nullable: true),
+                    AppointmentDate = table.Column<DateTime>(nullable: true),
+                    AppointmentTime = table.Column<DateTime>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Appointments", x => new { x.ClientId, x.TreatmentId, x.TechnicianId });
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
                 {
@@ -265,6 +281,9 @@ namespace Delux.Delux.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Appointments");
+
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 

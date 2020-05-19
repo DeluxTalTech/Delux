@@ -1,0 +1,18 @@
+﻿@page
+@using global::Delux.Pages.Extensions
+@model Delux.Areas.Salon.Pages.Appointments.EditModel
+
+@{
+    Layout = "_Edit";
+}
+
+    <body>
+        <input type="hidden" asp-for="Item.Id" />
+        <input type="hidden" asp-for="Item.ClientId" />
+        @Html.DisabledControlsFor(m => m.Item.Id)
+        @Html.DisabledControlsFor(m => m.Item.ClientId)
+        @Html.EditControlsFor(m => m.Item.TreatmentId)
+        @Html.EditControlsFor(m => m.Item.TechnicianId)
+        @Html.EditControlsFor(m => m.Item.AppointmentDate)
+        @Html.EditControlsFor(m => m.Item.AppointmentTime)
+    </body>

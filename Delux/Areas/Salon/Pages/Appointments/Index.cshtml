@@ -1,0 +1,47 @@
+﻿@page
+@using global::Delux.Pages.Extensions
+@model Delux.Areas.Salon.Pages.Appointments.IndexModel
+
+@{
+    Layout = "_Index";
+    var page = Model.PageUrl;
+}
+
+@section Create {
+    @Html.HypertextLinkFor(string.Empty, new Link(Constants.CreateNewLinkTitle, $"{page}/Create"))
+}
+
+<body>
+    <table class="table">
+        <thead>
+            @Html.TableHeaderFor(
+                new Link(Html.DisplayNameFor(m => m.Item.Id), Model.GetSortString(m => m.Id, page)),
+                new Link(Html.DisplayNameFor(m => m.Item.ClientId), Model.GetSortString(m => m.ClientId, page)),
+                new Link(Html.DisplayNameFor(m => m.Item.TreatmentId), Model.GetSortString(m => m.TreatmentId, page)),
+                new Link(Html.DisplayNameFor(m => m.Item.TechnicianId), Model.GetSortString(m => m.TechnicianId, page)),
+                new Link(Html.DisplayNameFor(m => m.Item.AppointmentDate), Model.GetSortString(m => m.AppointmentDate, page)),
+                new Link(Html.DisplayNameFor(m => m.Item.AppointmentTime), Model.GetSortString(m => m.AppointmentTime, page))
+                )
+
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    @Html.TableRowFor(
+                        page,
+                        item.Id,
+                        Model.FixedFilter,
+                        Model.FixedValue,
+                        Html.DisplayFor(modelItem => item.Id),
+                        Html.DisplayFor(modelItem => item.ClientId),
+                        Html.DisplayFor(modelItem => item.TreatmentId),
+                        Html.DisplayFor(modelItem => item.TechnicianId),
+                        Html.DisplayFor(modelItem => item.AppointmentDate),
+                        Html.DisplayFor(modelItem => item.AppointmentTime)
+                        )
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>

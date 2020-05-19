@@ -1,0 +1,15 @@
+﻿@page
+@using global::Delux.Pages.Extensions
+@model Delux.Areas.Salon.Pages.Appointments.CreateModel
+
+@{
+    Layout = "_Create";
+}
+    <body>
+        @Html.EditControlsFor(m => m.Item.Id)
+        @Html.EditControlsForDropDown(m => m.Item.ClientId, Model.Clients)
+        @Html.EditControlsForDropDown(m => m.Item.TreatmentId, Model.Treatments)
+        @Html.EditControlsForDropDown(m => m.Item.TechnicianId, Model.Technicians)
+        @Html.EditControlsFor(m => m.Item.AppointmentDate)
+        @Html.EditControlsFor(m => m.Item.AppointmentTime)
+    </body>
