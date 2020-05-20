@@ -121,7 +121,7 @@ namespace Delux.Tests.Infra.Common
         public void GetItemsCountTest()
         {
             var itemsCount = Obj.GetItemsCount();
-            Assert.AreEqual(0, itemsCount);
+            Assert.AreEqual(_count, itemsCount);
         }
 
         private void AddItems()

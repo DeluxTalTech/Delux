@@ -17,7 +17,8 @@ namespace Delux.Tests.Pages.Extensions
         [TestMethod] public void SelectLinkTitleTest() => Assert.AreEqual("Select", Constants.SelectLinkTitle);
         [TestMethod] public void TechniciansPageTitleTest() => Assert.AreEqual("Technicians", Constants.TechniciansPageTitle);
         [TestMethod] public void TreatmentsPageTitleTest() => Assert.AreEqual("Treatments", Constants.TreatmentsPageTitle);
-
+        [TestMethod] public void ClientsPageTitleTest() => Assert.AreEqual("Clients", Constants.ClientsPageTitle);
+        [TestMethod] public void AppointmentsPageTitleTest() => Assert.AreEqual("Appointments", Constants.AppointmentsPageTitle);
     }
 }
  

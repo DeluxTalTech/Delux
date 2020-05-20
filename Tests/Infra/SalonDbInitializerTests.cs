@@ -47,7 +47,7 @@ namespace Delux.Tests.Infra
         public void TechniciansTest() => Assert.AreEqual(24, GetCount(_db.Technicians));
 
         [TestMethod]
-        public void ClientsTest() => Assert.AreEqual(6, GetCount(_db.Clients));
+        public void ClientsTest() => Assert.AreEqual(12, GetCount(_db.Clients));
 
         //[TestMethod]
         //public void AppointmentsTest() => Assert.AreEqual(2, GetCount(db.Appointments));

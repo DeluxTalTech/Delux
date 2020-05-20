@@ -5,6 +5,7 @@ using Delux.Domain.Treatment;
 using Delux.Facade.Treatment;
 using Delux.Pages.Common;
 using Delux.Pages.Treatment;
+using Delux.Infra.Treatment;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Delux.Tests.Pages.Treatment
@@ -57,7 +58,7 @@ namespace Delux.Tests.Pages.Treatment
         {
             var item = GetRandom.Object<TreatmentView>();
             Obj.Item = item;
-            Assert.AreEqual(item.Id, Obj.ItemId);
+            Assert.AreEqual(item.GetId(), Obj.ItemId);
             Obj.Item = null;
             Assert.AreEqual(string.Empty, Obj.ItemId);
         }

@@ -9,5 +9,10 @@ namespace Delux.Facade.Technician
         [Required]
         [DisplayName("Kategooria")]
         public string TechnicianTypeId { get; set; }
+
+        public string GetId()
+        {
+            return $"{Id}.{TechnicianTypeId}";
+        }
     }
 }
