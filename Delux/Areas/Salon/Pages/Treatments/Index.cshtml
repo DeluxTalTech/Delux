@@ -8,7 +8,7 @@
 }
 
 @section Create {
-    @Html.HypertextLinkFor(string.Empty, new Link(Constants.CreateNewLinkTitle, $"{page}/Create"))
+    @Html.HypertextLinkFor(string.Empty, new Link(Constants.CreateNewLinkTitle, $"{page}/Create?fixedFilter={Model.FixedFilter}&fixedValue={Model.FixedValue}"))
 }
 
 <body>
@@ -36,7 +36,7 @@
                 Model.FixedFilter,
                 Model.FixedValue,
                 Html.DisplayFor(modelItem => item.Id),
-                Html.DisplayFor(modelItem => item.TreatmentTypeId),
+                Html.Raw(Model.GetTreatmentTypeName(item.TreatmentTypeId)),
                 Html.DisplayFor(modelItem => item.Name),
                 Html.DisplayFor(modelItem => item.Definition),
                 Html.DisplayFor(modelItem => item.ValidFrom),

@@ -7,10 +7,10 @@
 }
 
 <body>
-@Html.DisplayControlsFor(m => m.Item.Id)
-@Html.DisplayControlsFor(m => m.Item.ClientId)
-@Html.DisplayControlsFor(m => m.Item.TreatmentId)
-@Html.DisplayControlsFor(m => m.Item.TechnicianId)
-@Html.DisplayControlsFor(m => m.Item.AppointmentDate)
-@Html.DisplayControlsFor(m => m.Item.AppointmentTime)
+    @Html.DisplayControlsFor(m => m.Item.Id)
+    @Html.DisplayControlsFor(m => m.Item.ClientId, Model.GetClientName(Model.Item.ClientId))
+    @Html.DisplayControlsFor(m => m.Item.TreatmentId, Model.GetTreatmentName(Model.Item.TreatmentId))
+    @Html.DisplayControlsFor(m => m.Item.TechnicianId, Model.GetTechnicianName(Model.Item.TechnicianId))
+    @Html.DisplayControlsFor(m => m.Item.AppointmentDate)
+    @Html.DisplayControlsFor(m => m.Item.AppointmentTime)
 </body>

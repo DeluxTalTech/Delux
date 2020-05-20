@@ -7,16 +7,16 @@
 }
 
 
-<body>
-@Html.DisplayControlsFor(m => m.Item.Id)
-@Html.DisplayControlsFor(m => m.Item.TreatmentTypeId)
-@Html.DisplayControlsFor(m => m.Item.Name)
-@Html.DisplayControlsFor(m => m.Item.Definition)
-@Html.DisplayControlsFor(m => m.Item.ValidFrom)
-@Html.DisplayControlsFor(m => m.Item.ValidTo)
-@Html.DisplayControlsFor(m => m.Item.Price)
-@Html.DisplayControlsFor(m => m.Item.Duration)
-</body>
+    <body>
+        @Html.DisplayControlsFor(m => m.Item.Id)
+        @Html.DisplayControlsFor(m => m.Item.TreatmentTypeId, Model.GetTreatmentTypeName(Model.Item.TreatmentTypeId))
+        @Html.DisplayControlsFor(m => m.Item.Name)
+        @Html.DisplayControlsFor(m => m.Item.Definition)
+        @Html.DisplayControlsFor(m => m.Item.ValidFrom)
+        @Html.DisplayControlsFor(m => m.Item.ValidTo)
+        @Html.DisplayControlsFor(m => m.Item.Price)
+        @Html.DisplayControlsFor(m => m.Item.Duration)
+    </body>
 
 @section Details {
 }

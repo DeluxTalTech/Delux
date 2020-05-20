@@ -60,7 +60,7 @@ namespace Delux.Pages.Reservation
 
         public string GetTreatmentName(string treatmentId)
         {
-            foreach (var m in Clients)
+            foreach (var m in Treatments)
                 if (m.Value == treatmentId)
                     return m.Text;
             return "Unspecified";
@@ -68,7 +68,7 @@ namespace Delux.Pages.Reservation
 
         public string GetTechnicianName(string technicianId)
         {
-            foreach (var m in Clients)
+            foreach (var m in Technicians)
                 if (m.Value == technicianId)
                     return m.Text;
             return "Unspecified";

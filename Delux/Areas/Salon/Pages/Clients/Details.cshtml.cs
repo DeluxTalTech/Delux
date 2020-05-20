@@ -7,7 +7,7 @@ namespace Delux.Delux.Areas.Salon.Pages.Clients
 {
     public class DetailsModel : ClientsPage
     {
-        public DetailsModel(IClientsRepository r) : base(r) { }
+        public DetailsModel(IClientsRepository c) : base(c) { }
 
         public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
         {

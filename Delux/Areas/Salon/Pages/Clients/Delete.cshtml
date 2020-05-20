@@ -1,9 +1,9 @@
 ﻿@page
 @using global::Delux.Pages.Extensions
-@model Delux.Areas.Salon.Pages.Clients.DetailsModel
+@model Delux.Areas.Salon.Pages.Clients.DeleteModel
 
 @{
-    Layout = "_Details";
+    Layout = "_Delete";
 }
 
 
@@ -13,6 +13,3 @@
     @Html.DisplayControlsFor(m => m.Item.MailAddress)
     @Html.DisplayControlsFor(m => m.Item.PhoneNumber)
 </body>
-
-@section Details {
-}

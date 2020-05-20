@@ -7,7 +7,7 @@ namespace Delux.Delux.Areas.Salon.Pages.Clients
 {
     public class CreateModel : ClientsPage
     {
-        public CreateModel(IClientsRepository r) : base(r) { }
+        public CreateModel(IClientsRepository c) : base(c) { }
 
         public IActionResult OnGet(string fixedFilter, string fixedValue)
         {

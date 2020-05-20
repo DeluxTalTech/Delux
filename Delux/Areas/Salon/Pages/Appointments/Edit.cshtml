@@ -11,8 +11,8 @@
         <input type="hidden" asp-for="Item.ClientId" />
         @Html.DisabledControlsFor(m => m.Item.Id)
         @Html.DisabledControlsFor(m => m.Item.ClientId)
-        @Html.EditControlsFor(m => m.Item.TreatmentId)
-        @Html.EditControlsFor(m => m.Item.TechnicianId)
+        @Html.EditControlsForDropDown(m => m.Item.TreatmentId, Model.Treatments)
+        @Html.EditControlsForDropDown(m => m.Item.TechnicianId, Model.Technicians)
         @Html.EditControlsFor(m => m.Item.AppointmentDate)
         @Html.EditControlsFor(m => m.Item.AppointmentTime)
     </body>

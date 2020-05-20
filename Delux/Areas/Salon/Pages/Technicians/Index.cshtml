@@ -1,5 +1,7 @@
 ﻿@page
 @using global::Delux.Pages.Extensions
+@using global::Delux.Facade.Technician
+@using global::Delux.Aids
 @model Delux.Areas.Salon.Pages.Technicians.IndexModel
 
 @{
@@ -8,7 +10,7 @@
 }
 
 @section Create {
-    @Html.HypertextLinkFor(string.Empty, new Link(Constants.CreateNewLinkTitle, $"{page}/Create"))
+    @Html.HypertextLinkFor(string.Empty, new Link(Constants.CreateNewLinkTitle, $"{page}/Create?fixedFilter={Model.FixedFilter}&fixedValue={Model.FixedValue}"))
 }
 
 <body>
@@ -33,7 +35,7 @@
                         Model.FixedFilter,
                         Model.FixedValue,
                         Html.DisplayFor(modelItem => item.Id),
-                        Html.DisplayFor(modelItem => item.TechnicianTypeId),
+                        Html.Raw(Model.GetTechnicianTypeName(item.TechnicianTypeId)),
                         Html.DisplayFor(modelItem => item.Name),
                         Html.DisplayFor(modelItem => item.WorkedYears),
                         Html.DisplayFor(modelItem => item.AvailableDays)

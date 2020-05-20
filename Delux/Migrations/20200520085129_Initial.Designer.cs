@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Delux.Delux.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200519163239_Initial")]
+    [Migration("20200520085129_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,6 +38,31 @@ namespace Delux.Delux.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Clients");
+                });
+
+            modelBuilder.Entity("Delux.Data.Reservation.AppointmentData", b =>
+                {
+                    b.Property<string>("ClientId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("TreatmentId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("TechnicianId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("AppointmentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("AppointmentTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ClientId", "TreatmentId", "TechnicianId");
+
+                    b.ToTable("Appointments");
                 });
 
             modelBuilder.Entity("Delux.Data.Technician.TechnicianData", b =>

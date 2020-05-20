@@ -6,7 +6,7 @@ namespace Delux.Delux.Areas.Salon.Pages.Clients
 {
     public class IndexModel : ClientsPage
     {
-        public IndexModel(IClientsRepository r) : base(r) { }
+        public IndexModel(IClientsRepository c) : base(c) { }
 
         public async Task OnGetAsync(string sortOrder,
             string currentFilter, string searchString, int? pageIndex,

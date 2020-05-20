@@ -8,9 +8,8 @@
 
 <body>
 <input type="hidden" asp-for="Item.Id" />
-<input type="hidden" asp-for="Item.TechnicianTypeId" />
 @Html.DisabledControlsFor(m => m.Item.Id)
-@Html.DisabledControlsFor(m => m.Item.TechnicianTypeId)
+@Html.EditControlsForDropDown(m => m.Item.TechnicianTypeId, Model.TechnicianTypes)
 @Html.EditControlsFor(m => m.Item.Name)
 @Html.EditControlsFor(m => m.Item.WorkedYears)
 @Html.EditControlsFor(m => m.Item.AvailableDays)
