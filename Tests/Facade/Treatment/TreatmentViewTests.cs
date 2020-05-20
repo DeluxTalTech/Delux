@@ -9,5 +9,13 @@ namespace Delux.Tests.Facade.Treatment
     {
         [TestMethod]
         public void TreatmentTypeIdTest() => IsNullableProperty(() => Obj.TreatmentTypeId, x => Obj.TreatmentTypeId = x);
+
+        [TestMethod]
+        public void GetIdTest()
+        {
+            var actual = Obj.GetId();
+            var expected = $"{Obj.Id}.{Obj.TreatmentTypeId}";
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
