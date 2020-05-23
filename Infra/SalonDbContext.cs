@@ -10,7 +10,7 @@ namespace Delux.Infra
     {
         public DbSet<TreatmentTypeData> TreatmentTypes { get; set; }
         public DbSet<TechnicianTypeData> TechnicianTypes { get; set; }
-        public DbSet<TreatmentData> Treatments { get; set; }
+        public DbSet<TechnicianData> Treatments { get; set; }
         public DbSet<TechnicianData> Technicians { get; set; }
         public DbSet<ClientData> Clients { get; set; }
         public DbSet<AppointmentData> Appointments { get; set; }
