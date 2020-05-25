@@ -11,6 +11,7 @@ using Delux.Facade.Reservation;
 using Delux.Facade.Treatment;
 using Delux.Pages.Common;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 
 namespace Delux.Pages.Reservation
 {
@@ -29,15 +30,15 @@ namespace Delux.Pages.Reservation
             Technicians = CreateSelectList<Domain.Technician.Technician, TechnicianData>(te);
         }
 
-        public override string ItemId
-        {
-            get
-            {
-                if (Item is null) return string.Empty;
-                return $"{Item.ClientId}.{Item.TreatmentId}.{Item.TechnicianId}";
-            }
-        }
-
+        //public override string ItemId
+        //{
+        //    get
+        //    {
+        //        if (Item is null) return string.Empty;
+        //        return $"{Item.ClientId}.{Item.TreatmentId}.{Item.TechnicianId}";
+        //    }
+        //}
+        public override string ItemId => Item is null ? string.Empty : Item.GetId();
         protected internal override string GetPageUrl() => "/Salon/Appointments";
 
         protected internal override Appointment ToObject(AppointmentView view)

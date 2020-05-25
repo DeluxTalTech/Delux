@@ -20,23 +20,24 @@ namespace Delux.Tests.Infra.Technician
                 .UseInMemoryDatabase("TestDb")
                 .Options;
             Db = new SalonDbContext(options);
-            DbSet = ((SalonDbContext)Db).Treatments;
+            DbSet = ((SalonDbContext)Db).Technicians;
             Obj = new TechniciansRepository((SalonDbContext)Db);
             base.TestInitialize();
 
         }
 
-        protected override string GetId(TechnicianData d) => $"{d.Id}.{d.TechnicianTypeId}";
+        protected override string GetId(TechnicianData d) => d.Id;
+        //$"{d.Id}.{d.TechnicianTypeId}";
 
         protected override global::Delux.Domain.Technician.Technician GetObject(TechnicianData d) => new global::Delux.Domain.Technician.Technician(d);
 
-        protected override void SetId(TechnicianData d, string id)
-        {
-            var masterId = GetString.Head(id);
-            var technicianTypeId = GetString.Tail(id);
-            d.Id = masterId;
-            d.TechnicianTypeId = technicianTypeId;
-        }
+        protected override void SetId(TechnicianData d, string id) => d.Id = id;
+        //{
+        //    var masterId = GetString.Head(id);
+        //    var technicianTypeId = GetString.Tail(id);
+        //    d.Id = masterId;
+        //    d.TechnicianTypeId = technicianTypeId;
+        //}
 
         protected override Type GetBaseType()
         {

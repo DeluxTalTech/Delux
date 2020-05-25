@@ -15,16 +15,16 @@ namespace Delux.Infra.Technician
 
         protected internal override Domain.Technician.Technician ToDomainObject(TechnicianData d) => new Domain.Technician.Technician(d);
 
-        protected override async Task<TechnicianData> GetData(string id)
-        {
-            var masterId = GetString.Head(id);
-            var technicianTypeId = GetString.Tail(id);
-            return await DbSet.SingleOrDefaultAsync(x => x.TechnicianTypeId == technicianTypeId && x.Id == masterId);
-        }
+        //protected override async Task<TechnicianData> GetData(string id)
+        //{
+        //    var masterId = GetString.Head(id);
+        //    var technicianTypeId = GetString.Tail(id);
+        //    return await DbSet.SingleOrDefaultAsync(x => x.TechnicianTypeId == technicianTypeId && x.Id == masterId);
+        //}
 
-        protected override string GetId(Domain.Technician.Technician obj)
-        {
-            return obj?.Data is null ? string.Empty : $"{obj.Data.Id}.{obj.Data.TechnicianTypeId}";
-        }
+        //protected override string GetId(Domain.Technician.Technician obj)
+        //{
+        //    return obj?.Data is null ? string.Empty : $"{obj.Data.Id}.{obj.Data.TechnicianTypeId}";
+        //}
     }
 }

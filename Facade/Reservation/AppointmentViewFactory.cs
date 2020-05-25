@@ -16,8 +16,7 @@ namespace Delux.Facade.Reservation
         public static AppointmentView Create(Appointment obj)
         {
             var v = new AppointmentView();
-            if(!(obj?.Data is null))
-                Copy.Members(obj.Data, v);
+            Copy.Members(obj.Data, v);
             return v;
         }
     }

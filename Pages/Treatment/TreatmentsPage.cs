@@ -16,14 +16,15 @@ namespace Delux.Pages.Treatment
             TreatmentTypes = CreateSelectList<TreatmentType, TreatmentTypeData>(m);
         }
 
-        public override string ItemId
-        {
-            get
-            {
-                if (Item is null) return string.Empty;
-                return $"{Item.Id}.{Item.TreatmentTypeId}";
-            }
-        }
+        //public override string ItemId
+        //{
+        //    get
+        //    {
+        //        if (Item is null) return string.Empty;
+        //        return $"{Item.Id}.{Item.TreatmentTypeId}";
+        //    }
+        //}
+        public override string ItemId => Item?.Id ?? string.Empty;
 
         protected internal override string GetPageUrl() => "/Salon/Treatments";
 

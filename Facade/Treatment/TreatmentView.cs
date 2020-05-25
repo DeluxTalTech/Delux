@@ -10,9 +10,9 @@ namespace Delux.Facade.Treatment
         [DisplayName("Kategooria")]
         public string TreatmentTypeId { get; set; }
 
-        public string GetId()
-        {
-            return $"{Id}.{TreatmentTypeId}";
-        }
+        //public string GetId()
+        //{
+        //    return $"{Id}.{TreatmentTypeId}";
+        //}
     }
 }
