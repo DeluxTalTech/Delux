@@ -49,10 +49,7 @@ namespace Delux.Delux.Migrations
                     b.Property<string>("TechnicianId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateTime?>("AppointmentDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("AppointmentTime")
+                    b.Property<DateTime?>("AppointmentDateTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Id")

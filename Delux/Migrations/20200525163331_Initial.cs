@@ -15,8 +15,7 @@ namespace Delux.Delux.Migrations
                     TreatmentId = table.Column<string>(nullable: false),
                     TechnicianId = table.Column<string>(nullable: false),
                     Id = table.Column<string>(nullable: true),
-                    AppointmentDate = table.Column<DateTime>(nullable: true),
-                    AppointmentTime = table.Column<DateTime>(nullable: true)
+                    AppointmentDateTime = table.Column<DateTime>(nullable: true)
                 },
                 constraints: table =>
                 {

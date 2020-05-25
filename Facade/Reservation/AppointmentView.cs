@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Delux.Aids;
 using Delux.Facade.Common;
 
 namespace Delux.Facade.Reservation
@@ -8,22 +9,19 @@ namespace Delux.Facade.Reservation
     public sealed class AppointmentView : IdView
     {
         [Required]
-        [DisplayName("Vali klient")]
+        [DisplayName("Klient")]
         public string ClientId { get; set; }
         [Required]
-        [DisplayName("Vali hooldus")]
+        [DisplayName("Hooldus")]
         public string TreatmentId { get; set; }
         [Required]
-        [DisplayName("Vali tegija")]
+        [DisplayName("Tegija")]
         public string TechnicianId { get; set; }
         [Required]
-        [DataType(DataType.Date)]
-        [DisplayName("Broneeringu kuupäev")]
-        public DateTime? AppointmentDate { get; set; }
-        [Required]
-        [DataType(DataType.Time)]
-        [DisplayName("Broneeringu kellaaeg")]
-        public DateTime? AppointmentTime { get; set; }
+        [DataType(DataType.DateTime)]
+        [MyDate] //custom datetime validation attribute
+        [DisplayName("Broneeringu kuupäev ja kellaaeg")]
+        public DateTime? AppointmentDateTime { get; set; }
 
         public string GetId()
         {

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Delux.Delux.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200525130357_Initial")]
+    [Migration("20200525163331_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,10 +51,7 @@ namespace Delux.Delux.Migrations
                     b.Property<string>("TechnicianId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateTime?>("AppointmentDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("AppointmentTime")
+                    b.Property<DateTime?>("AppointmentDateTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Id")
