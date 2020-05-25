@@ -30,15 +30,8 @@ namespace Delux.Pages.Reservation
             Technicians = CreateSelectList<Domain.Technician.Technician, TechnicianData>(te);
         }
 
-        //public override string ItemId
-        //{
-        //    get
-        //    {
-        //        if (Item is null) return string.Empty;
-        //        return $"{Item.ClientId}.{Item.TreatmentId}.{Item.TechnicianId}";
-        //    }
-        //}
         public override string ItemId => Item is null ? string.Empty : Item.GetId();
+
         protected internal override string GetPageUrl() => "/Salon/Appointments";
 
         protected internal override Appointment ToObject(AppointmentView view)
@@ -75,11 +68,11 @@ namespace Delux.Pages.Reservation
             return "Unspecified";
         }
 
-        protected internal override string GetPageSubTitle()
-        {
-            return FixedValue is null
-                ? base.GetPageSubTitle()
-                : $"For {GetClientName(FixedValue)}.{GetTreatmentName(FixedValue)}.{GetTechnicianName(FixedValue)}";
-        }
+        //protected internal override string GetPageSubTitle()
+        //{
+        //    return FixedValue is null
+        //        ? base.GetPageSubTitle()
+        //        : $"For {GetClientName(FixedValue)}.{GetTreatmentName(FixedValue)}.{GetTechnicianName(FixedValue)}";
+        //}
     }
 }

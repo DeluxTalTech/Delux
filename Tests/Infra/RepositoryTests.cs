@@ -12,7 +12,7 @@ namespace Delux.Tests.Infra
         : BaseTests
     where TRepository : IRepository<TObject>
     where TObject : Entity<TData>
-    where TData : NameData, new()
+    where TData : IdData, new()
     {
 
         protected TData Data;

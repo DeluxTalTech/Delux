@@ -19,7 +19,7 @@ namespace Delux.Tests.Pages.Technician
             internal TestClass(ITechniciansRepository t, ITechnicianTypesRepository tt) : base(t, tt) { }
         }
 
-        private class TechnicianRepository : BaseTestRepositoryForId<global::Delux.Domain.Technician.Technician, TechnicianData>, ITechniciansRepository
+        private class TechniciansRepository : BaseTestRepositoryForId<global::Delux.Domain.Technician.Technician, TechnicianData>, ITechniciansRepository
         {
         }
 
@@ -51,6 +51,16 @@ namespace Delux.Tests.Pages.Technician
                 var t = new TechnicianType(d);
                 _technicianTypes.Add(t).GetAwaiter();
             }
+        }
+
+        [TestMethod]
+        public void ItemIdTest()
+        {
+            var item = GetRandom.Object<TechnicianView>();
+            Obj.Item = item;
+            Assert.AreEqual(item.Id, Obj.ItemId);
+            Obj.Item = null;
+            Assert.AreEqual(string.Empty, Obj.ItemId);
         }
 
         [TestMethod]

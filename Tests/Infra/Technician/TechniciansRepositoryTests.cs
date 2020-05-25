@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Delux.Tests.Infra.Technician
 {
     [TestClass]
-    public class TechnicianRepositoryTests : RepositoryTests<TechniciansRepository, global::Delux.Domain.Technician.Technician, TechnicianData>
+    public class TechniciansRepositoryTests : RepositoryTests<TechniciansRepository, global::Delux.Domain.Technician.Technician, TechnicianData>
     {
 
         [TestInitialize]

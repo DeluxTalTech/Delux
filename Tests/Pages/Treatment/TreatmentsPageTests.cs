@@ -54,6 +54,16 @@ namespace Delux.Tests.Pages.Treatment
         }
 
         [TestMethod]
+        public void ItemIdTest()
+        {
+            var item = GetRandom.Object<TreatmentView>();
+            Obj.Item = item;
+            Assert.AreEqual(item.Id, Obj.ItemId);
+            Obj.Item = null;
+            Assert.AreEqual(string.Empty, Obj.ItemId);
+        }
+
+        [TestMethod]
         public void PageTitleTest() => Assert.AreEqual("Hooldused", Obj.PageTitle);
 
 

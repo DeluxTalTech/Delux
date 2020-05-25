@@ -16,14 +16,6 @@ namespace Delux.Pages.Treatment
             TreatmentTypes = CreateSelectList<TreatmentType, TreatmentTypeData>(m);
         }
 
-        //public override string ItemId
-        //{
-        //    get
-        //    {
-        //        if (Item is null) return string.Empty;
-        //        return $"{Item.Id}.{Item.TreatmentTypeId}";
-        //    }
-        //}
         public override string ItemId => Item?.Id ?? string.Empty;
 
         protected internal override string GetPageUrl() => "/Salon/Treatments";
@@ -46,11 +38,11 @@ namespace Delux.Pages.Treatment
             return "Unspecified";
         }
 
-        protected internal override string GetPageSubTitle()
-        {
-            return FixedValue is null
-                ? base.GetPageSubTitle()
-                : $"For {GetTreatmentTypeName(FixedValue)}";
-        }
+        //protected internal override string GetPageSubTitle()
+        //{
+        //    return FixedValue is null
+        //        ? base.GetPageSubTitle()
+        //        : $"For {GetTreatmentTypeName(FixedValue)}";
+        //}
     }
 }

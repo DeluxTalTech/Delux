@@ -1,11 +1,12 @@
 ﻿using Delux.Data.Common;
+using Delux.Facade.Common;
 using Delux.Facade.Reservation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Delux.Tests.Facade.Reservation
 {
     [TestClass]
-    public class AppointmentViewTests:SealedClassTests<AppointmentView, IdData>
+    public class AppointmentViewTests : SealedClassTests<AppointmentView, IdView>
     {
         [TestMethod]
         public void ClientIdTest() => IsNullableProperty(() => Obj.ClientId, x => Obj.ClientId = x);
@@ -18,5 +19,13 @@ namespace Delux.Tests.Facade.Reservation
 
         [TestMethod]
         public void AppointmentDateTimeTest() => IsNullableProperty(() => Obj.AppointmentDateTime, x => Obj.AppointmentDateTime = x);
+
+        [TestMethod]
+        public void GetIdTest()
+        {
+            var actual = Obj.GetId();
+            var expected = $"{Obj.ClientId}.{Obj.TreatmentId}.{Obj.TechnicianId}";
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

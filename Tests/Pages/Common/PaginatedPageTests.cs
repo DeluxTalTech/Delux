@@ -71,12 +71,10 @@ namespace Delux.Tests.Pages.Common {
             }
         }
 
-        [TestMethod]
-        public void SelectedIdTest()
-        {
-            Assert.Inconclusive();
-        }
-
+        //[TestMethod]
+        //public void SelectedIdTest()
+        //{
+        //    Assert.Inconclusive();
+        //}
     }
-
 }

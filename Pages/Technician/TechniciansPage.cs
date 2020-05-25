@@ -16,14 +16,6 @@ namespace Delux.Pages.Technician
             TechnicianTypes = CreateSelectList<TechnicianType, TechnicianTypeData>(m);
         }
 
-        //public override string ItemId
-        //{
-        //    get
-        //    {
-        //        if (Item is null) return string.Empty;
-        //        return $"{Item.Id}.{Item.TechnicianTypeId}";
-        //    }
-        //}
         public override string ItemId => Item?.Id ?? string.Empty;
 
         protected internal override string GetPageUrl() => "/Salon/Technicians";
@@ -46,11 +38,11 @@ namespace Delux.Pages.Technician
             return "Unspecified";
         }
 
-        protected internal override string GetPageSubTitle()
-        {
-            return FixedValue is null
-                ? base.GetPageSubTitle()
-                : $"For {GetTechnicianTypeName(FixedValue)}";
-        }
+        //protected internal override string GetPageSubTitle()
+        //{
+        //    return FixedValue is null
+        //        ? base.GetPageSubTitle()
+        //        : $"For {GetTechnicianTypeName(FixedValue)}";
+        //}
     }
 }

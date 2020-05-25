@@ -15,11 +15,11 @@ namespace Delux.Pages.Common
 
         public IList<TView> Items { get; private set; }
 
-        public string SelectedId
-        {
-            get;
-            set;
-        }
+        //public string SelectedId
+        //{
+        //    get;
+        //    set;
+        //}
         public int PageIndex
         {
             get => Db.PageIndex;
