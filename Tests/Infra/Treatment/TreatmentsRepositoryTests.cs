@@ -27,17 +27,10 @@ namespace Delux.Tests.Infra.Treatment
         }
 
         protected override string GetId(TreatmentData d) => d.Id;
-        //$"{d.Id}.{d.TreatmentTypeId}";
 
         protected override global::Delux.Domain.Treatment.Treatment GetObject(TreatmentData d) => new global::Delux.Domain.Treatment.Treatment(d);
 
         protected override void SetId(TreatmentData d, string id) => d.Id = id;
-        //{
-        //    var masterId = GetString.Head(id);
-        //    var treatmentTypeId = GetString.Tail(id);
-        //    d.Id = masterId;
-        //    d.TreatmentTypeId = treatmentTypeId;
-        //}
 
         protected override Type GetBaseType()
         {
