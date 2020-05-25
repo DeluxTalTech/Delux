@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using Delux.Aids;
 using Delux.Data.Client;
 using Delux.Data.Reservation;
@@ -11,16 +8,9 @@ using Delux.Domain.Client;
 using Delux.Domain.Reservation;
 using Delux.Domain.Technician;
 using Delux.Domain.Treatment;
-using Delux.Facade.Client;
 using Delux.Facade.Reservation;
-using Delux.Facade.Technician;
-using Delux.Infra.Technician;
-using Delux.Pages.Client;
 using Delux.Pages.Common;
 using Delux.Pages.Reservation;
-using Delux.Pages.Technician;
-using Delux.Tests.Pages.Client;
-using Delux.Tests.Pages.Technician;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Delux.Tests.Pages.Reservation

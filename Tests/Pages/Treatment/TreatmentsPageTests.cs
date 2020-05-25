@@ -5,7 +5,6 @@ using Delux.Domain.Treatment;
 using Delux.Facade.Treatment;
 using Delux.Pages.Common;
 using Delux.Pages.Treatment;
-using Delux.Infra.Treatment;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Delux.Tests.Pages.Treatment

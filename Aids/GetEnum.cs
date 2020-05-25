@@ -1,9 +1,4 @@
-﻿
-
-
-
-
-using System;
+﻿using System;
 
 namespace Delux.Aids {
 
@@ -28,6 +23,3 @@ namespace Delux.Aids {
         }
     }
 }
-
-
-

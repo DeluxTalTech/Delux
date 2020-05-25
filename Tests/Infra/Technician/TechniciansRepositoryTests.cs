@@ -1,5 +1,4 @@
 ﻿using System;
-using Delux.Aids;
 using Delux.Data.Technician;
 using Delux.Infra;
 using Delux.Infra.Common;

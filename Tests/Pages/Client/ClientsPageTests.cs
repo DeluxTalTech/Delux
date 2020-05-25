@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Delux.Aids;
+﻿using Delux.Aids;
 using Delux.Data.Client;
 using Delux.Domain.Client;
 using Delux.Facade.Client;

@@ -5,7 +5,6 @@ using Delux.Domain.Technician;
 using Delux.Facade.Technician;
 using Delux.Pages.Common;
 using Delux.Pages.Technician;
-using Delux.Infra.Technician;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Delux.Tests.Pages.Technician

@@ -4,7 +4,6 @@ using Delux.Domain.Reservation;
 using Delux.Domain.Technician;
 using Delux.Domain.Treatment;
 using Delux.Pages.Reservation;
-using Delux.Pages.Treatment;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Delux.Delux.Areas.Salon.Pages.Appointments

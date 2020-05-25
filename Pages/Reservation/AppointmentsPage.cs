@@ -8,10 +8,8 @@ using Delux.Domain.Reservation;
 using Delux.Domain.Technician;
 using Delux.Domain.Treatment;
 using Delux.Facade.Reservation;
-using Delux.Facade.Treatment;
 using Delux.Pages.Common;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 
 namespace Delux.Pages.Reservation
 {

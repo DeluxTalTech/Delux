@@ -1,8 +1,6 @@
 ﻿using Delux.Aids;
 using Delux.Data.Technician;
-using Delux.Data.Treatment;
 using Delux.Facade.Technician;
-using Delux.Facade.Treatment;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Delux.Tests.Facade.Technician

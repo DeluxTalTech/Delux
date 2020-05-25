@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Delux.Data.Reservation;
-using Delux.Data.Technician;
 using Delux.Domain.Reservation;
 using Delux.Infra;
 using Delux.Infra.Common;
 using Delux.Infra.Reservation;
-using Delux.Infra.Technician;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

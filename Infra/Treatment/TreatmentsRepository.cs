@@ -1,9 +1,6 @@
-﻿using System.Threading.Tasks;
-using Delux.Aids;
-using Delux.Data.Treatment;
+﻿using Delux.Data.Treatment;
 using Delux.Domain.Treatment;
 using Delux.Infra.Common;
-using Microsoft.EntityFrameworkCore;
 
 namespace Delux.Infra.Treatment
 {

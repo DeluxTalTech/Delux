@@ -1,5 +1,4 @@
-﻿using Delux.Data.Common;
-using Delux.Facade.Common;
+﻿using Delux.Facade.Common;
 using Delux.Facade.Reservation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

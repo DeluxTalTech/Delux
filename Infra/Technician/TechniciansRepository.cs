@@ -1,9 +1,6 @@
-﻿using System.Threading.Tasks;
-using Delux.Aids;
-using Delux.Data.Technician;
+﻿using Delux.Data.Technician;
 using Delux.Domain.Technician;
 using Delux.Infra.Common;
-using Microsoft.EntityFrameworkCore;
 
 namespace Delux.Infra.Technician
 {
