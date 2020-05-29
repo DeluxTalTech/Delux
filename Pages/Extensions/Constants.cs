@@ -3,16 +3,16 @@ namespace Delux.Pages.Extensions
 {
     public static class Constants
     {
-        public const string Unspecified = "Unspecified";
-        public const string CreateNewLinkTitle = "Create New";
-        public const string EditLinkTitle = "Edit";
-        public const string DetailsLinkTitle = "Details";
-        public const string DeleteLinkTitle = "Delete";
-        public const string TechniciansPageTitle = "Technicians";
-        public const string TreatmentsPageTitle = "Treatments";
-        public const string ClientsPageTitle = "Clients";
-        public const string AppointmentsPageTitle = "Appointments";
-        public const string SelectLinkTitle = "Select";
+        public const string Unspecified = "Täpsustamata";
+        public const string CreateNewLinkTitle = "Loo uus";
+        public const string EditLinkTitle = "Muuda";
+        public const string DetailsLinkTitle = "Detailid";
+        public const string DeleteLinkTitle = "Kustuta";
+        public const string TechniciansPageTitle = "Tehnikud";
+        public const string TreatmentsPageTitle = "Hooldused";
+        public const string ClientsPageTitle = "Kliendid";
+        public const string AppointmentsPageTitle = "Broneeringud";
+        public const string SelectLinkTitle = "Vali";
     }
 
 }
