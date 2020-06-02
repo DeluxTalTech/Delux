@@ -90,15 +90,16 @@ namespace Delux.Infra
 
         internal static List<AppointmentData> Appointments => new List<AppointmentData>
         {
-            new AppointmentData{Id="1", ClientId = "10", TreatmentId = "13", TechnicianId = "17", AppointmentDateTime = Convert.ToDateTime("05/06/2020 17:00")},
-            new AppointmentData{Id="2", ClientId = "6", TreatmentId = "22", TechnicianId = "24", AppointmentDateTime = Convert.ToDateTime("05/06/2020 16:00")},
-            new AppointmentData{Id="3", ClientId = "7", TreatmentId = "1", TechnicianId = "4", AppointmentDateTime = Convert.ToDateTime("06/06/2020 12:00")},
-            new AppointmentData{Id="4", ClientId = "2", TreatmentId = "6", TechnicianId = "7", AppointmentDateTime = Convert.ToDateTime("03/06/2020 09:00")},
-            new AppointmentData{Id="5", ClientId = "11", TreatmentId = "19", TechnicianId = "19", AppointmentDateTime = Convert.ToDateTime("04/06/2020 11:00")},
+            new AppointmentData{Id="1", ClientId = "2", TreatmentId = "6", TechnicianId = "7", AppointmentDateTime = Convert.ToDateTime("03/06/2020 09:00")},
+            new AppointmentData{Id="2", ClientId = "11", TreatmentId = "19", TechnicianId = "19", AppointmentDateTime = Convert.ToDateTime("04/06/2020 11:00")},
+            new AppointmentData{Id="3", ClientId = "6", TreatmentId = "22", TechnicianId = "24", AppointmentDateTime = Convert.ToDateTime("05/06/2020 16:00")},
+            new AppointmentData{Id="4", ClientId = "10", TreatmentId = "13", TechnicianId = "17", AppointmentDateTime = Convert.ToDateTime("05/06/2020 17:00")},
+            new AppointmentData{Id="5", ClientId = "7", TreatmentId = "1", TechnicianId = "4", AppointmentDateTime = Convert.ToDateTime("06/06/2020 12:00")},
             new AppointmentData{Id="6", ClientId = "3", TreatmentId = "6", TechnicianId = "7", AppointmentDateTime = Convert.ToDateTime("12/06/2020 15:30")},
-            new AppointmentData{Id="7", ClientId = "4", TreatmentId = "10", TechnicianId = "11", AppointmentDateTime = Convert.ToDateTime("13/06/2020 10:00")},
-            new AppointmentData{Id="8", ClientId = "1", TreatmentId = "24", TechnicianId = "23", AppointmentDateTime = Convert.ToDateTime("12/06/2020 16:00")},
-            new AppointmentData{Id="9", ClientId = "1", TreatmentId = "22", TechnicianId = "23", AppointmentDateTime = Convert.ToDateTime("12/06/2020 16:30")}
+            new AppointmentData{Id="7", ClientId = "1", TreatmentId = "24", TechnicianId = "23", AppointmentDateTime = Convert.ToDateTime("12/06/2020 16:00")},
+            new AppointmentData{Id="8", ClientId = "1", TreatmentId = "22", TechnicianId = "23", AppointmentDateTime = Convert.ToDateTime("12/06/2020 16:30")},
+            new AppointmentData{Id="9", ClientId = "4", TreatmentId = "10", TechnicianId = "11", AppointmentDateTime = Convert.ToDateTime("13/06/2020 10:00")}
+
 
         };
 
