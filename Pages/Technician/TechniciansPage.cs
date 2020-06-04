@@ -35,14 +35,7 @@ namespace Delux.Pages.Technician
             foreach (var m in TechnicianTypes)
                 if (m.Value == technicianTypeId)
                     return m.Text;
-            return "Unspecified";
+            return "Määratlemata";
         }
-
-        //protected internal override string GetPageSubTitle()
-        //{
-        //    return FixedValue is null
-        //        ? base.GetPageSubTitle()
-        //        : $"For {GetTechnicianTypeName(FixedValue)}";
-        //}
     }
 }

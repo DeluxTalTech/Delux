@@ -47,7 +47,7 @@ namespace Delux.Pages.Reservation
             foreach (var m in Clients)
                 if (m.Value == clientId)
                     return m.Text;
-            return "Unspecified";
+            return "Määratlemata";
         }
 
         public string GetTreatmentName(string treatmentId)
@@ -55,7 +55,7 @@ namespace Delux.Pages.Reservation
             foreach (var m in Treatments)
                 if (m.Value == treatmentId)
                     return m.Text;
-            return "Unspecified";
+            return "Määratlemata";
         }
 
         public string GetTechnicianName(string technicianId)
@@ -63,14 +63,7 @@ namespace Delux.Pages.Reservation
             foreach (var m in Technicians)
                 if (m.Value == technicianId)
                     return m.Text;
-            return "Unspecified";
+            return "Määratlemata";
         }
-
-        //protected internal override string GetPageSubTitle()
-        //{
-        //    return FixedValue is null
-        //        ? base.GetPageSubTitle()
-        //        : $"For {GetClientName(FixedValue)}.{GetTreatmentName(FixedValue)}.{GetTechnicianName(FixedValue)}";
-        //}
     }
 }

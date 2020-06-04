@@ -42,9 +42,6 @@ namespace Delux.Infra.Common
             return property is null ? null : LambdaExpression(property);
         }
 
-
-
-
         internal Expression<Func<TData, object>> LambdaExpression(PropertyInfo p)
         {
             var param = Expression.Parameter(typeof(TData), "x");

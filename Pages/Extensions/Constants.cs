@@ -3,7 +3,7 @@ namespace Delux.Pages.Extensions
 {
     public static class Constants
     {
-        public const string Unspecified = "Täpsustamata";
+        public const string Unspecified = "Määratlemata";
         public const string CreateNewLinkTitle = "Loo uus";
         public const string EditLinkTitle = "Muuda";
         public const string DetailsLinkTitle = "Detailid";

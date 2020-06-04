@@ -9,7 +9,7 @@ namespace Delux.Tests.Pages.Extensions
         [TestInitialize]
         public virtual void TestInitialize() => Type = typeof(Constants);
         
-        [TestMethod] public void UnspecifiedTest() => Assert.AreEqual( "Täpsustamata", Constants.Unspecified);
+        [TestMethod] public void UnspecifiedTest() => Assert.AreEqual( "Määratlemata", Constants.Unspecified);
         [TestMethod] public void CreateNewLinkTitleTest() => Assert.AreEqual("Loo uus", Constants.CreateNewLinkTitle);
         [TestMethod] public void EditLinkTitleTest() => Assert.AreEqual("Muuda", Constants.EditLinkTitle);
         [TestMethod] public void DetailsLinkTitleTest() => Assert.AreEqual("Detailid", Constants.DetailsLinkTitle);

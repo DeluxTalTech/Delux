@@ -35,14 +35,7 @@ namespace Delux.Pages.Treatment
             foreach (var m in TreatmentTypes)
                 if (m.Value == treatmentTypeId)
                     return m.Text;
-            return "Unspecified";
+            return "Määratlemata";
         }
-
-        //protected internal override string GetPageSubTitle()
-        //{
-        //    return FixedValue is null
-        //        ? base.GetPageSubTitle()
-        //        : $"For {GetTreatmentTypeName(FixedValue)}";
-        //}
     }
 }

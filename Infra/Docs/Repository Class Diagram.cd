@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Delux.Infra.Common.BaseRepository&lt;TDomain, TData&gt;">
+    <Position X="10.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAEAAAAABAEAAAAAAAAAEoIAAAAAAAEAIAgAA=</HashCode>
+      <FileName>Common\BaseRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Delux.Infra.Common.FilteredRepository&lt;TDomain, TData&gt;">
+    <Position X="6.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAQAAAAAAAAAAEAAAAIAAAAABAASBAAAA=</HashCode>
+      <FileName>Common\FilteredRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Delux.Infra.Common.IdRepository&lt;TDomain, TData&gt;">
+    <Position X="2.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Common\IdRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Delux.Infra.Common.PaginatedRepository&lt;TDomain, TData&gt;">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAgAAgABAEAAUAAAAIAACAAAAEAAAAAA=</HashCode>
+      <FileName>Common\PaginatedRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Delux.Infra.Common.SortedRepository&lt;TDomain, TData&gt;">
+    <Position X="8.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAABAAAAAAAAAAAAEAAQAAAAAABIAAQJAAAAAAABAA=</HashCode>
+      <FileName>Common\SortedRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Delux.Infra.Reservation.AppointmentsRepository">
+    <Position X="2.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Reservation\AppointmentsRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
